@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WordLadder2", "WordLadder2\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Quiz24Game", "Quiz24Game\Quiz24Game.csproj", "{61490EA5-1790-4F57-B7E6-A0A966FB4C33}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AddTwoNumbers", "AddTwoNumbers\AddTwoNumbers.csproj", "{C04A475D-00A2-4F87-B111-A0108CFAFA15}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,6 +25,10 @@ Global
 		{61490EA5-1790-4F57-B7E6-A0A966FB4C33}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{61490EA5-1790-4F57-B7E6-A0A966FB4C33}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{61490EA5-1790-4F57-B7E6-A0A966FB4C33}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C04A475D-00A2-4F87-B111-A0108CFAFA15}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C04A475D-00A2-4F87-B111-A0108CFAFA15}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C04A475D-00A2-4F87-B111-A0108CFAFA15}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C04A475D-00A2-4F87-B111-A0108CFAFA15}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -30,5 +36,6 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{CE9CF055-04C1-4A05-8D93-AC16323BCBA0} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
 		{61490EA5-1790-4F57-B7E6-A0A966FB4C33} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
+		{C04A475D-00A2-4F87-B111-A0108CFAFA15} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
 	EndGlobalSection
 EndGlobal
