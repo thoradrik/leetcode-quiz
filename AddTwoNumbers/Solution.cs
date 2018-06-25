@@ -1,4 +1,4 @@
-﻿namespace AddTwoNumbers {
+﻿namespace Quiz {
     public class Solution {
         
         public ListNode AddTwoNumbers(ListNode a, ListNode b) {

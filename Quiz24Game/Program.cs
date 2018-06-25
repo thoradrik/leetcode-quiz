@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Quiz24Game {
+namespace Quiz {
     public class Program {
         public static void Main(string[] args) {
             Solution solution = new Solution();

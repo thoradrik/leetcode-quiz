@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 
-namespace WordLadder2 {
+namespace Quiz {
     public class Program {
         
         public static void Main(string[] args) {

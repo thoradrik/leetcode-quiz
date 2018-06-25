@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
 
-namespace Quiz24Game {
+namespace Quiz {
     public class Solution {
         public bool JudgePoint24(int[] nums) {
             for (int a_i = 0; a_i < nums.Length; a_i++) {

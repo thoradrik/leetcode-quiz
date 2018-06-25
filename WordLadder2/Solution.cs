@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace WordLadder2 {
+namespace Quiz {
     public class Solution {
         
         public IList<IList<string>> FindLadders(string begin_word, string end_word, IList<string> words_list) {
