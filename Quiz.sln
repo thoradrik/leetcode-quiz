@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.0.0
+MinimumVisualStudioVersion = 10.0.0.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "solved", "solved", "{CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WordLadder2", "WordLadder2\WordLadder2.csproj", "{CE9CF055-04C1-4A05-8D93-AC16323BCBA0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Quiz24Game", "Quiz24Game\Quiz24Game.csproj", "{61490EA5-1790-4F57-B7E6-A0A966FB4C33}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CE9CF055-04C1-4A05-8D93-AC16323BCBA0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE9CF055-04C1-4A05-8D93-AC16323BCBA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE9CF055-04C1-4A05-8D93-AC16323BCBA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE9CF055-04C1-4A05-8D93-AC16323BCBA0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{61490EA5-1790-4F57-B7E6-A0A966FB4C33}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{61490EA5-1790-4F57-B7E6-A0A966FB4C33}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{61490EA5-1790-4F57-B7E6-A0A966FB4C33}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{61490EA5-1790-4F57-B7E6-A0A966FB4C33}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{CE9CF055-04C1-4A05-8D93-AC16323BCBA0} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
+		{61490EA5-1790-4F57-B7E6-A0A966FB4C33} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
+	EndGlobalSection
+EndGlobal
