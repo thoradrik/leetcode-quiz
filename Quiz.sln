@@ -13,6 +13,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AddTwoNumbers", "AddTwoNumb
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StringToInteger", "StringToInteger\StringToInteger.csproj", "{04CFEB9D-63E6-4748-A35C-2A93F6BE297A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShiftingLetters", "ShiftingLetters\ShiftingLetters.csproj", "{FB686E2F-86B5-43BE-8B02-2EA04B15F6D4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "_Template", "_Template\_Template.csproj", "{5537B266-1AEA-4788-8273-3891CDB59FA2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,6 +39,14 @@ Global
 		{04CFEB9D-63E6-4748-A35C-2A93F6BE297A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{04CFEB9D-63E6-4748-A35C-2A93F6BE297A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{04CFEB9D-63E6-4748-A35C-2A93F6BE297A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FB686E2F-86B5-43BE-8B02-2EA04B15F6D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB686E2F-86B5-43BE-8B02-2EA04B15F6D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB686E2F-86B5-43BE-8B02-2EA04B15F6D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB686E2F-86B5-43BE-8B02-2EA04B15F6D4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5537B266-1AEA-4788-8273-3891CDB59FA2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5537B266-1AEA-4788-8273-3891CDB59FA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5537B266-1AEA-4788-8273-3891CDB59FA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5537B266-1AEA-4788-8273-3891CDB59FA2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -44,5 +56,6 @@ Global
 		{61490EA5-1790-4F57-B7E6-A0A966FB4C33} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
 		{C04A475D-00A2-4F87-B111-A0108CFAFA15} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
 		{04CFEB9D-63E6-4748-A35C-2A93F6BE297A} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
+		{FB686E2F-86B5-43BE-8B02-2EA04B15F6D4} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
 	EndGlobalSection
 EndGlobal
