@@ -6,14 +6,14 @@ namespace Quiz {
         private static void Main(string[] args) {
             Solution solution = new Solution();
 
-            Check(solution, 1, 1);
+            Check(solution.Method, 1, 1);
         }
 
-        private static void Check(Solution solution, int test, int expected) {
+        private static void Check<T, R>(Func<T, R> func, T test, R expected) {
             Console.WriteLine("TEST {0}", test);
             
-            int answer = solution.Method(test);
-            if (expected != answer) {
+            R answer = func(test);
+            if (!Equals(expected, answer)) {
                 Console.WriteLine("  !!! FAILED {0} {1}", answer, expected);
             } else {
                 Console.WriteLine("  PASSED {0} {1}", answer, expected);
