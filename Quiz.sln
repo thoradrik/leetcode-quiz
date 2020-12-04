@@ -41,6 +41,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MaxPoints", "0149_MaxPoints
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SolveEquation", "0640_SolveEquation\SolveEquation.csproj", "{3D76200D-D9DC-4867-B43D-749F6F359C90}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RussianDollEnvelopes", "0354_RussianDollEnvelopes\RussianDollEnvelopes.csproj", "{FD0BF6F5-081D-4064-8A4F-0CB87BBBA281}"
+EndProject
 Global
 																GlobalSection(SolutionConfigurationPlatforms) = preSolution
 																																Debug|Any CPU = Debug|Any CPU
@@ -111,6 +113,10 @@ Global
 																	{3D76200D-D9DC-4867-B43D-749F6F359C90}.Debug|Any CPU.Build.0 = Debug|Any CPU
 																	{3D76200D-D9DC-4867-B43D-749F6F359C90}.Release|Any CPU.ActiveCfg = Release|Any CPU
 																	{3D76200D-D9DC-4867-B43D-749F6F359C90}.Release|Any CPU.Build.0 = Release|Any CPU
+																	{FD0BF6F5-081D-4064-8A4F-0CB87BBBA281}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+																	{FD0BF6F5-081D-4064-8A4F-0CB87BBBA281}.Debug|Any CPU.Build.0 = Debug|Any CPU
+																	{FD0BF6F5-081D-4064-8A4F-0CB87BBBA281}.Release|Any CPU.ActiveCfg = Release|Any CPU
+																	{FD0BF6F5-081D-4064-8A4F-0CB87BBBA281}.Release|Any CPU.Build.0 = Release|Any CPU
 																EndGlobalSection
 																GlobalSection(SolutionProperties) = preSolution
 																																HideSolutionNode = FALSE
@@ -131,5 +137,6 @@ Global
 																	{989C45DD-11F8-431B-850D-CC5952B24892} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
 																	{175BA581-01DC-4CCA-9A77-0C45C654EF11} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
 																	{3D76200D-D9DC-4867-B43D-749F6F359C90} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
+																	{FD0BF6F5-081D-4064-8A4F-0CB87BBBA281} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
 																EndGlobalSection
 EndGlobal
