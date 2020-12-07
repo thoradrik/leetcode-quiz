@@ -49,6 +49,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NumberOfLongestIncreasingSu
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sqrtx", "0069_Sqrtx\Sqrtx.csproj", "{86F9D0AC-6ED2-4245-9435-042A5984FFB9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ValidPerfectSquare", "0367_ValidPerfectSquare\ValidPerfectSquare.csproj", "{029B7B92-DD20-41B4-AA2E-36BA3F1BBCAA}"
+EndProject
 Global
 																GlobalSection(SolutionConfigurationPlatforms) = preSolution
 																																Debug|Any CPU = Debug|Any CPU
@@ -135,6 +137,10 @@ Global
 																	{86F9D0AC-6ED2-4245-9435-042A5984FFB9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 																	{86F9D0AC-6ED2-4245-9435-042A5984FFB9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 																	{86F9D0AC-6ED2-4245-9435-042A5984FFB9}.Release|Any CPU.Build.0 = Release|Any CPU
+																	{029B7B92-DD20-41B4-AA2E-36BA3F1BBCAA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+																	{029B7B92-DD20-41B4-AA2E-36BA3F1BBCAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+																	{029B7B92-DD20-41B4-AA2E-36BA3F1BBCAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+																	{029B7B92-DD20-41B4-AA2E-36BA3F1BBCAA}.Release|Any CPU.Build.0 = Release|Any CPU
 																EndGlobalSection
 																GlobalSection(SolutionProperties) = preSolution
 																																HideSolutionNode = FALSE
@@ -159,5 +165,6 @@ Global
 																	{5B9FEA74-DD6B-4582-A537-533CE25A0715} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
 																	{F7C8A2F9-5B7A-4CEB-AD8A-B4C12274E9F5} = {4A003753-E9E9-4FF6-B636-9C9644C4C509}
 																	{86F9D0AC-6ED2-4245-9435-042A5984FFB9} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
+																	{029B7B92-DD20-41B4-AA2E-36BA3F1BBCAA} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
 																EndGlobalSection
 EndGlobal

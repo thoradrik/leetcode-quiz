@@ -1,26 +1,26 @@
 ﻿namespace Quiz {
     public class Solution {
         
-        public int MySqrt(int x) {
-            if (x == 0) {
-                return 0;
+        public bool IsPerfectSquare(int num) {
+            if (num <= 1) {
+                return true;
             } else {
                 long a = 2;
-                long b = x / 2;
+                long b = num / 2;
 
                 do {
                     long v = (a + b) / 2;
                     long v2 = v * v;
-                    if (v2 == x) {
-                        return (int) v;
-                    } else if (v2 < x) {
+                    if (v2 == num) {
+                        return true;
+                    } else if (v2 < num) {
                         a = v;
                     } else {
                         b = v;
                     }
                 } while (b - a > 1);
 
-                return (int)a;
+                return false;
             }
         }
         
