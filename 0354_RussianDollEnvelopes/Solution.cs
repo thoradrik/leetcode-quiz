@@ -45,10 +45,8 @@ namespace Quiz {
         private Envelope[] m_ES;
         
         private int[] m_Maxes;
-        
-        private int m_Top;
 
-        private Envelope.Comparer m_Comparer = new Envelope.Comparer();
+        private readonly Envelope.Comparer m_Comparer = new Envelope.Comparer();
         
         public int MaxEnvelopes(int[][] envelopes) {
             m_ES = Array.ConvertAll(envelopes, e => new Envelope(e));
