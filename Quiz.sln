@@ -53,6 +53,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pow", "0050_Pow\Pow.csproj"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SuperPow", "0372_SuperPow\SuperPow.csproj", "{E1C511BD-83E9-406A-86B2-193F670015C8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LongestSubstringWithoutRepeatingCharacters", "0003_LongestSubstringWithoutRepeatingCharacters\LongestSubstringWithoutRepeatingCharacters.csproj", "{17F9F278-C5D4-4596-9C63-107DF43BD282}"
+EndProject
 Global
 																GlobalSection(SolutionConfigurationPlatforms) = preSolution
 																																Debug|Any CPU = Debug|Any CPU
@@ -147,6 +149,10 @@ Global
 																	{E1C511BD-83E9-406A-86B2-193F670015C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 																	{E1C511BD-83E9-406A-86B2-193F670015C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 																	{E1C511BD-83E9-406A-86B2-193F670015C8}.Release|Any CPU.Build.0 = Release|Any CPU
+																	{17F9F278-C5D4-4596-9C63-107DF43BD282}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+																	{17F9F278-C5D4-4596-9C63-107DF43BD282}.Debug|Any CPU.Build.0 = Debug|Any CPU
+																	{17F9F278-C5D4-4596-9C63-107DF43BD282}.Release|Any CPU.ActiveCfg = Release|Any CPU
+																	{17F9F278-C5D4-4596-9C63-107DF43BD282}.Release|Any CPU.Build.0 = Release|Any CPU
 																EndGlobalSection
 																GlobalSection(SolutionProperties) = preSolution
 																																HideSolutionNode = FALSE
@@ -173,5 +179,6 @@ Global
 																	{029B7B92-DD20-41B4-AA2E-36BA3F1BBCAA} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
 																	{D9194C34-C664-446F-8C14-222C708E865B} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
 																	{E1C511BD-83E9-406A-86B2-193F670015C8} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
+																	{17F9F278-C5D4-4596-9C63-107DF43BD282} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
 																EndGlobalSection
 EndGlobal
