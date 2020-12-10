@@ -22,7 +22,7 @@ namespace Quiz {
                 
                 if (map[s[k]]) {
                     if (length >= max_length) {
-                        Console.WriteLine("MAX: {0}", s.Substring(start, length));
+                        // Console.WriteLine("MAX: {0}", s.Substring(start, length));
                         max_start = start;
                         max_length = length;
                     }
@@ -37,7 +37,7 @@ namespace Quiz {
                     goto next;
                 }
                 
-                Console.WriteLine("     {0}", s.Substring(start, length));
+                // Console.WriteLine("     {0}", s.Substring(start, length));
                 
                 map[s[k]] = true;
                 length++;
@@ -46,7 +46,7 @@ namespace Quiz {
             }
 
             if (length > max_length) {
-                Console.WriteLine("MAX: {0}", s.Substring(start, length));
+                // Console.WriteLine("MAX: {0}", s.Substring(start, length));
                 max_start = start;
                 max_length = length;
             }

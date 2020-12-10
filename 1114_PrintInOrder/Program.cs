@@ -4,7 +4,7 @@ using System.Threading;
 namespace Quiz {
     public static class Program {
         
-        private static void Main(string[] args) {
+        public static void Main() {
             Foo solution = new Foo();
             
             Thread first = new Thread(() => solution.First(() => Console.WriteLine("First")));

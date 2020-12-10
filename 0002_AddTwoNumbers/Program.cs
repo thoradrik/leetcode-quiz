@@ -3,7 +3,7 @@
 namespace Quiz {
     public static class Program {
         
-        private static void Main(string[] args) {
+        public static void Main() {
             ListNode a = new ListNode(9) {
                 next = new ListNode(9) {
                     next = new ListNode(9) { }   

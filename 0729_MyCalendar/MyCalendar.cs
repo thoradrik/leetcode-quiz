@@ -154,7 +154,7 @@ namespace Quiz {
                     }
                 }
 
-                Console.WriteLine("  {0} = {1}", this, m_Count);
+                // Console.WriteLine("  {0} = {1}", this, m_Count);
                 
                 if (process_after) {
                     if (m_R != null) {

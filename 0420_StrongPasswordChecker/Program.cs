@@ -3,7 +3,7 @@
 namespace Quiz {
     public static class Program {
         
-        private static void Main(string[] args) {
+        public static void Main() {
             Solution solution = new Solution();
 
 //            Check(solution, "", 6);
