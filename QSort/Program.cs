@@ -4,7 +4,7 @@ using System.Collections.Generic;
 namespace Quiz {
     public static class Program {
         
-        private static void Main(string[] args) {
+        public static void Main() {
             int[] array = new int[20];
 
             for (int i = 0; i < array.Length; i++) {
