@@ -61,6 +61,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestingHelpers", "TestingHe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StrongPasswordChecker", "0420_StrongPasswordChecker\StrongPasswordChecker.csproj", "{363DEA9E-542A-4ECC-9769-085E7F2827A6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SquaresOfSortedArray", "0977_SquaresOfSortedArray\SquaresOfSortedArray.csproj", "{E4B1224F-2785-49AD-BFFC-5BAE120EA57D}"
+EndProject
 Global
 																GlobalSection(SolutionConfigurationPlatforms) = preSolution
 																																Debug|Any CPU = Debug|Any CPU
@@ -167,6 +169,10 @@ Global
 																	{363DEA9E-542A-4ECC-9769-085E7F2827A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 																	{363DEA9E-542A-4ECC-9769-085E7F2827A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 																	{363DEA9E-542A-4ECC-9769-085E7F2827A6}.Release|Any CPU.Build.0 = Release|Any CPU
+																	{E4B1224F-2785-49AD-BFFC-5BAE120EA57D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+																	{E4B1224F-2785-49AD-BFFC-5BAE120EA57D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+																	{E4B1224F-2785-49AD-BFFC-5BAE120EA57D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+																	{E4B1224F-2785-49AD-BFFC-5BAE120EA57D}.Release|Any CPU.Build.0 = Release|Any CPU
 																EndGlobalSection
 																GlobalSection(SolutionProperties) = preSolution
 																																HideSolutionNode = FALSE
@@ -196,5 +202,6 @@ Global
 																	{D414B90A-24CC-498C-9A40-07C66917192D} = {0DB4C5C5-A8EE-43BA-B74C-5034A809E187}
 																	{ADEAFAE8-9121-42B0-96FC-E83BCAA93A60} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
 																	{363DEA9E-542A-4ECC-9769-085E7F2827A6} = {4A003753-E9E9-4FF6-B636-9C9644C4C509}
+																	{E4B1224F-2785-49AD-BFFC-5BAE120EA57D} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
 																EndGlobalSection
 EndGlobal
