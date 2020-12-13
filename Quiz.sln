@@ -67,6 +67,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MergeSortedArray", "0088_Me
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MergeTwoSortedLists", "0021_MergeTwoSortedLists\MergeTwoSortedLists.csproj", "{3BE4FCEA-86E9-4138-8295-146752B2E9B2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MergeKSortedLists", "0023_MergeKSortedLists\MergeKSortedLists.csproj", "{04D434FD-A2F0-408E-AA11-5A76C7E987DA}"
+EndProject
 Global
 																GlobalSection(SolutionConfigurationPlatforms) = preSolution
 																																Debug|Any CPU = Debug|Any CPU
@@ -185,6 +187,10 @@ Global
 																	{3BE4FCEA-86E9-4138-8295-146752B2E9B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 																	{3BE4FCEA-86E9-4138-8295-146752B2E9B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 																	{3BE4FCEA-86E9-4138-8295-146752B2E9B2}.Release|Any CPU.Build.0 = Release|Any CPU
+																	{04D434FD-A2F0-408E-AA11-5A76C7E987DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+																	{04D434FD-A2F0-408E-AA11-5A76C7E987DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+																	{04D434FD-A2F0-408E-AA11-5A76C7E987DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+																	{04D434FD-A2F0-408E-AA11-5A76C7E987DA}.Release|Any CPU.Build.0 = Release|Any CPU
 																EndGlobalSection
 																GlobalSection(SolutionProperties) = preSolution
 																																HideSolutionNode = FALSE
@@ -216,5 +222,7 @@ Global
 																	{363DEA9E-542A-4ECC-9769-085E7F2827A6} = {4A003753-E9E9-4FF6-B636-9C9644C4C509}
 																	{E4B1224F-2785-49AD-BFFC-5BAE120EA57D} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
 																	{08291942-C369-4929-AEC5-B83057FA092A} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
+																	{3BE4FCEA-86E9-4138-8295-146752B2E9B2} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
+																	{04D434FD-A2F0-408E-AA11-5A76C7E987DA} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
 																EndGlobalSection
 EndGlobal
