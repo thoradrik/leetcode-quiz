@@ -61,19 +61,19 @@ namespace Quiz {
                 return CheckArrayResult(la_answer, la_expected, (x, y) => x == y);
             } else if (answer is ulong[] ula_answer && expected is ulong[] ula_expected) {
                 return CheckArrayResult(ula_answer, ula_expected, (x, y) => x == y);
-            } else if (answer is int i_answer && answer is int i_expected) {
+            } else if (answer is int i_answer && expected is int i_expected) {
                 return i_answer == i_expected;
-            } else if (answer is uint ui_answer && answer is uint ui_expected) {
+            } else if (answer is uint ui_answer && expected is uint ui_expected) {
                 return ui_answer == ui_expected;
-            } else if (answer is long l_answer && answer is long l_expected) {
+            } else if (answer is long l_answer && expected is long l_expected) {
                 return l_answer == l_expected;
-            } else if (answer is ulong ul_answer && answer is ulong ul_expected) {
+            } else if (answer is ulong ul_answer && expected is ulong ul_expected) {
                 return ul_answer == ul_expected;
-            } else if (answer is bool b_answer && answer is bool b_expected) {
+            } else if (answer is bool b_answer && expected is bool b_expected) {
                 return b_answer == b_expected;
-            } else if (answer is float f_answer && answer is float f_expected) {
+            } else if (answer is float f_answer && expected is float f_expected) {
                 return Math.Abs(f_answer - f_expected) < Single.Epsilon;
-            } else if (answer is double d_answer && answer is double d_expected) {
+            } else if (answer is double d_answer && expected is double d_expected) {
                 return Math.Abs(d_answer - d_expected) < Double.Epsilon;
             } else {
                 return answer.Equals(expected);
