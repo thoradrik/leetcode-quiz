@@ -49,7 +49,9 @@ namespace Quiz {
         }
 
         private static bool CheckResult(object answer, object expected) {
-            if (answer is string s_answer && expected is string s_expected) {
+            if (answer == null) {
+                return expected == null;
+            } else if (answer is string s_answer && expected is string s_expected) {
                 return s_answer == s_expected;
             } else if (answer is int[] ia_answer && expected is int[] ia_expected) {
                 return CheckArrayResult(ia_answer, ia_expected, (x, y) => x == y);
@@ -74,7 +76,7 @@ namespace Quiz {
             } else if (answer is double d_answer && answer is double d_expected) {
                 return Math.Abs(d_answer - d_expected) < Double.Epsilon;
             } else {
-                throw new NotImplementedException();
+                return answer.Equals(expected);
             }
         }
 
@@ -94,7 +96,9 @@ namespace Quiz {
         }
 
         private static string Value(object value) {
-            if (value is object[] objs) {
+            if (value == null) {
+                return "(null)";
+            } else if (value is object[] objs) {
                 StringBuilder sb = new StringBuilder();
                 
                 for (int i = 0; i < objs.Length; i++) {

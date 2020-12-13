@@ -65,6 +65,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SquaresOfSortedArray", "097
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MergeSortedArray", "0088_MergeSortedArray\MergeSortedArray.csproj", "{08291942-C369-4929-AEC5-B83057FA092A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MergeTwoSortedLists", "0021_MergeTwoSortedLists\MergeTwoSortedLists.csproj", "{3BE4FCEA-86E9-4138-8295-146752B2E9B2}"
+EndProject
 Global
 																GlobalSection(SolutionConfigurationPlatforms) = preSolution
 																																Debug|Any CPU = Debug|Any CPU
@@ -179,6 +181,10 @@ Global
 																	{08291942-C369-4929-AEC5-B83057FA092A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 																	{08291942-C369-4929-AEC5-B83057FA092A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 																	{08291942-C369-4929-AEC5-B83057FA092A}.Release|Any CPU.Build.0 = Release|Any CPU
+																	{3BE4FCEA-86E9-4138-8295-146752B2E9B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+																	{3BE4FCEA-86E9-4138-8295-146752B2E9B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+																	{3BE4FCEA-86E9-4138-8295-146752B2E9B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+																	{3BE4FCEA-86E9-4138-8295-146752B2E9B2}.Release|Any CPU.Build.0 = Release|Any CPU
 																EndGlobalSection
 																GlobalSection(SolutionProperties) = preSolution
 																																HideSolutionNode = FALSE
