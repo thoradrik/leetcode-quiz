@@ -71,6 +71,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MergeKSortedLists", "0023_M
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CountPrimes", "0204_CountPrimes\CountPrimes.csproj", "{F604DC68-D6CE-4A70-B971-C8F1285BEA99}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PerfectSquares", "0279_PerfectSquares\PerfectSquares.csproj", "{B4D39D23-2C02-4C1A-A9A1-5D6C78BF1FAF}"
+EndProject
 Global
 																GlobalSection(SolutionConfigurationPlatforms) = preSolution
 																																Debug|Any CPU = Debug|Any CPU
@@ -197,6 +199,10 @@ Global
 																	{F604DC68-D6CE-4A70-B971-C8F1285BEA99}.Debug|Any CPU.Build.0 = Debug|Any CPU
 																	{F604DC68-D6CE-4A70-B971-C8F1285BEA99}.Release|Any CPU.ActiveCfg = Release|Any CPU
 																	{F604DC68-D6CE-4A70-B971-C8F1285BEA99}.Release|Any CPU.Build.0 = Release|Any CPU
+																	{B4D39D23-2C02-4C1A-A9A1-5D6C78BF1FAF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+																	{B4D39D23-2C02-4C1A-A9A1-5D6C78BF1FAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+																	{B4D39D23-2C02-4C1A-A9A1-5D6C78BF1FAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+																	{B4D39D23-2C02-4C1A-A9A1-5D6C78BF1FAF}.Release|Any CPU.Build.0 = Release|Any CPU
 																EndGlobalSection
 																GlobalSection(SolutionProperties) = preSolution
 																																HideSolutionNode = FALSE
@@ -231,5 +237,6 @@ Global
 																	{3BE4FCEA-86E9-4138-8295-146752B2E9B2} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
 																	{04D434FD-A2F0-408E-AA11-5A76C7E987DA} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
 																	{F604DC68-D6CE-4A70-B971-C8F1285BEA99} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
+																	{B4D39D23-2C02-4C1A-A9A1-5D6C78BF1FAF} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
 																EndGlobalSection
 EndGlobal
