@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.Globalization;
 using System.Text;
@@ -49,34 +50,25 @@ namespace Quiz {
         }
 
         private static bool CheckResult(object answer, object expected) {
-            if (answer == null) {
-                return expected == null;
-            } else if (answer is string s_answer && expected is string s_expected) {
-                return s_answer == s_expected;
-            } else if (answer is int[] ia_answer && expected is int[] ia_expected) {
-                return CheckArrayResult(ia_answer, ia_expected, (x, y) => x == y);
-            } else if (answer is uint[] uia_answer && expected is uint[] uia_expected) {
-                return CheckArrayResult(uia_answer, uia_expected, (x, y) => x == y);
-            } else if (answer is long[] la_answer && expected is long[] la_expected) {
-                return CheckArrayResult(la_answer, la_expected, (x, y) => x == y);
-            } else if (answer is ulong[] ula_answer && expected is ulong[] ula_expected) {
-                return CheckArrayResult(ula_answer, ula_expected, (x, y) => x == y);
-            } else if (answer is int i_answer && expected is int i_expected) {
-                return i_answer == i_expected;
-            } else if (answer is uint ui_answer && expected is uint ui_expected) {
-                return ui_answer == ui_expected;
-            } else if (answer is long l_answer && expected is long l_expected) {
-                return l_answer == l_expected;
-            } else if (answer is ulong ul_answer && expected is ulong ul_expected) {
-                return ul_answer == ul_expected;
-            } else if (answer is bool b_answer && expected is bool b_expected) {
-                return b_answer == b_expected;
-            } else if (answer is float f_answer && expected is float f_expected) {
-                return Math.Abs(f_answer - f_expected) < Single.Epsilon;
-            } else if (answer is double d_answer && expected is double d_expected) {
-                return Math.Abs(d_answer - d_expected) < Double.Epsilon;
-            } else {
-                return answer.Equals(expected);
+            switch (answer) {
+                case null: return expected == null;
+                case string s_answer when expected is string s_expected: return s_answer == s_expected;
+                case int[] ia_answer when expected is int[] ia_expected: return CheckArrayResult(ia_answer, ia_expected, (x, y) => x == y);
+                case uint[] uia_answer when expected is uint[] uia_expected: return CheckArrayResult(uia_answer, uia_expected, (x, y) => x == y);
+                case long[] la_answer when expected is long[] la_expected: return CheckArrayResult(la_answer, la_expected, (x, y) => x == y);
+                case ulong[] ula_answer when expected is ulong[] ula_expected: return CheckArrayResult(ula_answer, ula_expected, (x, y) => x == y);
+                case IList<int> il_answer when expected is IList<int> il_expected: return CheckListResult(il_answer, il_expected, (x, y) => x == y);
+                case IList<uint> uil_answer when expected is IList<uint> uil_expected: return CheckListResult(uil_answer, uil_expected, (x, y) => x == y);
+                case IList<long> ll_answer when expected is IList<long> ll_expected: return CheckListResult(ll_answer, ll_expected, (x, y) => x == y);
+                case IList<ulong> ull_answer when expected is IList<ulong> ull_expected: return CheckListResult(ull_answer, ull_expected, (x, y) => x == y);
+                case int i_answer when expected is int i_expected: return i_answer == i_expected;
+                case uint ui_answer when expected is uint ui_expected: return ui_answer == ui_expected;
+                case long l_answer when expected is long l_expected: return l_answer == l_expected;
+                case ulong ul_answer when expected is ulong ul_expected: return ul_answer == ul_expected;
+                case bool b_answer when expected is bool b_expected: return b_answer == b_expected;
+                case float f_answer when expected is float f_expected: return Math.Abs(f_answer - f_expected) < Single.Epsilon;
+                case double d_answer when expected is double d_expected: return Math.Abs(d_answer - d_expected) < Double.Epsilon;
+                default: return answer.Equals(expected);
             }
         }
 
@@ -86,6 +78,21 @@ namespace Quiz {
             } 
             
             for (int i = 0; i < answer.Length; i++) {
+                if (!comparison(answer[i], expected[i])) {
+                    return false;
+                }
+
+            }
+           
+            return true;
+        }
+
+        private static bool CheckListResult<T>(IList<T> answer, IList<T> expected, Func<T, T, bool> comparison) {
+            if (answer.Count != expected.Count) {
+                return false;
+            } 
+            
+            for (int i = 0; i < answer.Count; i++) {
                 if (!comparison(answer[i], expected[i])) {
                     return false;
                 }
@@ -118,6 +125,14 @@ namespace Quiz {
                 return JsonSerializer.Serialize(la);
             } else if (value is ulong[] ula) {
                 return JsonSerializer.Serialize(ula);
+            } else if (value is IList<int> il) {
+                return JsonSerializer.Serialize(il);
+            } else if (value is IList<uint> uil) {
+                return JsonSerializer.Serialize(uil);
+            } else if (value is IList<long> ll) {
+                return JsonSerializer.Serialize(ll);
+            } else if (value is IList<ulong> ull) {
+                return JsonSerializer.Serialize(ull);
             } else if (value is string s) {
                 return Format("\"{0}\"", s);
             } else if (value is IFormattable f) {

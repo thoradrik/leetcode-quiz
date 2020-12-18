@@ -81,6 +81,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExcelSheetColumnTitle", "01
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExcelSheetColumnNumber", "0171_ExcelSheetColumnNumber\ExcelSheetColumnNumber.csproj", "{1BDFAF58-EC3C-491E-813A-3F7EFCEDA25B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SelfDividingNumbers", "0728_SelfDividingNumbers\SelfDividingNumbers.csproj", "{B0426110-793E-4800-8C90-EB51437AD0FA}"
+EndProject
 Global
 																GlobalSection(SolutionConfigurationPlatforms) = preSolution
 																																Debug|Any CPU = Debug|Any CPU
@@ -227,6 +229,10 @@ Global
 																	{1BDFAF58-EC3C-491E-813A-3F7EFCEDA25B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 																	{1BDFAF58-EC3C-491E-813A-3F7EFCEDA25B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 																	{1BDFAF58-EC3C-491E-813A-3F7EFCEDA25B}.Release|Any CPU.Build.0 = Release|Any CPU
+																	{B0426110-793E-4800-8C90-EB51437AD0FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+																	{B0426110-793E-4800-8C90-EB51437AD0FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+																	{B0426110-793E-4800-8C90-EB51437AD0FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+																	{B0426110-793E-4800-8C90-EB51437AD0FA}.Release|Any CPU.Build.0 = Release|Any CPU
 																EndGlobalSection
 																GlobalSection(SolutionProperties) = preSolution
 																																HideSolutionNode = FALSE
@@ -266,5 +272,6 @@ Global
 																	{76A9585C-04A7-4C23-8CCC-98BF2532A1F7} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
 																	{1D7DCC83-6E4D-4C62-BBAF-C4DAB856FE23} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
 																	{1BDFAF58-EC3C-491E-813A-3F7EFCEDA25B} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
+																	{B0426110-793E-4800-8C90-EB51437AD0FA} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
 																EndGlobalSection
 EndGlobal
