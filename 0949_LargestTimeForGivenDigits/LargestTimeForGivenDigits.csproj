@@ -1,0 +1,11 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net5.0</TargetFramework>
+    <RootNamespace>Quiz</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AlgorithmLib\AlgorithmLib.csproj" />
+    <ProjectReference Include="..\TestingHelpers\TestingHelpers.csproj" />
+  </ItemGroup>
+</Project>
