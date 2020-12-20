@@ -1,7 +1,7 @@
 ﻿using System.Text.Json;
 
 namespace Quiz {
-    public static class Program {
+    public class Program : ProgramBase {
         
         public static void Main() {
             Solution solution = new Solution();

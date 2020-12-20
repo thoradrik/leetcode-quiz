@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 
 namespace Quiz {
-    public static class Program {
+    public class Program : ProgramBase {
         
         public static void Main() {
             int[] array = new int[20];

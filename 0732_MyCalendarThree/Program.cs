@@ -1,5 +1,5 @@
 ﻿namespace Quiz {
-    public static class Program {
+    public class Program : ProgramBase {
         
         public static void Main() {
             MyCalendarThree solution = new MyCalendarThree();

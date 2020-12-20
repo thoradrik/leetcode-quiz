@@ -1,7 +1,7 @@
 ﻿using System;
 
 namespace Quiz {
-    public static class Program {
+    public class Program : ProgramBase {
         
         public static void Main() {
             ListNode a = new ListNode(9) {

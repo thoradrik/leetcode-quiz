@@ -1,7 +1,5 @@
-﻿using System.Text.Json;
-
-namespace Quiz {
-    public static class Program {
+﻿namespace Quiz {
+    public class Program : ProgramBase {
         
         public static void Main() {
             Solution solution = new Solution();
@@ -11,13 +9,11 @@ namespace Quiz {
                 return a1;
             }
 
-            Test.Check(Func, Array("[]"), 0, Array("[]"), 0, Array("[]"));
-            Test.Check(Func, Array("[1]"), 1, Array("[]"), 0, Array("[1]"));
-            Test.Check(Func, Array("[0]"), 0, Array("[1]"), 1, Array("[1]"));
-            Test.Check(Func, Array("[1,2,3,0,0,0]"), 3, Array("[2,5,6]"), 3, Array("[1,2,2,3,5,6]"));
+            Test.Check(Func, IntArray("[]"), 0, IntArray("[]"), 0, IntArray("[]"));
+            Test.Check(Func, IntArray("[1]"), 1, IntArray("[]"), 0, IntArray("[1]"));
+            Test.Check(Func, IntArray("[0]"), 0, IntArray("[1]"), 1, IntArray("[1]"));
+            Test.Check(Func, IntArray("[1,2,3,0,0,0]"), 3, IntArray("[2,5,6]"), 3, IntArray("[1,2,2,3,5,6]"));
         }
-
-        private static int[] Array(string s) => JsonSerializer.Deserialize<int[]>(s);
 
     }
 }
