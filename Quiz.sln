@@ -107,6 +107,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinkedListCycle", "0141_Lin
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinkedListCycle2", "0142_LinkedListCycle2\LinkedListCycle2.csproj", "{5BABF7A0-7C68-463A-B4C2-365A3564C89B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FindDifference", "0389_FindDifference\FindDifference.csproj", "{5AAB794A-7694-40F5-AEB6-B56A34B3950E}"
+EndProject
 Global
 																GlobalSection(SolutionConfigurationPlatforms) = preSolution
 																																Debug|Any CPU = Debug|Any CPU
@@ -305,6 +307,10 @@ Global
 																	{5BABF7A0-7C68-463A-B4C2-365A3564C89B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 																	{5BABF7A0-7C68-463A-B4C2-365A3564C89B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 																	{5BABF7A0-7C68-463A-B4C2-365A3564C89B}.Release|Any CPU.Build.0 = Release|Any CPU
+																	{5AAB794A-7694-40F5-AEB6-B56A34B3950E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+																	{5AAB794A-7694-40F5-AEB6-B56A34B3950E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+																	{5AAB794A-7694-40F5-AEB6-B56A34B3950E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+																	{5AAB794A-7694-40F5-AEB6-B56A34B3950E}.Release|Any CPU.Build.0 = Release|Any CPU
 																EndGlobalSection
 																GlobalSection(SolutionProperties) = preSolution
 																																HideSolutionNode = FALSE
@@ -358,5 +364,6 @@ Global
 																	{EF3AAC68-A571-4B3E-8B38-EC8EBE8F32C9} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
 																	{5BABF7A0-7C68-463A-B4C2-365A3564C89B} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
 																	{E5AA0367-B4DE-4B7D-AA0D-819962FABADE} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
+																	{5AAB794A-7694-40F5-AEB6-B56A34B3950E} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
 																EndGlobalSection
 EndGlobal
