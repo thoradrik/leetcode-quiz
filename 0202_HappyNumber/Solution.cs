@@ -1,8 +1,8 @@
-﻿using System.Collections.Generic;
-
-namespace Quiz {
+﻿namespace Quiz {
     public class Solution {
 
+        /*
+         
         private static Dictionary<int, bool> m_Map = new Dictionary<int, bool> {
             { 1, true },
             { 10, true },
@@ -31,6 +31,28 @@ namespace Quiz {
                 return false;
             }
         }
+        
+        */
+        
+        public bool IsHappy(int n) {
+            while (true) {
+                if (n == 1) {
+                    return true;
+                } else if (n == 4) {
+                    return false;
+                }
 
+                int k = n;
+                int s = 0;
+                while (k > 0) {
+                    int r = k % 10;
+                    s += r * r;
+                    k /= 10;
+                }
+
+                n = s;
+            }
+        }
+        
     }
 }
