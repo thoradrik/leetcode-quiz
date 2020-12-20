@@ -91,6 +91,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AddBinary", "0067_AddBinary
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AddStrings", "0415_AddStrings\AddStrings.csproj", "{5BA422E4-4DCA-4EEE-8C76-934C7DCDB991}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiplyStrings", "0043_MultiplyStrings\MultiplyStrings.csproj", "{76439CDB-C6E5-4343-811E-8C03FE341EA0}"
+EndProject
 Global
 																GlobalSection(SolutionConfigurationPlatforms) = preSolution
 																																Debug|Any CPU = Debug|Any CPU
@@ -257,6 +259,10 @@ Global
 																	{5BA422E4-4DCA-4EEE-8C76-934C7DCDB991}.Debug|Any CPU.Build.0 = Debug|Any CPU
 																	{5BA422E4-4DCA-4EEE-8C76-934C7DCDB991}.Release|Any CPU.ActiveCfg = Release|Any CPU
 																	{5BA422E4-4DCA-4EEE-8C76-934C7DCDB991}.Release|Any CPU.Build.0 = Release|Any CPU
+																	{76439CDB-C6E5-4343-811E-8C03FE341EA0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+																	{76439CDB-C6E5-4343-811E-8C03FE341EA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+																	{76439CDB-C6E5-4343-811E-8C03FE341EA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+																	{76439CDB-C6E5-4343-811E-8C03FE341EA0}.Release|Any CPU.Build.0 = Release|Any CPU
 																EndGlobalSection
 																GlobalSection(SolutionProperties) = preSolution
 																																HideSolutionNode = FALSE
@@ -301,5 +307,6 @@ Global
 																	{87AF8B14-DD09-45CD-A7E7-8DA063BE420C} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
 																	{352AA7A1-ADA9-48F6-9885-6C54BF62C8A0} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
 																	{5BA422E4-4DCA-4EEE-8C76-934C7DCDB991} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
+																	{76439CDB-C6E5-4343-811E-8C03FE341EA0} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
 																EndGlobalSection
 EndGlobal
