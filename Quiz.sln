@@ -97,6 +97,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TwoSum", "0001_TwoSum\TwoSu
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlusOne", "0066_PlusOne\PlusOne.csproj", "{12B9FE9B-34FC-4065-8D75-4D9A8A5254E1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SingleNumber", "0136_SingleNumber\SingleNumber.csproj", "{9CCE7366-A6BA-4737-A116-0C6E91404C2E}"
+EndProject
 Global
 																GlobalSection(SolutionConfigurationPlatforms) = preSolution
 																																Debug|Any CPU = Debug|Any CPU
@@ -275,6 +277,10 @@ Global
 																	{12B9FE9B-34FC-4065-8D75-4D9A8A5254E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 																	{12B9FE9B-34FC-4065-8D75-4D9A8A5254E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 																	{12B9FE9B-34FC-4065-8D75-4D9A8A5254E1}.Release|Any CPU.Build.0 = Release|Any CPU
+																	{9CCE7366-A6BA-4737-A116-0C6E91404C2E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+																	{9CCE7366-A6BA-4737-A116-0C6E91404C2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+																	{9CCE7366-A6BA-4737-A116-0C6E91404C2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+																	{9CCE7366-A6BA-4737-A116-0C6E91404C2E}.Release|Any CPU.Build.0 = Release|Any CPU
 																EndGlobalSection
 																GlobalSection(SolutionProperties) = preSolution
 																																HideSolutionNode = FALSE
@@ -322,5 +328,6 @@ Global
 																	{76439CDB-C6E5-4343-811E-8C03FE341EA0} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
 																	{C394D96F-585C-4B97-B989-1F9DD6A92113} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
 																	{12B9FE9B-34FC-4065-8D75-4D9A8A5254E1} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
+																	{9CCE7366-A6BA-4737-A116-0C6E91404C2E} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
 																EndGlobalSection
 EndGlobal
