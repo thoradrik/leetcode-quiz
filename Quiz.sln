@@ -109,6 +109,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinkedListCycle2", "0142_Li
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FindDifference", "0389_FindDifference\FindDifference.csproj", "{5AAB794A-7694-40F5-AEB6-B56A34B3950E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AddToArrayForm", "0989_AddToArrayForm\AddToArrayForm.csproj", "{2105D255-BA2D-4D54-8A60-5FAF97E37423}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CanPlaceFlowers", "0605_CanPlaceFlowers\CanPlaceFlowers.csproj", "{E97B8F8E-6568-47C1-AE48-19DE207A85D9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeemoAttacking", "0495_TeemoAttacking\TeemoAttacking.csproj", "{093EA53F-15C5-404B-A259-5B57394EF585}"
+EndProject
 Global
 																GlobalSection(SolutionConfigurationPlatforms) = preSolution
 																																Debug|Any CPU = Debug|Any CPU
@@ -311,6 +317,18 @@ Global
 																	{5AAB794A-7694-40F5-AEB6-B56A34B3950E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 																	{5AAB794A-7694-40F5-AEB6-B56A34B3950E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 																	{5AAB794A-7694-40F5-AEB6-B56A34B3950E}.Release|Any CPU.Build.0 = Release|Any CPU
+																	{2105D255-BA2D-4D54-8A60-5FAF97E37423}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+																	{2105D255-BA2D-4D54-8A60-5FAF97E37423}.Debug|Any CPU.Build.0 = Debug|Any CPU
+																	{2105D255-BA2D-4D54-8A60-5FAF97E37423}.Release|Any CPU.ActiveCfg = Release|Any CPU
+																	{2105D255-BA2D-4D54-8A60-5FAF97E37423}.Release|Any CPU.Build.0 = Release|Any CPU
+																	{E97B8F8E-6568-47C1-AE48-19DE207A85D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+																	{E97B8F8E-6568-47C1-AE48-19DE207A85D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+																	{E97B8F8E-6568-47C1-AE48-19DE207A85D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+																	{E97B8F8E-6568-47C1-AE48-19DE207A85D9}.Release|Any CPU.Build.0 = Release|Any CPU
+																	{093EA53F-15C5-404B-A259-5B57394EF585}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+																	{093EA53F-15C5-404B-A259-5B57394EF585}.Debug|Any CPU.Build.0 = Debug|Any CPU
+																	{093EA53F-15C5-404B-A259-5B57394EF585}.Release|Any CPU.ActiveCfg = Release|Any CPU
+																	{093EA53F-15C5-404B-A259-5B57394EF585}.Release|Any CPU.Build.0 = Release|Any CPU
 																EndGlobalSection
 																GlobalSection(SolutionProperties) = preSolution
 																																HideSolutionNode = FALSE
@@ -365,5 +383,8 @@ Global
 																	{5BABF7A0-7C68-463A-B4C2-365A3564C89B} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
 																	{E5AA0367-B4DE-4B7D-AA0D-819962FABADE} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
 																	{5AAB794A-7694-40F5-AEB6-B56A34B3950E} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
+																	{2105D255-BA2D-4D54-8A60-5FAF97E37423} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
+																	{E97B8F8E-6568-47C1-AE48-19DE207A85D9} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
+																	{093EA53F-15C5-404B-A259-5B57394EF585} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
 																EndGlobalSection
 EndGlobal
