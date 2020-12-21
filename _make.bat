@@ -10,9 +10,9 @@ IF "%~2"=="" GOTO :usage
 
     MD %d%
 
-    COPY _Template\_Template.csproj %d%\%2.csproj
-    COPY _Template\Program.cs %d%\Program.cs
-    COPY _Template\Solution.cs %d%\Solution.cs
+    COPY libs\Template\Template.csproj problems\%d%\%2.csproj
+    COPY libs\Template\Program.cs problems\%d%\Program.cs
+    COPY libs\Template\Solution.cs problems\%d%\Solution.cs
 
     GOTO :eof
 
