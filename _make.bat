@@ -8,7 +8,7 @@ IF "%~2"=="" GOTO :usage
     SET n=0000%1
     SET d=%n:~-4%_%2
 
-    MD %d%
+    MD problems\%d%
 
     COPY libs\Template\Template.csproj problems\%d%\%2.csproj
     COPY libs\Template\Program.cs problems\%d%\Program.cs
