@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.0.0
 MinimumVisualStudioVersion = 10.0.0.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "solved", "solved", "{CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "problems-solved", "problems-solved", "{CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WordLadder2", "problems\0126_WordLadder2\WordLadder2.csproj", "{CE9CF055-04C1-4A05-8D93-AC16323BCBA0}"
 EndProject
@@ -21,7 +21,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrintInOrder", "problems\11
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyCalendarTwo", "problems\0731_MyCalendarTwo\MyCalendarTwo.csproj", "{9995FCD5-B308-4BEA-9A23-2C51D5C6AF8A}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "unsolved", "unsolved", "{4A003753-E9E9-4FF6-B636-9C9644C4C509}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "problems-not-solved", "problems-not-solved", "{4A003753-E9E9-4FF6-B636-9C9644C4C509}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyCalendarThree", "problems\0732_MyCalendarThree\MyCalendarThree.csproj", "{94F84353-8749-47DA-9D46-F24B7CD0EF01}"
 EndProject
@@ -110,6 +110,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeemoAttacking", "problems\0495_TeemoAttacking\TeemoAttacking.csproj", "{093EA53F-15C5-404B-A259-5B57394EF585}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Template", "libs\Template\Template.csproj", "{CA5EEE96-A49D-4A9A-8F26-ED0F89007B23}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsteroidCollision", "problems\0735_AsteroidCollision\AsteroidCollision.csproj", "{9EAA25A4-F9CD-43D7-972D-1098EDF17B9C}"
 EndProject
 Global
 																																																																GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -321,6 +323,10 @@ Global
 																																																																	{CA5EEE96-A49D-4A9A-8F26-ED0F89007B23}.Debug|Any CPU.Build.0 = Debug|Any CPU
 																																																																	{CA5EEE96-A49D-4A9A-8F26-ED0F89007B23}.Release|Any CPU.ActiveCfg = Release|Any CPU
 																																																																	{CA5EEE96-A49D-4A9A-8F26-ED0F89007B23}.Release|Any CPU.Build.0 = Release|Any CPU
+																																																																	{9EAA25A4-F9CD-43D7-972D-1098EDF17B9C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+																																																																	{9EAA25A4-F9CD-43D7-972D-1098EDF17B9C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+																																																																	{9EAA25A4-F9CD-43D7-972D-1098EDF17B9C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+																																																																	{9EAA25A4-F9CD-43D7-972D-1098EDF17B9C}.Release|Any CPU.Build.0 = Release|Any CPU
 																																																																EndGlobalSection
 																																																																GlobalSection(SolutionProperties) = preSolution
 																																																																																																																																HideSolutionNode = FALSE
@@ -377,5 +383,6 @@ Global
 																																																																				{E97B8F8E-6568-47C1-AE48-19DE207A85D9} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
 																																																																				{093EA53F-15C5-404B-A259-5B57394EF585} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
 																																																																	{CA5EEE96-A49D-4A9A-8F26-ED0F89007B23} = {0DB4C5C5-A8EE-43BA-B74C-5034A809E187}
+																																																																	{9EAA25A4-F9CD-43D7-972D-1098EDF17B9C} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
 																																																																EndGlobalSection
 EndGlobal
