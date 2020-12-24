@@ -28,7 +28,6 @@ namespace Quiz {
         private static void Check<TResult>(Func<TResult> result, object[] input, TResult expected) {
             Console.WriteLine("TEST {0}", Value(input));
 
-            Console.Write("  ");
             
             Stopwatch stopwatch = Stopwatch.StartNew();
             
@@ -37,10 +36,14 @@ namespace Quiz {
             stopwatch.Stop();
             
             if (CheckResult(answer, expected)) {
+                Console.Write("  ");
+                
                 using (ConsoleIndicator.Passed()) {
                     Console.Write("PASSED");
                 }
             } else {
+                Console.Write("  ");
+
                 using (ConsoleIndicator.Failed()) {
                     Console.Write("!!! FAILED !!!");
                 }
