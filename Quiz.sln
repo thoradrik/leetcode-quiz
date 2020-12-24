@@ -123,6 +123,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BaseballGame", "problems\06
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SumOfSubarrayMinimums", "problems\0907_SumOfSubarrayMinimums\SumOfSubarrayMinimums.csproj", "{9A78A6EA-D198-427B-914D-469F17C894F2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrawlerLogFolder", "problems\1598_CrawlerLogFolder\CrawlerLogFolder.csproj", "{1E211521-C733-4816-AA9F-384A5CC253D8}"
+EndProject
 Global
 																																																																GlobalSection(SolutionConfigurationPlatforms) = preSolution
 																																																																																																																																Debug|Any CPU = Debug|Any CPU
@@ -357,6 +359,10 @@ Global
 																																																																	{9A78A6EA-D198-427B-914D-469F17C894F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 																																																																	{9A78A6EA-D198-427B-914D-469F17C894F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 																																																																	{9A78A6EA-D198-427B-914D-469F17C894F2}.Release|Any CPU.Build.0 = Release|Any CPU
+																																																																	{1E211521-C733-4816-AA9F-384A5CC253D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+																																																																	{1E211521-C733-4816-AA9F-384A5CC253D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+																																																																	{1E211521-C733-4816-AA9F-384A5CC253D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+																																																																	{1E211521-C733-4816-AA9F-384A5CC253D8}.Release|Any CPU.Build.0 = Release|Any CPU
 																																																																EndGlobalSection
 																																																																GlobalSection(SolutionProperties) = preSolution
 																																																																																																																																HideSolutionNode = FALSE
@@ -419,5 +425,6 @@ Global
 																																																																	{7DDF4F9C-EC2F-436C-8E30-CAF47AAFC682} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
 																																																																	{B7257160-C8F4-4600-A3D2-D63C3AEF602B} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
 																																																																	{9A78A6EA-D198-427B-914D-469F17C894F2} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
+																																																																	{1E211521-C733-4816-AA9F-384A5CC253D8} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
 																																																																EndGlobalSection
 EndGlobal
