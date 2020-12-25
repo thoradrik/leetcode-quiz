@@ -24,7 +24,7 @@ namespace Quiz {
                 throw new Exception("Stack does not contain expression");
             }
 
-            PrintExpression(node, 1);
+            PrintExpressionTree(node, 1);
 
             return node.Evaluate();
         }
@@ -45,13 +45,13 @@ namespace Quiz {
                 Count = 1;
             }
 
-            public int Start { get; set; }
+            public int Start { get; }
             
             public int Count { get; set; }
 
-            public int Value { get; set; }
-
             public TokenType Type { get; set; }
+
+            public int Value { get; set; }
 
             public bool IsNumber => Type == TokenType.Number;
             
@@ -85,7 +85,7 @@ namespace Quiz {
                         pending = new Token(i);
                     }
                 } else {
-                    throw new Exception("Unexpected symbol");
+                    throw new Exception("Tokenize: Unexpected symbol");
                 }
             }
             
@@ -114,18 +114,18 @@ namespace Quiz {
                     token.Type = TokenType.Number;
                     token.Value = value;
                 } else {
-                    throw new Exception("Invalid token");
+                    throw new Exception("Lexer: Invalid token");
                 }
 
                 if (prev != null) {
                     if (prev.IsOperation && token.IsOperation) {
-                        throw new Exception("Several operations in a row");
+                        throw new Exception("Lexer: Several operations in a row");
                     } else if (prev.IsNumber && token.IsNumber) {
-                        throw new Exception("Several operations in a row");
+                        throw new Exception("Lexer: Several operations in a row");
                     }
                 } else {
                     if (token.IsOperation) {
-                        throw new Exception("Trailing operation");
+                        throw new Exception("Lexer: Trailing operation");
                     }
                 }
                 
@@ -274,7 +274,7 @@ namespace Quiz {
 
         private static bool TryParseMulDiv_Simple(TokenStream stream, Stack<Node> stack, Token op) {
             if (!stream.TryPeek(2, out Token r_token)) {
-                throw new Exception("TryParseMulDiv: RValue cant be obtained from token stream");
+                throw new Exception("TryParseMulDiv_Simple: RValue cant be obtained from token stream");
             }
 
             if (!r_token.IsNumber) {
@@ -282,7 +282,7 @@ namespace Quiz {
             }
 
             if (!stack.TryPop(out Node l_value)) {
-                throw new Exception("TryParseMulDiv: LValue cant be obtained from stack");
+                throw new Exception("TryParseMulDiv_Simple: LValue cant be obtained from stack");
             }
 
             stream.Pop(2);
@@ -329,11 +329,11 @@ namespace Quiz {
             }
 
             if (!stack.TryPop(out Node r_value)) {
-                throw new Exception("TryParseAddSub: RValue cant be obtained from stack");
+                throw new Exception("TryParseAddSub_BeforeMulDiv: RValue cant be obtained from stack");
             }
 
             if (!stack.TryPop(out Node l_value)) {
-                throw new Exception("TryParseAddSub: LValue cant be obtained from stack");
+                throw new Exception("TryParseAddSub_BeforeMulDiv: LValue cant be obtained from stack");
             }
 
             if (op.Type == TokenType.Add) {

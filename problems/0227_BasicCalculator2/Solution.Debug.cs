@@ -5,7 +5,7 @@ using System.Text;
 namespace Quiz {
     public partial class Solution {
 
-        private static void PrintTokens(List<Token> tokens) {
+        private static void PrintTokens(IEnumerable<Token> tokens) {
             Console.Write(" ");
 
             foreach (Token token in tokens) {
@@ -15,7 +15,7 @@ namespace Quiz {
             Console.WriteLine();
         }
 
-        private static void PrintExpression(Node node, int level) {
+        private static void PrintExpressionTree(Node node, int level) {
             for (int i = 0; i < level; i++) {
                 Console.Write("  ");
             }
@@ -23,8 +23,8 @@ namespace Quiz {
             Console.WriteLine(node);
 
             if (node is Expression e) {
-                PrintExpression(e.Left, level + 1);
-                PrintExpression(e.Right, level + 1);
+                PrintExpressionTree(e.Left, level + 1);
+                PrintExpressionTree(e.Right, level + 1);
             }
         }
         
@@ -42,31 +42,31 @@ namespace Quiz {
             
         }
 
-        private partial class MulExpression : Expression {
+        private partial class MulExpression {
 
             public override string ToString() => "MultiplyExpression";
 
         }
 
-        private partial class DivExpression : Expression {
+        private partial class DivExpression {
             
             public override string ToString() => "DivExpression";
 
         }
 
-        private partial class SubExpression : Expression {
+        private partial class SubExpression {
             
             public override string ToString() => "SubExpression";
 
         }
 
-        private partial class AddExpression : Expression {
+        private partial class AddExpression {
             
             public override string ToString() => "AddExpression";
 
         }
 
-        private partial class ValueExpression : Node {
+        private partial class ValueExpression {
 
             public override string ToString() => String.Format("ValueExpression={0}", m_Value);
 
