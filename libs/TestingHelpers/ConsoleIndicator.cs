@@ -28,5 +28,7 @@ namespace Quiz {
 
         public static IDisposable Failed() => new ConsoleIndicator(ConsoleColor.White, ConsoleColor.Red);
 
+        public static IDisposable Exception() => new ConsoleIndicator(ConsoleColor.White, ConsoleColor.Magenta);
+
     }
 }

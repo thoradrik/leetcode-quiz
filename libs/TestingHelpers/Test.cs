@@ -31,8 +31,21 @@ namespace Quiz {
             
             Stopwatch stopwatch = Stopwatch.StartNew();
             
-            TResult answer = result();
-            
+            TResult answer;
+            try {
+                answer = result();
+            } catch (Exception ex) {
+                Console.Write("  ");
+                
+                using (ConsoleIndicator.Exception()) {
+                    Console.Write("!!! EXCEPTION !!!");
+                }
+                
+                Console.WriteLine(" {0}", ex.Message);
+                
+                return;
+            }
+
             stopwatch.Stop();
             
             if (CheckResult(answer, expected)) {
