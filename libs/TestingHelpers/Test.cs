@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Globalization;
+using System.Linq;
 using System.Text;
 using System.Text.Json;
 using static System.String;
@@ -73,10 +74,17 @@ namespace Quiz {
                 case uint[] uia_answer when expected is uint[] uia_expected: return CheckArrayResult(uia_answer, uia_expected, (x, y) => x == y);
                 case long[] la_answer when expected is long[] la_expected: return CheckArrayResult(la_answer, la_expected, (x, y) => x == y);
                 case ulong[] ula_answer when expected is ulong[] ula_expected: return CheckArrayResult(ula_answer, ula_expected, (x, y) => x == y);
+                case string[] sa_answer when expected is string[] sa_expected: return CheckArrayResult(sa_answer, sa_expected, (x, y) => x == y);
                 case IList<int> il_answer when expected is IList<int> il_expected: return CheckListResult(il_answer, il_expected, (x, y) => x == y);
                 case IList<uint> uil_answer when expected is IList<uint> uil_expected: return CheckListResult(uil_answer, uil_expected, (x, y) => x == y);
                 case IList<long> ll_answer when expected is IList<long> ll_expected: return CheckListResult(ll_answer, ll_expected, (x, y) => x == y);
                 case IList<ulong> ull_answer when expected is IList<ulong> ull_expected: return CheckListResult(ull_answer, ull_expected, (x, y) => x == y);
+                case IList<string> sl_answer when expected is IList<string> sl_expected: return CheckListResult(sl_answer, sl_expected, (x, y) => x == y);
+                case HashSet<int> ih_answer when expected is HashSet<int> ih_expected: return CheckHashSet(ih_answer, ih_expected);
+                case HashSet<uint> uih_answer when expected is HashSet<uint> uih_expected: return CheckHashSet(uih_answer, uih_expected);
+                case HashSet<long> lh_answer when expected is HashSet<long> lh_expected: return CheckHashSet(lh_answer, lh_expected);
+                case HashSet<ulong> ulh_answer when expected is HashSet<ulong> ulh_expected: return CheckHashSet(ulh_answer, ulh_expected);
+                case HashSet<string> sh_answer when expected is HashSet<string> sh_expected: return CheckHashSet(sh_answer, sh_expected);
                 case int i_answer when expected is int i_expected: return i_answer == i_expected;
                 case uint ui_answer when expected is uint ui_expected: return ui_answer == ui_expected;
                 case long l_answer when expected is long l_expected: return l_answer == l_expected;
@@ -118,21 +126,27 @@ namespace Quiz {
             return true;
         }
 
+        private static bool CheckHashSet<T>(HashSet<T> answer, HashSet<T> expected) {
+            if (answer.Count != expected.Count) {
+                return false;
+            }
+
+            HashSet<T> hs1 = new HashSet<T>();
+            
+            hs1.UnionWith(answer);
+            hs1.ExceptWith(expected);
+           
+            HashSet<T> hs2 = new HashSet<T>();
+            
+            hs2.UnionWith(expected);
+            hs2.ExceptWith(answer);
+            
+            return hs1.Count == 0 && hs2.Count == 0;
+        }
+
         private static string Value(object value) {
             if (value == null) {
                 return "(null)";
-            } else if (value is object[] objs) {
-                StringBuilder sb = new StringBuilder();
-                
-                for (int i = 0; i < objs.Length; i++) {
-                    if (i > 0) {
-                        sb.Append(" ");
-                    }
-                    
-                    sb.Append(Value(objs[i]));
-                }
-
-                return sb.ToString();
             } else if (value is int[] ia) {
                 return JsonSerializer.Serialize(ia);
             } else if (value is uint[] uia) {
@@ -141,6 +155,24 @@ namespace Quiz {
                 return JsonSerializer.Serialize(la);
             } else if (value is ulong[] ula) {
                 return JsonSerializer.Serialize(ula);
+            } else if (value is string[] sa) {
+                return JsonSerializer.Serialize(sa);
+            } else if (value is object[] objs) {
+                StringBuilder sb = new StringBuilder();
+                
+                sb.Append("[");
+                
+                for (int i = 0; i < objs.Length; i++) {
+                    if (i > 0) {
+                        sb.Append(",");
+                    }
+                    
+                    sb.Append(Value(objs[i]));
+                }
+                
+                sb.Append("]");
+
+                return sb.ToString();
             } else if (value is IList<int> il) {
                 return JsonSerializer.Serialize(il);
             } else if (value is IList<uint> uil) {
@@ -149,6 +181,28 @@ namespace Quiz {
                 return JsonSerializer.Serialize(ll);
             } else if (value is IList<ulong> ull) {
                 return JsonSerializer.Serialize(ull);
+            } else if (value is IList<string> sl) {
+                return JsonSerializer.Serialize(sl);
+            } else if (value is HashSet<int> ih) {
+                List<int> i_l = ih.ToList();
+                i_l.Sort();
+                return JsonSerializer.Serialize(i_l);
+            } else if (value is HashSet<uint> uih) {
+                List<uint> ui_l = uih.ToList();
+                ui_l.Sort();
+                return JsonSerializer.Serialize(ui_l);
+            } else if (value is HashSet<long> lh) {
+                List<long> l_l = lh.ToList();
+                l_l.Sort();
+                return JsonSerializer.Serialize(l_l);
+            } else if (value is HashSet<ulong> ulh) {
+                List<ulong> ul_l = ulh.ToList();
+                ul_l.Sort();
+                return JsonSerializer.Serialize(ul_l);
+            } else if (value is HashSet<string> sh) {
+                List<string> s_l = sh.ToList();
+                s_l.Sort();
+                return JsonSerializer.Serialize(s_l);
             } else if (value is string s) {
                 return Format("\"{0}\"", s);
             } else if (value is IFormattable f) {

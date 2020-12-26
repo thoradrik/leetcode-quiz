@@ -129,6 +129,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BackspaceStringCompare", "p
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasicCalculator2", "problems\0227_BasicCalculator2\BasicCalculator2.csproj", "{EC0D765B-85F6-485C-8120-DC3CDF8FD27F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ValidParentheses", "problems\0020_ValidParentheses\ValidParentheses.csproj", "{BA899D13-7691-40CD-8BD2-F630C8B7A00E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenerateParentheses", "problems\0022_GenerateParentheses\GenerateParentheses.csproj", "{D0C04978-90A5-4C58-977B-8D5EBF58CC5E}"
+EndProject
 Global
 																																																																GlobalSection(SolutionConfigurationPlatforms) = preSolution
 																																																																																																																																Debug|Any CPU = Debug|Any CPU
@@ -375,6 +379,14 @@ Global
 																																																																	{EC0D765B-85F6-485C-8120-DC3CDF8FD27F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 																																																																	{EC0D765B-85F6-485C-8120-DC3CDF8FD27F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 																																																																	{EC0D765B-85F6-485C-8120-DC3CDF8FD27F}.Release|Any CPU.Build.0 = Release|Any CPU
+																																																																	{BA899D13-7691-40CD-8BD2-F630C8B7A00E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+																																																																	{BA899D13-7691-40CD-8BD2-F630C8B7A00E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+																																																																	{BA899D13-7691-40CD-8BD2-F630C8B7A00E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+																																																																	{BA899D13-7691-40CD-8BD2-F630C8B7A00E}.Release|Any CPU.Build.0 = Release|Any CPU
+																																																																	{D0C04978-90A5-4C58-977B-8D5EBF58CC5E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+																																																																	{D0C04978-90A5-4C58-977B-8D5EBF58CC5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+																																																																	{D0C04978-90A5-4C58-977B-8D5EBF58CC5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+																																																																	{D0C04978-90A5-4C58-977B-8D5EBF58CC5E}.Release|Any CPU.Build.0 = Release|Any CPU
 																																																																EndGlobalSection
 																																																																GlobalSection(SolutionProperties) = preSolution
 																																																																																																																																HideSolutionNode = FALSE
@@ -440,5 +452,7 @@ Global
 																																																																	{1E211521-C733-4816-AA9F-384A5CC253D8} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
 																																																																	{83EE201B-F16F-41C5-8CED-E9B44C83DA63} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
 																																																																	{EC0D765B-85F6-485C-8120-DC3CDF8FD27F} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
+																																																																	{BA899D13-7691-40CD-8BD2-F630C8B7A00E} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
+																																																																	{D0C04978-90A5-4C58-977B-8D5EBF58CC5E} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
 																																																																EndGlobalSection
 EndGlobal
