@@ -135,6 +135,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenerateParentheses", "prob
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CheckIfWordIsValidAfterSubstitutions", "problems\1003_CheckIfWordIsValidAfterSubstitutions\CheckIfWordIsValidAfterSubstitutions.csproj", "{28708375-18C7-4FF7-8416-63D43598F41E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LongestValidParentheses", "problems\0032_LongestValidParentheses\LongestValidParentheses.csproj", "{ECBF24CA-7F78-43FB-ABE2-142ACA5CD656}"
+EndProject
 Global
 																																																																GlobalSection(SolutionConfigurationPlatforms) = preSolution
 																																																																																																																																Debug|Any CPU = Debug|Any CPU
@@ -393,6 +395,10 @@ Global
 																																																																	{28708375-18C7-4FF7-8416-63D43598F41E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 																																																																	{28708375-18C7-4FF7-8416-63D43598F41E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 																																																																	{28708375-18C7-4FF7-8416-63D43598F41E}.Release|Any CPU.Build.0 = Release|Any CPU
+																																																																	{ECBF24CA-7F78-43FB-ABE2-142ACA5CD656}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+																																																																	{ECBF24CA-7F78-43FB-ABE2-142ACA5CD656}.Debug|Any CPU.Build.0 = Debug|Any CPU
+																																																																	{ECBF24CA-7F78-43FB-ABE2-142ACA5CD656}.Release|Any CPU.ActiveCfg = Release|Any CPU
+																																																																	{ECBF24CA-7F78-43FB-ABE2-142ACA5CD656}.Release|Any CPU.Build.0 = Release|Any CPU
 																																																																EndGlobalSection
 																																																																GlobalSection(SolutionProperties) = preSolution
 																																																																																																																																HideSolutionNode = FALSE
@@ -461,5 +467,6 @@ Global
 																																																																	{BA899D13-7691-40CD-8BD2-F630C8B7A00E} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
 																																																																	{D0C04978-90A5-4C58-977B-8D5EBF58CC5E} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
 																																																																	{28708375-18C7-4FF7-8416-63D43598F41E} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
+																																																																	{ECBF24CA-7F78-43FB-ABE2-142ACA5CD656} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
 																																																																EndGlobalSection
 EndGlobal
