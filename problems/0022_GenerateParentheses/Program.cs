@@ -4,10 +4,10 @@
         public static void Main() {
             Solution solution = new Solution();
 
-            // Test.Check(solution.GenerateParenthesis, 1, StringArray("[\"()\"]"));
-            Test.Check(solution.GenerateParenthesis, 2, StringArray("[\"()()\",\"(())\"]"));
-            Test.Check(solution.GenerateParenthesis, 3, StringArray("[\"()()()\",\"(()())\",\"()(())\",\"((()))\",\"(())()\"]"));
-            Test.Check(solution.GenerateParenthesis, 4, StringArray("[\"(((())))\",\"((()()))\",\"((())())\",\"((()))()\",\"(()(()))\",\"(()()())\",\"(()())()\",\"(())(())\",\"(())()()\",\"()((()))\",\"()(()())\",\"()(())()\",\"()()(())\",\"()()()()\"]"));
+            Test.Print(solution.GenerateParenthesis, 1);
+            Test.Print(solution.GenerateParenthesis, 2);
+            Test.Print(solution.GenerateParenthesis, 3);
+            Test.Print(solution.GenerateParenthesis, 4);
         }
 
     }
