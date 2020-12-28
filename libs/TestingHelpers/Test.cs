@@ -28,7 +28,6 @@ namespace Quiz {
 
         private static void Check<TResult>(Func<TResult> result, object[] input, TResult expected) {
             Console.WriteLine("TEST {0}", Value(input));
-
             
             Stopwatch stopwatch = Stopwatch.StartNew();
             
