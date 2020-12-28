@@ -65,6 +65,41 @@ namespace Quiz {
             Console.WriteLine(" [{0}ms] ANSWER {1} EXPECTED {2}", stopwatch.ElapsedMilliseconds, Value(answer), Value(expected));
         }
 
+        public static void Print<TArg, TResult>(Func<TArg, TResult> func, TArg arg) {
+            Print(() => func(arg), new object[] { arg });
+        }
+        
+        private static void Print<TResult>(Func<TResult> result, object[] input) {
+            Console.WriteLine("TEST {0}", Value(input));
+            
+            Stopwatch stopwatch = Stopwatch.StartNew();
+            
+            TResult answer;
+            try {
+                answer = result();
+            } catch (Exception ex) {
+                Console.Write("  ");
+                
+                using (ConsoleIndicator.Exception()) {
+                    Console.Write("!!! EXCEPTION !!!");
+                }
+                
+                Console.WriteLine(" {0}", ex.Message);
+                
+                return;
+            }
+
+            stopwatch.Stop();
+            
+            Console.Write("  ");
+                
+            using (ConsoleIndicator.Result()) {
+                Console.Write("RETURNED");
+            }
+            
+            Console.WriteLine(" [{0}ms] ANSWER {1}", stopwatch.ElapsedMilliseconds, Value(answer));
+        }
+
         private static bool CheckResult(object answer, object expected) {
             switch (answer) {
                 case null: return expected == null;
