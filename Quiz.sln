@@ -147,6 +147,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NumberGoodOfWaysToSplitStri
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LengthOfLastWord", "problems\0058_LengthOfLastWord\LengthOfLastWord.csproj", "{3466EF8C-5AA7-453B-ADE1-450161291F86}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinaryWatch", "problems\0401_BinaryWatch\BinaryWatch.csproj", "{C5DB6FB1-5D72-4F18-915D-48E63DB5F3CC}"
+EndProject
 Global
 																																																																GlobalSection(SolutionConfigurationPlatforms) = preSolution
 																																																																																																																																Debug|Any CPU = Debug|Any CPU
@@ -429,6 +431,10 @@ Global
 																																																																	{3466EF8C-5AA7-453B-ADE1-450161291F86}.Debug|Any CPU.Build.0 = Debug|Any CPU
 																																																																	{3466EF8C-5AA7-453B-ADE1-450161291F86}.Release|Any CPU.ActiveCfg = Release|Any CPU
 																																																																	{3466EF8C-5AA7-453B-ADE1-450161291F86}.Release|Any CPU.Build.0 = Release|Any CPU
+																																																																	{C5DB6FB1-5D72-4F18-915D-48E63DB5F3CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+																																																																	{C5DB6FB1-5D72-4F18-915D-48E63DB5F3CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+																																																																	{C5DB6FB1-5D72-4F18-915D-48E63DB5F3CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+																																																																	{C5DB6FB1-5D72-4F18-915D-48E63DB5F3CC}.Release|Any CPU.Build.0 = Release|Any CPU
 																																																																EndGlobalSection
 																																																																GlobalSection(SolutionProperties) = preSolution
 																																																																																																																																HideSolutionNode = FALSE
@@ -503,5 +509,6 @@ Global
 																																																																	{1ACB90C0-29F1-45D6-9203-1DFAD9A56BA0} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
 																																																																	{BCF322A6-556F-4AF7-92F5-4801131AF121} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
 																																																																	{3466EF8C-5AA7-453B-ADE1-450161291F86} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
+																																																																	{C5DB6FB1-5D72-4F18-915D-48E63DB5F3CC} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
 																																																																EndGlobalSection
 EndGlobal
