@@ -143,6 +143,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LetterCombinationsOfPhoneNu
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MaximumNestingDepthOfParentheses", "problems\1614_MaximumNestingDepthOfParentheses\MaximumNestingDepthOfParentheses.csproj", "{1ACB90C0-29F1-45D6-9203-1DFAD9A56BA0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NumberGoodOfWaysToSplitString", "problems\1525_NumberGoodOfWaysToSplitString\NumberGoodOfWaysToSplitString.csproj", "{BCF322A6-556F-4AF7-92F5-4801131AF121}"
+EndProject
 Global
 																																																																GlobalSection(SolutionConfigurationPlatforms) = preSolution
 																																																																																																																																Debug|Any CPU = Debug|Any CPU
@@ -417,6 +419,10 @@ Global
 																																																																	{1ACB90C0-29F1-45D6-9203-1DFAD9A56BA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 																																																																	{1ACB90C0-29F1-45D6-9203-1DFAD9A56BA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 																																																																	{1ACB90C0-29F1-45D6-9203-1DFAD9A56BA0}.Release|Any CPU.Build.0 = Release|Any CPU
+																																																																	{BCF322A6-556F-4AF7-92F5-4801131AF121}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+																																																																	{BCF322A6-556F-4AF7-92F5-4801131AF121}.Debug|Any CPU.Build.0 = Debug|Any CPU
+																																																																	{BCF322A6-556F-4AF7-92F5-4801131AF121}.Release|Any CPU.ActiveCfg = Release|Any CPU
+																																																																	{BCF322A6-556F-4AF7-92F5-4801131AF121}.Release|Any CPU.Build.0 = Release|Any CPU
 																																																																EndGlobalSection
 																																																																GlobalSection(SolutionProperties) = preSolution
 																																																																																																																																HideSolutionNode = FALSE
@@ -489,5 +495,6 @@ Global
 																																																																	{00972198-6ACC-4174-B1CB-7724B3DFECE1} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
 																																																																	{267BEAB4-2E2F-4C9A-ABAE-58B426DEC34D} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
 																																																																	{1ACB90C0-29F1-45D6-9203-1DFAD9A56BA0} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
+																																																																	{BCF322A6-556F-4AF7-92F5-4801131AF121} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
 																																																																EndGlobalSection
 EndGlobal
