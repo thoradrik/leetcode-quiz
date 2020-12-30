@@ -217,6 +217,8 @@ namespace Quiz {
                 return Format("{0} (Count={1})", JsonSerializer.Serialize(ull), ull.Count);
             } else if (value is IList<string> sl) {
                 return Format("{0} (Count={1})", JsonSerializer.Serialize(sl), sl.Count);
+            } else if (value is IList<IList<string>> sll) {
+                return Format("{0} (Count={1})", JsonSerializer.Serialize(sll), sll.Count);
             } else if (value is HashSet<int> ih) {
                 List<int> i_l = ih.ToList();
                 i_l.Sort();
