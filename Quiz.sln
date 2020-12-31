@@ -153,6 +153,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GroupShiftedStrings", "prob
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WaysToMakeFairArray", "problems\1664_WaysToMakeFairArray\WaysToMakeFairArray.csproj", "{D2F0EB7C-9034-430D-8CA7-43DF44C137A8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RemoveInvalidParentheses", "problems\0301_RemoveInvalidParentheses\RemoveInvalidParentheses.csproj", "{F8AFBF2B-F51C-4636-8DE8-CBC6C5AF2531}"
+EndProject
 Global
 																																																																GlobalSection(SolutionConfigurationPlatforms) = preSolution
 																																																																																																																																Debug|Any CPU = Debug|Any CPU
@@ -447,6 +449,10 @@ Global
 																																																																	{D2F0EB7C-9034-430D-8CA7-43DF44C137A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 																																																																	{D2F0EB7C-9034-430D-8CA7-43DF44C137A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 																																																																	{D2F0EB7C-9034-430D-8CA7-43DF44C137A8}.Release|Any CPU.Build.0 = Release|Any CPU
+																																																																	{F8AFBF2B-F51C-4636-8DE8-CBC6C5AF2531}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+																																																																	{F8AFBF2B-F51C-4636-8DE8-CBC6C5AF2531}.Debug|Any CPU.Build.0 = Debug|Any CPU
+																																																																	{F8AFBF2B-F51C-4636-8DE8-CBC6C5AF2531}.Release|Any CPU.ActiveCfg = Release|Any CPU
+																																																																	{F8AFBF2B-F51C-4636-8DE8-CBC6C5AF2531}.Release|Any CPU.Build.0 = Release|Any CPU
 																																																																EndGlobalSection
 																																																																GlobalSection(SolutionProperties) = preSolution
 																																																																																																																																HideSolutionNode = FALSE
@@ -524,5 +530,6 @@ Global
 																																																																	{C5DB6FB1-5D72-4F18-915D-48E63DB5F3CC} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
 																																																																	{23E56ADB-B049-4011-BACE-F12256E73223} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
 																																																																	{D2F0EB7C-9034-430D-8CA7-43DF44C137A8} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
+																																																																	{F8AFBF2B-F51C-4636-8DE8-CBC6C5AF2531} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
 																																																																EndGlobalSection
 EndGlobal
