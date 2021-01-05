@@ -1,14 +1,10 @@
 ﻿using System.Collections.Generic;
-using System.Linq;
-using AlgorithmLib;
 
 namespace Quiz {
     public class Solution {
         
         public IList<IList<int>> Permute(int[] nums) {
             IList<IList<int>> list = new List<IList<int>>();
-            
-            PermutationGenerator.Generate(nums, variant => list.Add(variant.ToArray()));
             
             int[] stack = new int[nums.Length];
             int ptr = 0;
