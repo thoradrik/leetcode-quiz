@@ -68,6 +68,10 @@ namespace Quiz {
         public static void Print<TArg, TResult>(Func<TArg, TResult> func, TArg arg) {
             Print(() => func(arg), new object[] { arg });
         }
+
+        public static void Print<TArg1, TArg2, TResult>(Func<TArg1, TArg2, TResult> func, TArg1 arg1, TArg2 arg2) {
+            Print(() => func(arg1, arg2), new object[] { arg1, arg2 });
+        }
         
         private static void Print<TResult>(Func<TResult> result, object[] input) {
             Console.WriteLine("TEST {0}", Value(input));
@@ -217,6 +221,14 @@ namespace Quiz {
                 return Format("{0} (Count={1})", JsonSerializer.Serialize(ull), ull.Count);
             } else if (value is IList<string> sl) {
                 return Format("{0} (Count={1})", JsonSerializer.Serialize(sl), sl.Count);
+            } else if (value is IList<IList<int>> ill) {
+                return Format("{0} (Count={1})", JsonSerializer.Serialize(ill), ill.Count);
+            } else if (value is IList<IList<uint>> uill) {
+                return Format("{0} (Count={1})", JsonSerializer.Serialize(uill), uill.Count);
+            } else if (value is IList<IList<long>> lll) {
+                return Format("{0} (Count={1})", JsonSerializer.Serialize(lll), lll.Count);
+            } else if (value is IList<IList<ulong>> ulll) {
+                return Format("{0} (Count={1})", JsonSerializer.Serialize(ulll), ulll.Count);
             } else if (value is IList<IList<string>> sll) {
                 return Format("{0} (Count={1})", JsonSerializer.Serialize(sll), sll.Count);
             } else if (value is HashSet<int> ih) {

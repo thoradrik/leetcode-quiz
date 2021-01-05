@@ -155,6 +155,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WaysToMakeFairArray", "prob
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RemoveInvalidParentheses", "problems\0301_RemoveInvalidParentheses\RemoveInvalidParentheses.csproj", "{F8AFBF2B-F51C-4636-8DE8-CBC6C5AF2531}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasicCalculator3", "problems\0772_BasicCalculator3\BasicCalculator3.csproj", "{90D4C0B8-104C-4B75-8444-1EFE0169ED81}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CombinationSum", "problems\0039_CombinationSum\CombinationSum.csproj", "{3FC49AEF-8EFD-47B2-93E2-3E072F9980EF}"
+EndProject
 Global
 																																																																GlobalSection(SolutionConfigurationPlatforms) = preSolution
 																																																																																																																																Debug|Any CPU = Debug|Any CPU
@@ -453,6 +457,14 @@ Global
 																																																																	{F8AFBF2B-F51C-4636-8DE8-CBC6C5AF2531}.Debug|Any CPU.Build.0 = Debug|Any CPU
 																																																																	{F8AFBF2B-F51C-4636-8DE8-CBC6C5AF2531}.Release|Any CPU.ActiveCfg = Release|Any CPU
 																																																																	{F8AFBF2B-F51C-4636-8DE8-CBC6C5AF2531}.Release|Any CPU.Build.0 = Release|Any CPU
+																																																																	{90D4C0B8-104C-4B75-8444-1EFE0169ED81}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+																																																																	{90D4C0B8-104C-4B75-8444-1EFE0169ED81}.Debug|Any CPU.Build.0 = Debug|Any CPU
+																																																																	{90D4C0B8-104C-4B75-8444-1EFE0169ED81}.Release|Any CPU.ActiveCfg = Release|Any CPU
+																																																																	{90D4C0B8-104C-4B75-8444-1EFE0169ED81}.Release|Any CPU.Build.0 = Release|Any CPU
+																																																																	{3FC49AEF-8EFD-47B2-93E2-3E072F9980EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+																																																																	{3FC49AEF-8EFD-47B2-93E2-3E072F9980EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+																																																																	{3FC49AEF-8EFD-47B2-93E2-3E072F9980EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+																																																																	{3FC49AEF-8EFD-47B2-93E2-3E072F9980EF}.Release|Any CPU.Build.0 = Release|Any CPU
 																																																																EndGlobalSection
 																																																																GlobalSection(SolutionProperties) = preSolution
 																																																																																																																																HideSolutionNode = FALSE
@@ -531,5 +543,7 @@ Global
 																																																																	{23E56ADB-B049-4011-BACE-F12256E73223} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
 																																																																	{D2F0EB7C-9034-430D-8CA7-43DF44C137A8} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
 																																																																	{F8AFBF2B-F51C-4636-8DE8-CBC6C5AF2531} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
+																																																																	{90D4C0B8-104C-4B75-8444-1EFE0169ED81} = {4A003753-E9E9-4FF6-B636-9C9644C4C509}
+																																																																	{3FC49AEF-8EFD-47B2-93E2-3E072F9980EF} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
 																																																																EndGlobalSection
 EndGlobal
