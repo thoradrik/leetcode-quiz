@@ -11,7 +11,7 @@ namespace Quiz {
 
             Stack<int> variant = new Stack<int>();
 
-            void deep(int remaining, int start) {
+            void backtrack(int remaining, int start) {
                 if (remaining == 0) {
                     if (variant.Count > 0) {
                         list.Add(variant.ToArray());
@@ -25,7 +25,7 @@ namespace Quiz {
                         }
 
                         variant.Push(candidate);
-                        deep(remaining - candidate, index);
+                        backtrack(remaining - candidate, index);
                         variant.Pop();
 
                         index++;
@@ -33,7 +33,7 @@ namespace Quiz {
                 }   
             }
             
-            deep(target, 0);
+            backtrack(target, 0);
 
             return list;
         }
