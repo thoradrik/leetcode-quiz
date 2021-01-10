@@ -107,29 +107,44 @@ namespace Quiz {
         private static bool CheckResult(object answer, object expected) {
             switch (answer) {
                 case null: return expected == null;
-                case string s_answer when expected is string s_expected: return s_answer == s_expected;
-                case int[] ia_answer when expected is int[] ia_expected: return CheckArrayResult(ia_answer, ia_expected, (x, y) => x == y);
-                case uint[] uia_answer when expected is uint[] uia_expected: return CheckArrayResult(uia_answer, uia_expected, (x, y) => x == y);
-                case long[] la_answer when expected is long[] la_expected: return CheckArrayResult(la_answer, la_expected, (x, y) => x == y);
-                case ulong[] ula_answer when expected is ulong[] ula_expected: return CheckArrayResult(ula_answer, ula_expected, (x, y) => x == y);
-                case string[] sa_answer when expected is string[] sa_expected: return CheckArrayResult(sa_answer, sa_expected, (x, y) => x == y);
-                case IList<int> il_answer when expected is IList<int> il_expected: return CheckListResult(il_answer, il_expected, (x, y) => x == y);
-                case IList<uint> uil_answer when expected is IList<uint> uil_expected: return CheckListResult(uil_answer, uil_expected, (x, y) => x == y);
-                case IList<long> ll_answer when expected is IList<long> ll_expected: return CheckListResult(ll_answer, ll_expected, (x, y) => x == y);
-                case IList<ulong> ull_answer when expected is IList<ulong> ull_expected: return CheckListResult(ull_answer, ull_expected, (x, y) => x == y);
-                case IList<string> sl_answer when expected is IList<string> sl_expected: return CheckListResult(sl_answer, sl_expected, (x, y) => x == y);
-                case HashSet<int> ih_answer when expected is HashSet<int> ih_expected: return CheckHashSet(ih_answer, ih_expected);
-                case HashSet<uint> uih_answer when expected is HashSet<uint> uih_expected: return CheckHashSet(uih_answer, uih_expected);
-                case HashSet<long> lh_answer when expected is HashSet<long> lh_expected: return CheckHashSet(lh_answer, lh_expected);
-                case HashSet<ulong> ulh_answer when expected is HashSet<ulong> ulh_expected: return CheckHashSet(ulh_answer, ulh_expected);
-                case HashSet<string> sh_answer when expected is HashSet<string> sh_expected: return CheckHashSet(sh_answer, sh_expected);
+                
                 case int i_answer when expected is int i_expected: return i_answer == i_expected;
                 case uint ui_answer when expected is uint ui_expected: return ui_answer == ui_expected;
                 case long l_answer when expected is long l_expected: return l_answer == l_expected;
                 case ulong ul_answer when expected is ulong ul_expected: return ul_answer == ul_expected;
-                case bool b_answer when expected is bool b_expected: return b_answer == b_expected;
                 case float f_answer when expected is float f_expected: return Math.Abs(f_answer - f_expected) < Single.Epsilon;
                 case double d_answer when expected is double d_expected: return Math.Abs(d_answer - d_expected) < Double.Epsilon;
+                case bool b_answer when expected is bool b_expected: return b_answer == b_expected;
+                case char c_answer when expected is char c_expected: return c_answer == c_expected;
+                case string s_answer when expected is string s_expected: return s_answer == s_expected;
+
+                case int[] ia_answer when expected is int[] ia_expected: return CheckArrayResult(ia_answer, ia_expected, (x, y) => x == y);
+                case uint[] uia_answer when expected is uint[] uia_expected: return CheckArrayResult(uia_answer, uia_expected, (x, y) => x == y);
+                case long[] la_answer when expected is long[] la_expected: return CheckArrayResult(la_answer, la_expected, (x, y) => x == y);
+                case ulong[] ula_answer when expected is ulong[] ula_expected: return CheckArrayResult(ula_answer, ula_expected, (x, y) => x == y);
+                case float[] fa_answer when expected is float[] fa_expected: return CheckArrayResult(fa_answer, fa_expected, (x, y) => Math.Abs(x - y) < Single.Epsilon);
+                case double[] da_answer when expected is double[] da_expected: return CheckArrayResult(da_answer, da_expected, (x, y) => Math.Abs(x - y) < Double.Epsilon);
+                case bool[] ba_answer when expected is bool[] ba_expected: return CheckArrayResult(ba_answer, ba_expected, (x, y) => x == y);
+                case char[] ca_answer when expected is char[] ca_expected: return CheckArrayResult(ca_answer, ca_expected, (x, y) => x == y);
+                case string[] sa_answer when expected is string[] sa_expected: return CheckArrayResult(sa_answer, sa_expected, (x, y) => x == y);
+
+                case IList<int> il_answer when expected is IList<int> il_expected: return CheckListResult(il_answer, il_expected, (x, y) => x == y);
+                case IList<uint> uil_answer when expected is IList<uint> uil_expected: return CheckListResult(uil_answer, uil_expected, (x, y) => x == y);
+                case IList<long> ll_answer when expected is IList<long> ll_expected: return CheckListResult(ll_answer, ll_expected, (x, y) => x == y);
+                case IList<ulong> ull_answer when expected is IList<ulong> ull_expected: return CheckListResult(ull_answer, ull_expected, (x, y) => x == y);
+                case IList<float> fl_answer when expected is IList<float> fl_expected: return CheckListResult(fl_answer, fl_expected, (x, y) =>  Math.Abs(x - y) < Single.Epsilon);
+                case IList<double> dl_answer when expected is IList<double> dl_expected: return CheckListResult(dl_answer, dl_expected, (x, y) => Math.Abs(x - y) < Double.Epsilon);
+                case IList<bool> bl_answer when expected is IList<bool> bl_expected: return CheckListResult(bl_answer, bl_expected, (x, y) => x == y);
+                case IList<char> cl_answer when expected is IList<char> cl_expected: return CheckListResult(cl_answer, cl_expected, (x, y) => x == y);
+                case IList<string> sl_answer when expected is IList<string> sl_expected: return CheckListResult(sl_answer, sl_expected, (x, y) => x == y);
+                
+                case HashSet<int> ih_answer when expected is HashSet<int> ih_expected: return CheckHashSet(ih_answer, ih_expected);
+                case HashSet<uint> uih_answer when expected is HashSet<uint> uih_expected: return CheckHashSet(uih_answer, uih_expected);
+                case HashSet<long> lh_answer when expected is HashSet<long> lh_expected: return CheckHashSet(lh_answer, lh_expected);
+                case HashSet<ulong> ulh_answer when expected is HashSet<ulong> ulh_expected: return CheckHashSet(ulh_answer, ulh_expected);
+                case HashSet<char> ch_answer when expected is HashSet<char> ch_expected: return CheckHashSet(ch_answer, ch_expected);
+                case HashSet<string> sh_answer when expected is HashSet<string> sh_expected: return CheckHashSet(sh_answer, sh_expected);
+                
                 default: return answer.Equals(expected);
             }
         }
@@ -193,6 +208,10 @@ namespace Quiz {
                 return Format("{0} (Length={1})", JsonSerializer.Serialize(la), la.Length);
             } else if (value is ulong[] ula) {
                 return Format("{0} (Length={1})", JsonSerializer.Serialize(ula), ula.Length);
+            } else if (value is bool[] ba) {
+                return Format("{0} (Length={1})", JsonSerializer.Serialize(ba), ba.Length);
+            } else if (value is char[] ca) {
+                return Format("{0} (Length={1})", JsonSerializer.Serialize(ca), ca.Length);
             } else if (value is string[] sa) {
                 return Format("{0} (Length={1})", JsonSerializer.Serialize(sa), sa.Length);
             } else if (value is object[] objs) {
@@ -219,6 +238,10 @@ namespace Quiz {
                 return Format("{0} (Count={1})", JsonSerializer.Serialize(ll), ll.Count);
             } else if (value is IList<ulong> ull) {
                 return Format("{0} (Count={1})", JsonSerializer.Serialize(ull), ull.Count);
+            } else if (value is IList<bool> bl) {
+                return Format("{0} (Count={1})", JsonSerializer.Serialize(bl), bl.Count);
+            } else if (value is IList<char> cl) {
+                return Format("{0} (Count={1})", JsonSerializer.Serialize(cl), cl.Count);
             } else if (value is IList<string> sl) {
                 return Format("{0} (Count={1})", JsonSerializer.Serialize(sl), sl.Count);
             } else if (value is IList<IList<int>> ill) {
@@ -229,6 +252,10 @@ namespace Quiz {
                 return Format("{0} (Count={1})", JsonSerializer.Serialize(lll), lll.Count);
             } else if (value is IList<IList<ulong>> ulll) {
                 return Format("{0} (Count={1})", JsonSerializer.Serialize(ulll), ulll.Count);
+            } else if (value is IList<IList<bool>> bll) {
+                return Format("{0} (Count={1})", JsonSerializer.Serialize(bll), bll.Count);
+            } else if (value is IList<IList<char>> cll) {
+                return Format("{0} (Count={1})", JsonSerializer.Serialize(cll), cll.Count);
             } else if (value is IList<IList<string>> sll) {
                 return Format("{0} (Count={1})", JsonSerializer.Serialize(sll), sll.Count);
             } else if (value is HashSet<int> ih) {
@@ -247,6 +274,10 @@ namespace Quiz {
                 List<ulong> ul_l = ulh.ToList();
                 ul_l.Sort();
                 return Format("{0} (Count={1})", JsonSerializer.Serialize(ul_l), ulh.Count);
+            } else if (value is HashSet<char> ch) {
+                List<char> c_l = ch.ToList();
+                c_l.Sort();
+                return Format("{0} (Count={1})", JsonSerializer.Serialize(c_l), ch.Count);
             } else if (value is HashSet<string> sh) {
                 List<string> s_l = sh.ToList();
                 s_l.Sort();
