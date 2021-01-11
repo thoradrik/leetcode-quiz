@@ -7,14 +7,14 @@ namespace Quiz {
         public int NextGreaterElement(int n) {
             int[] digits = GetDigits(n);
 
-            if (TryNextGreaterElement(digits)) {
+            if (TryMakeNextGreaterElement(digits)) {
                 return GetNumber(digits);
             } else {
                 return -1;
             }
         }
         
-        public bool TryNextGreaterElement(int[] digits) {
+        public bool TryMakeNextGreaterElement(int[] digits) {
             for (int i = digits.Length - 2; i >= 0; i--) {
                 int d_i = digits[i];
 
@@ -37,7 +37,7 @@ namespace Quiz {
                     digits[i] = digits[min_j];
                     digits[min_j] = tmp;
 
-                    TryMinimizeElement(digits, i + 1);
+                    MinimizeElement(digits, i + 1);
                     
                     return true;
                 }
@@ -46,7 +46,7 @@ namespace Quiz {
             return false;
         }
 
-        private void TryMinimizeElement(int[] digits, int end) {
+        private void MinimizeElement(int[] digits, int end) {
             Array.Sort(digits, end, digits.Length - end);    
         }
 
@@ -72,4 +72,5 @@ namespace Quiz {
         }
 
     }
+
 }
