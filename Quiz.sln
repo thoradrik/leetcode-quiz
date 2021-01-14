@@ -199,6 +199,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LastSubstringInLexicographi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NextClosestTime", "problems\0681_NextClosestTime\NextClosestTime.csproj", "{DE276C86-EBED-4763-B961-64CCC9AA46B3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EvaluateReversePolishNotation", "problems\0150_EvaluateReversePolishNotation\EvaluateReversePolishNotation.csproj", "{5D43A0B2-E2B5-4267-8C10-CEFF3A5D11E5}"
+EndProject
 Global
 																																																																GlobalSection(SolutionConfigurationPlatforms) = preSolution
 																																																																																																																																Debug|Any CPU = Debug|Any CPU
@@ -581,6 +583,10 @@ Global
 																																																																	{DE276C86-EBED-4763-B961-64CCC9AA46B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 																																																																	{DE276C86-EBED-4763-B961-64CCC9AA46B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 																																																																	{DE276C86-EBED-4763-B961-64CCC9AA46B3}.Release|Any CPU.Build.0 = Release|Any CPU
+																																																																	{5D43A0B2-E2B5-4267-8C10-CEFF3A5D11E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+																																																																	{5D43A0B2-E2B5-4267-8C10-CEFF3A5D11E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+																																																																	{5D43A0B2-E2B5-4267-8C10-CEFF3A5D11E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+																																																																	{5D43A0B2-E2B5-4267-8C10-CEFF3A5D11E5}.Release|Any CPU.Build.0 = Release|Any CPU
 																																																																EndGlobalSection
 																																																																GlobalSection(SolutionProperties) = preSolution
 																																																																																																																																HideSolutionNode = FALSE
@@ -680,5 +686,6 @@ Global
 																																																																	{715CE3C3-D9C5-4E65-9623-C0253833E6EF} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
 																																																																	{481C5315-EB10-4F1A-9E8E-F44700F9D091} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
 																																																																	{DE276C86-EBED-4763-B961-64CCC9AA46B3} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
+																																																																	{5D43A0B2-E2B5-4267-8C10-CEFF3A5D11E5} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
 																																																																EndGlobalSection
 EndGlobal
