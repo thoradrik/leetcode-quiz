@@ -4,6 +4,7 @@ using System.Diagnostics;
 using System.Globalization;
 using System.Linq;
 using System.Text;
+using System.Text.Encodings.Web;
 using System.Text.Json;
 using static System.String;
 
@@ -197,23 +198,27 @@ namespace Quiz {
             return hs1.Count == 0 && hs2.Count == 0;
         }
 
+        private static readonly JsonSerializerOptions OPTIONS = new JsonSerializerOptions {
+            Encoder = JavaScriptEncoder.UnsafeRelaxedJsonEscaping
+        };
+
         private static string Value(object value) {
             if (value == null) {
                 return "(null)";
             } else if (value is int[] ia) {
-                return Format("{0} (Length={1})", JsonSerializer.Serialize(ia), ia.Length);
+                return Format("{0} (Length={1})", JsonSerializer.Serialize(ia, OPTIONS), ia.Length);
             } else if (value is uint[] uia) {
-                return Format("{0} (Length={1})", JsonSerializer.Serialize(uia), uia.Length);
+                return Format("{0} (Length={1})", JsonSerializer.Serialize(uia, OPTIONS), uia.Length);
             } else if (value is long[] la) {
-                return Format("{0} (Length={1})", JsonSerializer.Serialize(la), la.Length);
+                return Format("{0} (Length={1})", JsonSerializer.Serialize(la, OPTIONS), la.Length);
             } else if (value is ulong[] ula) {
-                return Format("{0} (Length={1})", JsonSerializer.Serialize(ula), ula.Length);
+                return Format("{0} (Length={1})", JsonSerializer.Serialize(ula, OPTIONS), ula.Length);
             } else if (value is bool[] ba) {
-                return Format("{0} (Length={1})", JsonSerializer.Serialize(ba), ba.Length);
+                return Format("{0} (Length={1})", JsonSerializer.Serialize(ba, OPTIONS), ba.Length);
             } else if (value is char[] ca) {
-                return Format("{0} (Length={1})", JsonSerializer.Serialize(ca), ca.Length);
+                return Format("{0} (Length={1})", JsonSerializer.Serialize(ca, OPTIONS), ca.Length);
             } else if (value is string[] sa) {
-                return Format("{0} (Length={1})", JsonSerializer.Serialize(sa), sa.Length);
+                return Format("{0} (Length={1})", JsonSerializer.Serialize(sa, OPTIONS), sa.Length);
             } else if (value is object[] objs) {
                 StringBuilder sb = new StringBuilder();
                 
@@ -231,57 +236,57 @@ namespace Quiz {
 
                 return sb.ToString();
             } else if (value is IList<int> il) {
-                return Format("{0} (Count={1})", JsonSerializer.Serialize(il), il.Count);
+                return Format("{0} (Count={1})", JsonSerializer.Serialize(il, OPTIONS), il.Count);
             } else if (value is IList<uint> uil) {
-                return Format("{0} (Count={1})", JsonSerializer.Serialize(uil), uil.Count);
+                return Format("{0} (Count={1})", JsonSerializer.Serialize(uil, OPTIONS), uil.Count);
             } else if (value is IList<long> ll) {
-                return Format("{0} (Count={1})", JsonSerializer.Serialize(ll), ll.Count);
+                return Format("{0} (Count={1})", JsonSerializer.Serialize(ll, OPTIONS), ll.Count);
             } else if (value is IList<ulong> ull) {
-                return Format("{0} (Count={1})", JsonSerializer.Serialize(ull), ull.Count);
+                return Format("{0} (Count={1})", JsonSerializer.Serialize(ull, OPTIONS), ull.Count);
             } else if (value is IList<bool> bl) {
-                return Format("{0} (Count={1})", JsonSerializer.Serialize(bl), bl.Count);
+                return Format("{0} (Count={1})", JsonSerializer.Serialize(bl, OPTIONS), bl.Count);
             } else if (value is IList<char> cl) {
-                return Format("{0} (Count={1})", JsonSerializer.Serialize(cl), cl.Count);
+                return Format("{0} (Count={1})", JsonSerializer.Serialize(cl, OPTIONS), cl.Count);
             } else if (value is IList<string> sl) {
-                return Format("{0} (Count={1})", JsonSerializer.Serialize(sl), sl.Count);
+                return Format("{0} (Count={1})", JsonSerializer.Serialize(sl, OPTIONS), sl.Count);
             } else if (value is IList<IList<int>> ill) {
-                return Format("{0} (Count={1})", JsonSerializer.Serialize(ill), ill.Count);
+                return Format("{0} (Count={1})", JsonSerializer.Serialize(ill, OPTIONS), ill.Count);
             } else if (value is IList<IList<uint>> uill) {
-                return Format("{0} (Count={1})", JsonSerializer.Serialize(uill), uill.Count);
+                return Format("{0} (Count={1})", JsonSerializer.Serialize(uill, OPTIONS), uill.Count);
             } else if (value is IList<IList<long>> lll) {
-                return Format("{0} (Count={1})", JsonSerializer.Serialize(lll), lll.Count);
+                return Format("{0} (Count={1})", JsonSerializer.Serialize(lll, OPTIONS), lll.Count);
             } else if (value is IList<IList<ulong>> ulll) {
-                return Format("{0} (Count={1})", JsonSerializer.Serialize(ulll), ulll.Count);
+                return Format("{0} (Count={1})", JsonSerializer.Serialize(ulll, OPTIONS), ulll.Count);
             } else if (value is IList<IList<bool>> bll) {
-                return Format("{0} (Count={1})", JsonSerializer.Serialize(bll), bll.Count);
+                return Format("{0} (Count={1})", JsonSerializer.Serialize(bll, OPTIONS), bll.Count);
             } else if (value is IList<IList<char>> cll) {
-                return Format("{0} (Count={1})", JsonSerializer.Serialize(cll), cll.Count);
+                return Format("{0} (Count={1})", JsonSerializer.Serialize(cll, OPTIONS), cll.Count);
             } else if (value is IList<IList<string>> sll) {
-                return Format("{0} (Count={1})", JsonSerializer.Serialize(sll), sll.Count);
+                return Format("{0} (Count={1})", JsonSerializer.Serialize(sll, OPTIONS), sll.Count);
             } else if (value is HashSet<int> ih) {
                 List<int> i_l = ih.ToList();
                 i_l.Sort();
-                return Format("{0} (Count={1})", JsonSerializer.Serialize(i_l), ih.Count);
+                return Format("{0} (Count={1})", JsonSerializer.Serialize(i_l, OPTIONS), ih.Count);
             } else if (value is HashSet<uint> uih) {
                 List<uint> ui_l = uih.ToList();
                 ui_l.Sort();
-                return Format("{0} (Count={1})", JsonSerializer.Serialize(ui_l), uih.Count);
+                return Format("{0} (Count={1})", JsonSerializer.Serialize(ui_l, OPTIONS), uih.Count);
             } else if (value is HashSet<long> lh) {
                 List<long> l_l = lh.ToList();
                 l_l.Sort();
-                return Format("{0} (Count={1})", JsonSerializer.Serialize(l_l), lh.Count);
+                return Format("{0} (Count={1})", JsonSerializer.Serialize(l_l, OPTIONS), lh.Count);
             } else if (value is HashSet<ulong> ulh) {
                 List<ulong> ul_l = ulh.ToList();
                 ul_l.Sort();
-                return Format("{0} (Count={1})", JsonSerializer.Serialize(ul_l), ulh.Count);
+                return Format("{0} (Count={1})", JsonSerializer.Serialize(ul_l, OPTIONS), ulh.Count);
             } else if (value is HashSet<char> ch) {
                 List<char> c_l = ch.ToList();
                 c_l.Sort();
-                return Format("{0} (Count={1})", JsonSerializer.Serialize(c_l), ch.Count);
+                return Format("{0} (Count={1})", JsonSerializer.Serialize(c_l, OPTIONS), ch.Count);
             } else if (value is HashSet<string> sh) {
                 List<string> s_l = sh.ToList();
                 s_l.Sort();
-                return Format("{0} (Count={1})", JsonSerializer.Serialize(s_l), sh.Count);
+                return Format("{0} (Count={1})", JsonSerializer.Serialize(s_l, OPTIONS), sh.Count);
             } else if (value is string s) {
                 return Format("\"{0}\"", s);
             } else if (value is IFormattable f) {
