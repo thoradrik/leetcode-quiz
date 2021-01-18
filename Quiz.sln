@@ -209,6 +209,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeleteOperationForTwoString
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LongestCommonSubsequence", "problems\1143_LongestCommonSubsequence\LongestCommonSubsequence.csproj", "{D0C9D691-F14F-49E7-A8D9-7812D98E98EA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KidsWithGreatestNumberOfCandies", "problems\1431_KidsWithGreatestNumberOfCandies\KidsWithGreatestNumberOfCandies.csproj", "{7CBD6554-9620-4DAD-A09E-495A9585368C}"
+EndProject
 Global
 																																																																GlobalSection(SolutionConfigurationPlatforms) = preSolution
 																																																																																																																																Debug|Any CPU = Debug|Any CPU
@@ -611,6 +613,10 @@ Global
 																																																																	{D0C9D691-F14F-49E7-A8D9-7812D98E98EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 																																																																	{D0C9D691-F14F-49E7-A8D9-7812D98E98EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 																																																																	{D0C9D691-F14F-49E7-A8D9-7812D98E98EA}.Release|Any CPU.Build.0 = Release|Any CPU
+																																																																	{7CBD6554-9620-4DAD-A09E-495A9585368C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+																																																																	{7CBD6554-9620-4DAD-A09E-495A9585368C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+																																																																	{7CBD6554-9620-4DAD-A09E-495A9585368C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+																																																																	{7CBD6554-9620-4DAD-A09E-495A9585368C}.Release|Any CPU.Build.0 = Release|Any CPU
 																																																																EndGlobalSection
 																																																																GlobalSection(SolutionProperties) = preSolution
 																																																																																																																																HideSolutionNode = FALSE
@@ -715,5 +721,6 @@ Global
 																																																																	{67E6F784-363C-45ED-A57D-4EF8268663EF} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
 																																																																	{2F44730D-B47C-4B0D-B8B9-B4CF8A881CDD} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
 																																																																	{D0C9D691-F14F-49E7-A8D9-7812D98E98EA} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
+																																																																	{7CBD6554-9620-4DAD-A09E-495A9585368C} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
 																																																																EndGlobalSection
 EndGlobal
