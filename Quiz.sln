@@ -215,6 +215,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RemoveSubFoldersFromFilesys
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LargestSubstringBetweenTwoEqualCharacters", "problems\1624_LargestSubstringBetweenTwoEqualCharacters\LargestSubstringBetweenTwoEqualCharacters.csproj", "{4414BAEB-F35B-442B-A2F6-745DCF9C1D00}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UglyNumber", "problems\0263_UglyNumber\UglyNumber.csproj", "{163A4336-09DE-4C10-BC73-FB2E65C84EBB}"
+EndProject
 Global
 																																																																GlobalSection(SolutionConfigurationPlatforms) = preSolution
 																																																																																																																																Debug|Any CPU = Debug|Any CPU
@@ -629,6 +631,10 @@ Global
 																																																																	{4414BAEB-F35B-442B-A2F6-745DCF9C1D00}.Debug|Any CPU.Build.0 = Debug|Any CPU
 																																																																	{4414BAEB-F35B-442B-A2F6-745DCF9C1D00}.Release|Any CPU.ActiveCfg = Release|Any CPU
 																																																																	{4414BAEB-F35B-442B-A2F6-745DCF9C1D00}.Release|Any CPU.Build.0 = Release|Any CPU
+																																																																	{163A4336-09DE-4C10-BC73-FB2E65C84EBB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+																																																																	{163A4336-09DE-4C10-BC73-FB2E65C84EBB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+																																																																	{163A4336-09DE-4C10-BC73-FB2E65C84EBB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+																																																																	{163A4336-09DE-4C10-BC73-FB2E65C84EBB}.Release|Any CPU.Build.0 = Release|Any CPU
 																																																																EndGlobalSection
 																																																																GlobalSection(SolutionProperties) = preSolution
 																																																																																																																																HideSolutionNode = FALSE
@@ -736,5 +742,6 @@ Global
 																																																																	{F0E9E436-136D-49F5-8EAF-EB02EF2C08AA} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
 																																																																	{C712C889-765F-4A91-8A69-C9CBCDE03605} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
 																																																																	{4414BAEB-F35B-442B-A2F6-745DCF9C1D00} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
+																																																																	{163A4336-09DE-4C10-BC73-FB2E65C84EBB} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
 																																																																EndGlobalSection
 EndGlobal
