@@ -21,8 +21,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrintInOrder", "problems\11
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyCalendarTwo", "problems\0731_MyCalendarTwo\MyCalendarTwo.csproj", "{9995FCD5-B308-4BEA-9A23-2C51D5C6AF8A}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "problems-not-solved", "problems-not-solved", "{4A003753-E9E9-4FF6-B636-9C9644C4C509}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyCalendarThree", "problems\0732_MyCalendarThree\MyCalendarThree.csproj", "{94F84353-8749-47DA-9D46-F24B7CD0EF01}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyCalendar", "problems\0729_MyCalendar\MyCalendar.csproj", "{B420A5D1-0F5A-443E-9006-8BCD49628E6B}"
@@ -52,8 +50,6 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "libs", "libs", "{0DB4C5C5-A8EE-43BA-B74C-5034A809E187}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestingHelpers", "libs\TestingHelpers\TestingHelpers.csproj", "{D414B90A-24CC-498C-9A40-07C66917192D}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StrongPasswordChecker", "problems\0420_StrongPasswordChecker\StrongPasswordChecker.csproj", "{363DEA9E-542A-4ECC-9769-085E7F2827A6}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SquaresOfSortedArray", "problems\0977_SquaresOfSortedArray\SquaresOfSortedArray.csproj", "{E4B1224F-2785-49AD-BFFC-5BAE120EA57D}"
 EndProject
@@ -311,10 +307,6 @@ Global
 																																																																				{D414B90A-24CC-498C-9A40-07C66917192D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 																																																																				{D414B90A-24CC-498C-9A40-07C66917192D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 																																																																				{D414B90A-24CC-498C-9A40-07C66917192D}.Release|Any CPU.Build.0 = Release|Any CPU
-																																																																				{363DEA9E-542A-4ECC-9769-085E7F2827A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-																																																																				{363DEA9E-542A-4ECC-9769-085E7F2827A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-																																																																				{363DEA9E-542A-4ECC-9769-085E7F2827A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-																																																																				{363DEA9E-542A-4ECC-9769-085E7F2827A6}.Release|Any CPU.Build.0 = Release|Any CPU
 																																																																				{E4B1224F-2785-49AD-BFFC-5BAE120EA57D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 																																																																				{E4B1224F-2785-49AD-BFFC-5BAE120EA57D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 																																																																				{E4B1224F-2785-49AD-BFFC-5BAE120EA57D}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -662,7 +654,6 @@ Global
 																																																																				{17F9F278-C5D4-4596-9C63-107DF43BD282} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
 																																																																				{D414B90A-24CC-498C-9A40-07C66917192D} = {0DB4C5C5-A8EE-43BA-B74C-5034A809E187}
 																																																																				{ADEAFAE8-9121-42B0-96FC-E83BCAA93A60} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
-																																																																				{363DEA9E-542A-4ECC-9769-085E7F2827A6} = {4A003753-E9E9-4FF6-B636-9C9644C4C509}
 																																																																				{E4B1224F-2785-49AD-BFFC-5BAE120EA57D} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
 																																																																				{08291942-C369-4929-AEC5-B83057FA092A} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
 																																																																				{3BE4FCEA-86E9-4138-8295-146752B2E9B2} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
