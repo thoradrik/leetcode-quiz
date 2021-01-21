@@ -215,6 +215,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UglyNumber", "problems\0263
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UglyNumber2", "problems\0264_UglyNumber2\UglyNumber2.csproj", "{61951CD2-4F10-4D41-BA8D-A51F48B2D513}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SuperUglyNumber", "problems\0313_SuperUglyNumber\SuperUglyNumber.csproj", "{342B0190-BEF9-4D15-812A-8602E86483AD}"
+EndProject
 Global
 																																																																GlobalSection(SolutionConfigurationPlatforms) = preSolution
 																																																																																																																																Debug|Any CPU = Debug|Any CPU
@@ -633,6 +635,10 @@ Global
 																																																																	{61951CD2-4F10-4D41-BA8D-A51F48B2D513}.Debug|Any CPU.Build.0 = Debug|Any CPU
 																																																																	{61951CD2-4F10-4D41-BA8D-A51F48B2D513}.Release|Any CPU.ActiveCfg = Release|Any CPU
 																																																																	{61951CD2-4F10-4D41-BA8D-A51F48B2D513}.Release|Any CPU.Build.0 = Release|Any CPU
+																																																																	{342B0190-BEF9-4D15-812A-8602E86483AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+																																																																	{342B0190-BEF9-4D15-812A-8602E86483AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+																																																																	{342B0190-BEF9-4D15-812A-8602E86483AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+																																																																	{342B0190-BEF9-4D15-812A-8602E86483AD}.Release|Any CPU.Build.0 = Release|Any CPU
 																																																																EndGlobalSection
 																																																																GlobalSection(SolutionProperties) = preSolution
 																																																																																																																																HideSolutionNode = FALSE
@@ -741,5 +747,6 @@ Global
 																																																																	{4414BAEB-F35B-442B-A2F6-745DCF9C1D00} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
 																																																																	{163A4336-09DE-4C10-BC73-FB2E65C84EBB} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
 																																																																	{61951CD2-4F10-4D41-BA8D-A51F48B2D513} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
+																																																																	{342B0190-BEF9-4D15-812A-8602E86483AD} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
 																																																																EndGlobalSection
 EndGlobal
