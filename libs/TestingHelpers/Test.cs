@@ -289,10 +289,36 @@ namespace Quiz {
                 return Format("{0} (Count={1})", JsonSerializer.Serialize(s_l, OPTIONS), sh.Count);
             } else if (value is string s) {
                 return Format("\"{0}\"", s);
+            } else if (value is IIntTreeNode itn) {
+                StringBuilder sb = new StringBuilder();
+                sb.Append("\r\n");
+                FormatIntTreeNode(itn, sb, "ROOT", 0);
+                return sb.ToString();
             } else if (value is IFormattable f) {
                 return Format(CultureInfo.InvariantCulture, "{0}", f);
             } else {
                 return value.ToString();
+            }
+        }
+
+        private static void FormatIntTreeNode(IIntTreeNode node, StringBuilder sb, string prefix, int level) {
+            for (int i = 0; i < level; i++) {
+                sb.Append("  ");
+            }
+
+            if (!IsNullOrEmpty(prefix)) {
+                sb.AppendFormat("{0}: ", prefix);
+            }
+            
+            if (node == null) {
+                sb.Append("(null)\r\n");
+            } else {
+                sb.AppendFormat("{0}\r\n", Value(node.Value));
+
+                if (node.Left != null || node.Right != null) {
+                    FormatIntTreeNode(node.Right, sb, "RIGHT", level + 1);
+                    FormatIntTreeNode(node.Left, sb, "LEFT", level + 1);
+                }
             }
         }
 
