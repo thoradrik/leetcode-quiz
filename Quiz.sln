@@ -225,6 +225,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenerateStringWithCharacter
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConvertSortedArrayToBinarySearchTree", "problems\0108_ConvertSortedArrayToBinarySearchTree\ConvertSortedArrayToBinarySearchTree.csproj", "{2012210C-5FDD-4574-AF56-E2679D2ECDA5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConvertSortedListToBinarySearchTree", "problems\0109_ConvertSortedListToBinarySearchTree\ConvertSortedListToBinarySearchTree.csproj", "{9390C1D1-2BC6-4AB4-BF52-4E3B06BF208B}"
+EndProject
 Global
 																																																																GlobalSection(SolutionConfigurationPlatforms) = preSolution
 																																																																																																																																Debug|Any CPU = Debug|Any CPU
@@ -663,6 +665,10 @@ Global
 																																																																	{2012210C-5FDD-4574-AF56-E2679D2ECDA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 																																																																	{2012210C-5FDD-4574-AF56-E2679D2ECDA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 																																																																	{2012210C-5FDD-4574-AF56-E2679D2ECDA5}.Release|Any CPU.Build.0 = Release|Any CPU
+																																																																	{9390C1D1-2BC6-4AB4-BF52-4E3B06BF208B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+																																																																	{9390C1D1-2BC6-4AB4-BF52-4E3B06BF208B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+																																																																	{9390C1D1-2BC6-4AB4-BF52-4E3B06BF208B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+																																																																	{9390C1D1-2BC6-4AB4-BF52-4E3B06BF208B}.Release|Any CPU.Build.0 = Release|Any CPU
 																																																																EndGlobalSection
 																																																																GlobalSection(SolutionProperties) = preSolution
 																																																																																																																																HideSolutionNode = FALSE
@@ -776,5 +782,6 @@ Global
 																																																																	{AAEBDD77-B61C-48DC-95D0-83A1A9B1264C} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
 																																																																	{68A1406D-DFCF-4A19-9739-FDAB62273A68} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
 																																																																	{2012210C-5FDD-4574-AF56-E2679D2ECDA5} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
+																																																																	{9390C1D1-2BC6-4AB4-BF52-4E3B06BF208B} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
 																																																																EndGlobalSection
 EndGlobal
