@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Quiz {
+﻿namespace Quiz {
     public class Solution {
         
         public string MakeGood(string s) {

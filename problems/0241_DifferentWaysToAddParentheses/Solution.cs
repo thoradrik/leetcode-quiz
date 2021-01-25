@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using AlgorithmLib;
 
 namespace Quiz {
     public class Solution {
