@@ -229,6 +229,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConvertSortedListToBinarySe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OneEditDistance", "problems\0161_OneEditDistance\OneEditDistance.csproj", "{F56DDD6F-0840-4C10-BD8A-77A349009432}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EditDistance", "problems\0072_EditDistance\EditDistance.csproj", "{7C502A8A-02A5-4BE3-BCED-DA2B0E7C1F47}"
+EndProject
 Global
 																																																																GlobalSection(SolutionConfigurationPlatforms) = preSolution
 																																																																																																																																Debug|Any CPU = Debug|Any CPU
@@ -675,6 +677,10 @@ Global
 																																																																	{F56DDD6F-0840-4C10-BD8A-77A349009432}.Debug|Any CPU.Build.0 = Debug|Any CPU
 																																																																	{F56DDD6F-0840-4C10-BD8A-77A349009432}.Release|Any CPU.ActiveCfg = Release|Any CPU
 																																																																	{F56DDD6F-0840-4C10-BD8A-77A349009432}.Release|Any CPU.Build.0 = Release|Any CPU
+																																																																	{7C502A8A-02A5-4BE3-BCED-DA2B0E7C1F47}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+																																																																	{7C502A8A-02A5-4BE3-BCED-DA2B0E7C1F47}.Debug|Any CPU.Build.0 = Debug|Any CPU
+																																																																	{7C502A8A-02A5-4BE3-BCED-DA2B0E7C1F47}.Release|Any CPU.ActiveCfg = Release|Any CPU
+																																																																	{7C502A8A-02A5-4BE3-BCED-DA2B0E7C1F47}.Release|Any CPU.Build.0 = Release|Any CPU
 																																																																EndGlobalSection
 																																																																GlobalSection(SolutionProperties) = preSolution
 																																																																																																																																HideSolutionNode = FALSE
@@ -790,5 +796,6 @@ Global
 																																																																	{2012210C-5FDD-4574-AF56-E2679D2ECDA5} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
 																																																																	{9390C1D1-2BC6-4AB4-BF52-4E3B06BF208B} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
 																																																																	{F56DDD6F-0840-4C10-BD8A-77A349009432} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
+																																																																	{7C502A8A-02A5-4BE3-BCED-DA2B0E7C1F47} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
 																																																																EndGlobalSection
 EndGlobal
