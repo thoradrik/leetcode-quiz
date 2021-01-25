@@ -231,6 +231,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OneEditDistance", "problems
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EditDistance", "problems\0072_EditDistance\EditDistance.csproj", "{7C502A8A-02A5-4BE3-BCED-DA2B0E7C1F47}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NestedListWeightSum", "problems\0339_NestedListWeightSum\NestedListWeightSum.csproj", "{DF36B000-4136-4A96-9C5F-B7CC651B81A4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NestedListWeightSum2", "problems\0364_NestedListWeightSum2\NestedListWeightSum2.csproj", "{C0CD2654-9F05-4B6A-AE9A-EF8A5D6EBB12}"
+EndProject
 Global
 																																																																GlobalSection(SolutionConfigurationPlatforms) = preSolution
 																																																																																																																																Debug|Any CPU = Debug|Any CPU
@@ -681,6 +685,14 @@ Global
 																																																																	{7C502A8A-02A5-4BE3-BCED-DA2B0E7C1F47}.Debug|Any CPU.Build.0 = Debug|Any CPU
 																																																																	{7C502A8A-02A5-4BE3-BCED-DA2B0E7C1F47}.Release|Any CPU.ActiveCfg = Release|Any CPU
 																																																																	{7C502A8A-02A5-4BE3-BCED-DA2B0E7C1F47}.Release|Any CPU.Build.0 = Release|Any CPU
+																																																																	{DF36B000-4136-4A96-9C5F-B7CC651B81A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+																																																																	{DF36B000-4136-4A96-9C5F-B7CC651B81A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+																																																																	{DF36B000-4136-4A96-9C5F-B7CC651B81A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+																																																																	{DF36B000-4136-4A96-9C5F-B7CC651B81A4}.Release|Any CPU.Build.0 = Release|Any CPU
+																																																																	{C0CD2654-9F05-4B6A-AE9A-EF8A5D6EBB12}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+																																																																	{C0CD2654-9F05-4B6A-AE9A-EF8A5D6EBB12}.Debug|Any CPU.Build.0 = Debug|Any CPU
+																																																																	{C0CD2654-9F05-4B6A-AE9A-EF8A5D6EBB12}.Release|Any CPU.ActiveCfg = Release|Any CPU
+																																																																	{C0CD2654-9F05-4B6A-AE9A-EF8A5D6EBB12}.Release|Any CPU.Build.0 = Release|Any CPU
 																																																																EndGlobalSection
 																																																																GlobalSection(SolutionProperties) = preSolution
 																																																																																																																																HideSolutionNode = FALSE
@@ -797,5 +809,7 @@ Global
 																																																																	{9390C1D1-2BC6-4AB4-BF52-4E3B06BF208B} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
 																																																																	{F56DDD6F-0840-4C10-BD8A-77A349009432} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
 																																																																	{7C502A8A-02A5-4BE3-BCED-DA2B0E7C1F47} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
+																																																																	{DF36B000-4136-4A96-9C5F-B7CC651B81A4} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
+																																																																	{C0CD2654-9F05-4B6A-AE9A-EF8A5D6EBB12} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
 																																																																EndGlobalSection
 EndGlobal
