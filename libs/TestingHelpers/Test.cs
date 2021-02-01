@@ -73,6 +73,14 @@ namespace Quiz {
         public static void Print<TArg1, TArg2, TResult>(Func<TArg1, TArg2, TResult> func, TArg1 arg1, TArg2 arg2) {
             Print(() => func(arg1, arg2), new object[] { arg1, arg2 });
         }
+
+        public static void Print<TArg1, TArg2, TArg3, TResult>(Func<TArg1, TArg2, TArg3, TResult> func, TArg1 arg1, TArg2 arg2, TArg3 arg3) {
+            Print(() => func(arg1, arg2, arg3), new object[] { arg1, arg2, arg3 });
+        }
+
+        public static void Print<TArg1, TArg2, TArg3, TArg4, TResult>(Func<TArg1, TArg2, TArg3, TArg4, TResult> func, TArg1 arg1, TArg2 arg2, TArg3 arg3, TArg4 arg4) {
+            Print(() => func(arg1, arg2, arg3, arg4), new object[] { arg1, arg2, arg3, arg4 });
+        }
         
         private static void Print<TResult>(Func<TResult> result, object[] input) {
             Console.WriteLine("TEST {0}", Value(input));
@@ -219,6 +227,10 @@ namespace Quiz {
                 return Format("{0} (Length={1})", JsonSerializer.Serialize(ca, OPTIONS), ca.Length);
             } else if (value is string[] sa) {
                 return Format("{0} (Length={1})", JsonSerializer.Serialize(sa, OPTIONS), sa.Length);
+            } else if (value is int[][] i2a) {
+                return Format2Array(i2a);
+            } else if (value is int[][] c2a) {
+                return Format2Array(c2a);
             } else if (value is object[] objs) {
                 StringBuilder sb = new StringBuilder();
                 
@@ -299,6 +311,35 @@ namespace Quiz {
             } else {
                 return value.ToString();
             }
+        }
+
+        private static string Format2Array<T>(T[][] array) {
+            int m = array.Length;
+            if (m <= 0) {
+                return "[0x?]";
+            }
+            int n = array[0].Length;
+            if (n <= 0) {
+                return Format("[{0}x0]", n);
+            }
+            
+            StringBuilder sb = new StringBuilder();
+
+            sb.AppendFormat("[{0}x{1}] = ", m, n);
+            
+            for (int i = 0; i < m; i++) {
+                sb.Append("\r\n[");
+                for (int j = 0; j < n; j++) {
+                    if (j > 0) {
+                        sb.Append(" ");
+                    }
+
+                    sb.Append(array[i][j]);
+                }
+                sb.Append("]");
+            }
+
+            return sb.ToString();
         }
 
         private static void FormatIntTreeNode(IIntTreeNode node, StringBuilder sb, string prefix, int level) {
