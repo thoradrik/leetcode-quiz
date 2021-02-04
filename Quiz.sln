@@ -249,6 +249,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeeImportance", "probl
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CanConvertStringInKMoves", "problems\1540_CanConvertStringInKMoves\CanConvertStringInKMoves.csproj", "{37FE2B38-ABC0-403E-BFEC-87115F34A8B5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TwoSumLessThanK", "problems\1099_TwoSumLessThanK\TwoSumLessThanK.csproj", "{62313AA0-FEEB-4550-9568-70E7020AADB2}"
+EndProject
 Global
 																																																																GlobalSection(SolutionConfigurationPlatforms) = preSolution
 																																																																																																																																Debug|Any CPU = Debug|Any CPU
@@ -735,6 +737,10 @@ Global
 																																																																	{37FE2B38-ABC0-403E-BFEC-87115F34A8B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 																																																																	{37FE2B38-ABC0-403E-BFEC-87115F34A8B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 																																																																	{37FE2B38-ABC0-403E-BFEC-87115F34A8B5}.Release|Any CPU.Build.0 = Release|Any CPU
+																																																																	{62313AA0-FEEB-4550-9568-70E7020AADB2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+																																																																	{62313AA0-FEEB-4550-9568-70E7020AADB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+																																																																	{62313AA0-FEEB-4550-9568-70E7020AADB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+																																																																	{62313AA0-FEEB-4550-9568-70E7020AADB2}.Release|Any CPU.Build.0 = Release|Any CPU
 																																																																EndGlobalSection
 																																																																GlobalSection(SolutionProperties) = preSolution
 																																																																																																																																HideSolutionNode = FALSE
@@ -860,5 +866,6 @@ Global
 																																																																	{43DA15AD-B2A3-451A-B574-90F24988D8F2} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
 																																																																	{2D126C7D-F014-4F8A-BB21-97DB6FCED928} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
 																																																																	{37FE2B38-ABC0-403E-BFEC-87115F34A8B5} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
+																																																																	{62313AA0-FEEB-4550-9568-70E7020AADB2} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
 																																																																EndGlobalSection
 EndGlobal
