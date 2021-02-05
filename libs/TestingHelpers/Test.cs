@@ -229,7 +229,7 @@ namespace Quiz {
                 return Format("{0} (Length={1})", JsonSerializer.Serialize(sa, OPTIONS), sa.Length);
             } else if (value is int[][] i2a) {
                 return Format2Array(i2a);
-            } else if (value is int[][] c2a) {
+            } else if (value is char[][] c2a) {
                 return Format2Array(c2a);
             } else if (value is object[] objs) {
                 StringBuilder sb = new StringBuilder();
