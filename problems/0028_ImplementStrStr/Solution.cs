@@ -1,39 +1,39 @@
-﻿namespace Quiz {
+﻿using System;
+
+namespace Quiz {
     public class Solution {
-        
-        public int StrStr(string haystack, string needle) {
-            if (haystack.Length < needle.Length) {
+
+        public int StrStr(string haystack, string needle) => StrStr(haystack.AsSpan(), needle.AsSpan());
+
+        public int StrStr(ReadOnlySpan<char> str, ReadOnlySpan<char> fragment) {
+            if (str.Length < fragment.Length) {
                 return -1;
-            } else if (needle.Length == 0) {
+            } else if (fragment.Length == 0) {
                 return 0;
             }
-
-            int n_hash = Hash(needle, 0, needle.Length);
+            
+            int n_hash = Hash(fragment, 0, fragment.Length);
             int h_hash = 0;
-
-            for (int i = 0; i <= haystack.Length - needle.Length; i++) {
+            
+            for (int i = 0; i <= str.Length - fragment.Length; i++) {
                 if (i <= 0) {
-                    h_hash = Hash(haystack, 0, needle.Length);
+                    h_hash = Hash(str, 0, fragment.Length);
                 } else {
-                    h_hash = Hash(h_hash, haystack[i - 1], haystack[i + needle.Length - 1]);
+                    h_hash = Hash(h_hash, str[i - 1], str[i + fragment.Length - 1]);
                 }
                 
                 if (n_hash == h_hash) {
-                    for (int j = 0; j < needle.Length; j++) {
-                        if (haystack[i + j] != needle[j]) {
-                            goto miss;
-                        }
+                    ReadOnlySpan<char> sample = str.Slice(i, fragment.Length);
+                    if (MemoryExtensions.Equals(sample, fragment, StringComparison.Ordinal)) {
+                        return i;
                     }
-                    return i;
-                miss: 
-                    ;
                 }
             }
             
             return -1;
         }
         
-        public static int Hash(string input, int start, int length) {
+        public static int Hash(ReadOnlySpan<char> input, int start, int length) {
             int hash = 17;
             
             for (int i = 0; i < length; i++) {
