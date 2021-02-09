@@ -263,6 +263,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PalindromePermutation", "pr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShortestPalindrome", "problems\0214_ShortestPalindrome\ShortestPalindrome.csproj", "{E786C93C-D697-4F95-91FB-268B01C2FCB8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Subsets", "problems\0078_Subsets\Subsets.csproj", "{D6110330-A1B8-41DD-91D3-9BAF9785969F}"
+EndProject
 Global
 																																																																GlobalSection(SolutionConfigurationPlatforms) = preSolution
 																																																																																																																																Debug|Any CPU = Debug|Any CPU
@@ -777,6 +779,10 @@ Global
 																																																																	{E786C93C-D697-4F95-91FB-268B01C2FCB8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 																																																																	{E786C93C-D697-4F95-91FB-268B01C2FCB8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 																																																																	{E786C93C-D697-4F95-91FB-268B01C2FCB8}.Release|Any CPU.Build.0 = Release|Any CPU
+																																																																	{D6110330-A1B8-41DD-91D3-9BAF9785969F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+																																																																	{D6110330-A1B8-41DD-91D3-9BAF9785969F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+																																																																	{D6110330-A1B8-41DD-91D3-9BAF9785969F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+																																																																	{D6110330-A1B8-41DD-91D3-9BAF9785969F}.Release|Any CPU.Build.0 = Release|Any CPU
 																																																																EndGlobalSection
 																																																																GlobalSection(SolutionProperties) = preSolution
 																																																																																																																																HideSolutionNode = FALSE
@@ -909,5 +915,6 @@ Global
 																																																																	{BC7EA03E-D79E-4E18-AF9F-A8C16B1D9840} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
 																																																																	{2CBB2A21-480E-4B9B-B3A1-81FB6D2A78F5} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
 																																																																	{E786C93C-D697-4F95-91FB-268B01C2FCB8} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
+																																																																	{D6110330-A1B8-41DD-91D3-9BAF9785969F} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
 																																																																EndGlobalSection
 EndGlobal
