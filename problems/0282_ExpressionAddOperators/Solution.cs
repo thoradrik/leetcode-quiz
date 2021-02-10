@@ -34,7 +34,7 @@ namespace Quiz {
             
             List<string> list = new List<string>();
             
-            CombinationGenerator.Generate(new[] { 10, 11, 22, 33 }, nums.Length - 1, ops => {
+            CombinationGenerator.Generate(nums.Length - 1, new[] { 10, 11, 22, 33 }, ops => {
                 Stack<int> op_stack = new Stack<int>();
                 Queue<int> n_output = new Queue<int>();
 

@@ -1,5 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using AlgorithmLib;
 
 namespace Quiz {
     public class Solution {
@@ -24,49 +24,26 @@ namespace Quiz {
 
             IList<IList<int>> list = new List<IList<int>>();
             
-            GenerateCombinations(ptr => map[ptr].Item2 + 1, map.Length, counts => {
-                List<int> items = new List<int>();
-                
-                for (int ptr = 0; ptr < counts.Length; ptr++) {
-                    int count = counts[ptr];
-                    while (count > 0) {
-                        items.Add(map[ptr].Item1);
-                        count--;
-                    }
-                }
-                
-                list.Add(items);
-            });  
-            
-            return list;
-        }
-
-        public static void GenerateCombinations(Func<int, int> array_length, int length, Action<int[]> output) {
-            int[] stack = new int[length];
-            int ptr = 0;
-            
-            int[] result = new int[length];
-            do {
-                if (ptr < length) {
-                    int index = stack[ptr];
-                    if (index < array_length(ptr)) {
-                        result[ptr] = index;
-                        ptr++;
-                    } else {
-                        stack[ptr] = 0;
-                        ptr--;
-                        if (ptr < 0) {
-                            break;
-                        } else {
-                            stack[ptr]++;
+            CombinationGenerator.Generate(
+                map.Length,
+                ptr => map[ptr].Item2 + 1,
+                (ptr, index) => index,
+                counts => {
+                    List<int> items = new List<int>();
+                    
+                    for (int ptr = 0; ptr < counts.Length; ptr++) {
+                        int count = counts[ptr];
+                        while (count > 0) {
+                            items.Add(map[ptr].Item1);
+                            count--;
                         }
                     }
-                } else {
-                    output(result);
-                    ptr--;
-                    stack[ptr]++;
+                    
+                    list.Add(items);
                 }
-            } while (true);
+            );  
+            
+            return list;
         }
         
     }

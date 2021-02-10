@@ -7,7 +7,7 @@ namespace Quiz {
         public IList<IList<int>> Subsets(int[] nums) {
             IList<IList<int>> list = new List<IList<int>>();
             
-            CombinationGenerator.Generate(new[] { false, true }, nums.Length, flags => {
+            CombinationGenerator.Generate(nums.Length, new[] { false, true }, flags => {
                 List<int> items = new List<int>();
                 
                 for (int index = 0; index < flags.Length; index++) {

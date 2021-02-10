@@ -24,7 +24,7 @@ namespace Quiz {
 
             int min_time = i_time + 10000;
             
-            CombinationGenerator.Generate(digits, 4, a => {
+            CombinationGenerator.Generate(4, digits, a => {
                 if (a[0] > 2) return;
                 if (a[2] > 5) return;
                 
