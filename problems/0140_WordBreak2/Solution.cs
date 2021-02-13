@@ -5,74 +5,48 @@ namespace Quiz {
     public class Solution {
         
         public IList<string> WordBreak(string s, IList<string> wordDict) {
-            HashSet<string> word_hs = new HashSet<string>(wordDict);
-
-            Dictionary<string, HashSet<int>> prefix_map = new Dictionary<string, HashSet<int>>();
-
             int max_length = 0;
             
+            HashSet<string> word_hs = new HashSet<string>(wordDict);
+            
+            HashSet<int> length_hs = new HashSet<int>();
             foreach (string word in wordDict) {
                 max_length = Math.Max(max_length, word.Length);
-                
-                for (int i = 1; i <= word.Length; i++) {
-                    string prefix = word.Substring(0, i);
-
-                    HashSet<int> count_hs;
-                    if (!prefix_map.TryGetValue(prefix, out count_hs)) {
-                        count_hs = new HashSet<int>();
-                        prefix_map[prefix] = count_hs;
-                    }
-
-                    count_hs.Add(word.Length);
-                }
+                length_hs.Add(word.Length);
             }
+            
+            Dictionary<int, List<string>> memo_map = new Dictionary<int, List<string>>();
 
-            HashSet<int> memo_map = new HashSet<int>();
-
-            IEnumerable<string> parse(int index) {
-                if (memo_map.Contains(index)) {
-                    yield break;
+            List<string> parse(int index) {
+                if (memo_map.TryGetValue(index, out List<string> value)) {
+                    return value;
                 }
 
-                int max_count = Math.Min(max_length, s.Length - index);
-                
-                bool was_result = false;
+                int max_count = s.Length - index;
 
-                HashSet<string> tries = new HashSet<string>();
-                
-                for (int length = 1; length <= max_count; length++) {
-                    string prefix = s.Substring(index, length);
-                    if (prefix_map.TryGetValue(prefix, out HashSet<int> count_hs)) {
-                        foreach (int count in count_hs) {
-                            if (count > max_count) {
-                                continue;
-                            }
-                            string word = s.Substring(index, count);
-                            if (word_hs.Contains(word)) {
-                                if (!tries.Contains(word)) {
-                                    if (index + count >= s.Length) {
-                                        was_result = true;
-                                        yield return word;
-                                    } else {
-                                        foreach (string result in parse(index + count)) {
-                                            was_result = true;
-                                            yield return word + " " + result;
-                                        }
-                                    }
+                List<string> result = new List<string>();
 
-                                    tries.Add(word);
+                foreach (int length in length_hs) {
+                    if (length <= max_count) {
+                        string trial = s.Substring(index, length);
+                        if (word_hs.Contains(trial)) {
+                            if (length == max_count) {
+                                result.Add(trial);
+                            } else {
+                                foreach (string sub in parse(index + trial.Length)) {
+                                    result.Add(trial + " " + sub);
                                 }
                             }
                         }
                     }
                 }
 
-                if (!was_result) {
-                    memo_map.Add(index);
-                }
+                memo_map.Add(index, result);
+                
+                return result;
             }
 
-            return new List<string>(parse(0));
+            return parse(0);
         }
         
     }
