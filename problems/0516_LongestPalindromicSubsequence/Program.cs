@@ -5,19 +5,17 @@
             Solution solution = new Solution();
 
             Test.Check(solution.LongestPalindromeSubseq, "a", 1);
-            Test.Check(solution.LongestPalindromeSubseq, "ab", 1);
             Test.Check(solution.LongestPalindromeSubseq, "aa", 2);
-            Test.Check(solution.LongestPalindromeSubseq, "aab", 2);
-            Test.Check(solution.LongestPalindromeSubseq, "aabb", 2);
-            Test.Check(solution.LongestPalindromeSubseq, "aabbb", 3);
-            Test.Check(solution.LongestPalindromeSubseq, "aabbba", 5);
-            Test.Check(solution.LongestPalindromeSubseq, "aabbbaa", 7);
-            Test.Check(solution.LongestPalindromeSubseq, "paabbbaa", 7);
-            Test.Check(solution.LongestPalindromeSubseq, "paabbbaaq", 7);
-            Test.Check(solution.LongestPalindromeSubseq, "qaabbbaaq", 9);
-            Test.Check(solution.LongestPalindromeSubseq, "ppaabbbaa", 7);
-            Test.Check(solution.LongestPalindromeSubseq, "aabbbaaqpaabbbaa", 7);
-            Test.Check(solution.LongestPalindromeSubseq, "aabbbbaaqpaabbbaa", 8);
+            Test.Check(solution.LongestPalindromeSubseq, "aba", 3);
+            Test.Check(solution.LongestPalindromeSubseq, "abca", 3);
+            Test.Check(solution.LongestPalindromeSubseq, "abcda", 3);
+            Test.Check(solution.LongestPalindromeSubseq, "abcdea", 3);
+            Test.Check(solution.LongestPalindromeSubseq, "adbac", 3);
+            Test.Check(solution.LongestPalindromeSubseq, "dabkac", 3);
+            Test.Check(solution.LongestPalindromeSubseq, "cdabkac", 5);
+            Test.Check(solution.LongestPalindromeSubseq, "zcdabkacl", 5);
+            Test.Check(solution.LongestPalindromeSubseq, "zcdabkaclz", 7);
+            Test.Check(solution.LongestPalindromeSubseq, "aaaabbbbbbbbbbccccccccccddddddddddeeeeeeeeeeffffffffffgggggggggghhhhhhhhhhiiiiiiiiiijjjjjjjjjjkkkkkkkkkkllllllllllmmmmmmmmmmnnnnnnnnnnooooooooooppppppppppqqqqqqqqqqrrrrrrrrrrssssssssssttttttttttuuuuuuuuuuvvvvvvvvvvwwwwwwwwwwxxxxxxxxxxyyyyyyyyyyzzzzzzzzzzyyyyyyyyyyxxxxxxxxxxwwwwwwwwwwvvvvvvvvvvuuuuuuuuuuttttttttttssssssssssrrrrrrrrrrqqqqqqqqqqppppppppppoooooooooonnnnnnnnnnmmmmmmmmmmllllllllllkkkkkkkkkkjjjjjjjjjjiiiiiiiiiihhhhhhhhhhggggggggggffffffffffeeeeeeeeeeddddddddddccccccccccbbbbbbbbbbaaaaaaaabbbbbbbbbbccccccccccddddddddddeeeeeeeeeeffffffffffgggggggggghhhhhhhhhhiiiiiiiiiijjjjjjjjjjkkkkkkkkkkllllllllllmmmmmmmmmmnnnnnnnnnnooooooooooppppppppppqqqqqqqqqqrrrrrrrrrrssssssssssttttttttttuuuuuuuuuuvvvvvvvvvvwwwwwwwwwwxxxxxxxxxxyyyyyyyyyyzzzzzzzzzzyyyyyyyyyyxxxxxxxxxxwwwwwwwwwwvvvvvvvvvvuuuuuuuuuuttttttttttssssssssssrrrrrrrrrrqqqqqqqqqqppppppppppoooooooooonnnnnnnnnnmmmmmmmmmmllllllllllkkkkkkkkkkjjjjjjjjjjiiiiiiiiiihhhhhhhhhhggggggggggffffffffffeeeeeeeeeeddddddddddccccccccccbbbbbbbbbbaaaa", 996);
         }
 
     }
