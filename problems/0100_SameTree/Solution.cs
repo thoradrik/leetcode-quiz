@@ -1,4 +1,6 @@
-﻿namespace Quiz {
+﻿using LeetcodeLib;
+
+namespace Quiz {
     public class Solution {
         
         public bool IsSameTree(TreeNode p, TreeNode q) {

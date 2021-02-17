@@ -1,4 +1,6 @@
-﻿namespace Quiz {
+﻿using LeetcodeLib;
+
+namespace Quiz {
     public class Solution {
         
         public TreeNode SortedArrayToBST(int[] nums) {
