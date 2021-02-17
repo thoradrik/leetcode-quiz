@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using LeetcodeLib;
 
 namespace Quiz {
     public class Solution {

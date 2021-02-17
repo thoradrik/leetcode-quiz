@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Text.Encodings.Web;
 using System.Text.Json;
+using AlgorithmLib;
 using static System.String;
 
 namespace Quiz {
@@ -301,10 +302,10 @@ namespace Quiz {
                 return Format("{0} (Count={1})", JsonSerializer.Serialize(s_l, OPTIONS), sh.Count);
             } else if (value is string s) {
                 return Format("\"{0}\"", s);
-            } else if (value is IIntTreeNode itn) {
+            } else if (value is IBinaryTreeNode itn) {
                 StringBuilder sb = new StringBuilder();
                 sb.Append("\r\n");
-                FormatIntTreeNode(itn, sb, "ROOT", 0);
+                FormatBinaryTreeNode(itn, sb, "ROOT", 0);
                 return sb.ToString();
             } else if (value is IFormattable f) {
                 return Format(CultureInfo.InvariantCulture, "{0}", f);
@@ -342,7 +343,9 @@ namespace Quiz {
             return sb.ToString();
         }
 
-        private static void FormatIntTreeNode(IIntTreeNode node, StringBuilder sb, string prefix, int level) {
+        private static void FormatBinaryTreeNode(IBinaryTreeNode node, StringBuilder sb, string prefix, int level) {
+            sb.Append("  ");
+            
             for (int i = 0; i < level; i++) {
                 sb.Append("  ");
             }
@@ -357,8 +360,8 @@ namespace Quiz {
                 sb.AppendFormat("{0}\r\n", Value(node.Value));
 
                 if (node.Left != null || node.Right != null) {
-                    FormatIntTreeNode(node.Right, sb, "RIGHT", level + 1);
-                    FormatIntTreeNode(node.Left, sb, "LEFT", level + 1);
+                    FormatBinaryTreeNode(node.Right, sb, "RIGHT", level + 1);
+                    FormatBinaryTreeNode(node.Left, sb, "LEFT", level + 1);
                 }
             }
         }

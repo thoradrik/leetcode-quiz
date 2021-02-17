@@ -1,70 +1,20 @@
-﻿namespace Quiz {
+﻿using LeetcodeLib;
+
+namespace Quiz {
     public class Program : ProgramBase {
         
         public static void Main() {
             Solution solution = new Solution();
 
-            TreeNode root;
-            
-            root = null;
-            Test.Check(solution.RightSideView, root, IntArray("[]"));
-
-            root = new TreeNode(1);
-            Test.Check(solution.RightSideView, root, IntArray("[1]"));
-
-            root = new TreeNode(
-                1,
-                new TreeNode(2),
-                null
-            );
-            Test.Check(solution.RightSideView, root, IntArray("[1,2]"));
-
-            root = new TreeNode(
-                1,
-                new TreeNode(2),
-                new TreeNode(3)
-            );
-            Test.Check(solution.RightSideView, root, IntArray("[1,3]"));
-
-            root = new TreeNode(
-                1,
-                new TreeNode(
-                    2,
-                    new TreeNode(4)
-                ),
-                new TreeNode(3)
-            );
-            Test.Check(solution.RightSideView, root, IntArray("[1,3,4]"));
-
-            root = new TreeNode(
-                1,
-                new TreeNode(
-                    2,
-                    new TreeNode(4),
-                    new TreeNode(5)
-                ),
-                new TreeNode(
-                    3,
-                    new TreeNode(6),
-                    null
-                )
-            );
-            Test.Check(solution.RightSideView, root, IntArray("[1,3,6]"));
-
-            root = new TreeNode(
-                1,
-                new TreeNode(
-                    2,
-                    new TreeNode(4),
-                    new TreeNode(5)
-                ),
-                new TreeNode(
-                    3,
-                    new TreeNode(6),
-                    new TreeNode(7)
-                )
-            );
-            Test.Check(solution.RightSideView, root, IntArray("[1,3,7]"));
+            Test.Check(solution.RightSideView, TreeHelper.CreateTreeFromBFS("[]"), IntArray("[]"));
+            Test.Check(solution.RightSideView, TreeHelper.CreateTreeFromBFS("[1]"), IntArray("[1]"));
+            Test.Check(solution.RightSideView, TreeHelper.CreateTreeFromBFS("[1,2]"), IntArray("[1,2]"));
+            Test.Check(solution.RightSideView, TreeHelper.CreateTreeFromBFS("[1,null,3]"), IntArray("[1,3]"));
+            Test.Check(solution.RightSideView, TreeHelper.CreateTreeFromBFS("[1,2,3]"), IntArray("[1,3]"));
+            Test.Check(solution.RightSideView, TreeHelper.CreateTreeFromBFS("[1,2,3,4,null]"), IntArray("[1,3,4]"));
+            Test.Check(solution.RightSideView, TreeHelper.CreateTreeFromBFS("[1,2,3,4,5]"), IntArray("[1,3,5]"));
+            Test.Check(solution.RightSideView, TreeHelper.CreateTreeFromBFS("[1,2,3,4,5,6]"), IntArray("[1,3,6]"));
+            Test.Check(solution.RightSideView, TreeHelper.CreateTreeFromBFS("[1,2,3,4,5,6,7]"), IntArray("[1,3,7]"));
         }
 
     }
