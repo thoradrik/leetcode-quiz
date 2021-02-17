@@ -285,6 +285,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MaximumSubarray", "problems
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FindHighestAltitude", "problems\1732_FindHighestAltitude\FindHighestAltitude.csproj", "{575D14DD-CF10-470E-92B8-764F2B830297}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinaryTreeRightSideView", "problems\0199_BinaryTreeRightSideView\BinaryTreeRightSideView.csproj", "{F6D43982-29A2-4602-8462-0FED7D30282D}"
+EndProject
 Global
 																																																																GlobalSection(SolutionConfigurationPlatforms) = preSolution
 																																																																																																																																Debug|Any CPU = Debug|Any CPU
@@ -843,6 +845,10 @@ Global
 																																																																	{575D14DD-CF10-470E-92B8-764F2B830297}.Debug|Any CPU.Build.0 = Debug|Any CPU
 																																																																	{575D14DD-CF10-470E-92B8-764F2B830297}.Release|Any CPU.ActiveCfg = Release|Any CPU
 																																																																	{575D14DD-CF10-470E-92B8-764F2B830297}.Release|Any CPU.Build.0 = Release|Any CPU
+																																																																	{F6D43982-29A2-4602-8462-0FED7D30282D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+																																																																	{F6D43982-29A2-4602-8462-0FED7D30282D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+																																																																	{F6D43982-29A2-4602-8462-0FED7D30282D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+																																																																	{F6D43982-29A2-4602-8462-0FED7D30282D}.Release|Any CPU.Build.0 = Release|Any CPU
 																																																																EndGlobalSection
 																																																																GlobalSection(SolutionProperties) = preSolution
 																																																																																																																																HideSolutionNode = FALSE
@@ -986,5 +992,6 @@ Global
 																																																																	{310F8D30-DCC6-435D-8913-67C607D2670F} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
 																																																																	{429DBCF2-0979-48A4-9FB5-F47B04107B34} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
 																																																																	{575D14DD-CF10-470E-92B8-764F2B830297} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
+																																																																	{F6D43982-29A2-4602-8462-0FED7D30282D} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
 																																																																EndGlobalSection
 EndGlobal
