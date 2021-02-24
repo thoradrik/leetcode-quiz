@@ -293,6 +293,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImplementTrie", "problems\0
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WordsDataStructure", "problems\0211_WordsDataStructure\WordsDataStructure.csproj", "{183B863A-3E62-484F-9BE9-AFA30B334EC6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImplementMagicDictionary", "problems\0676_ImplementMagicDictionary\ImplementMagicDictionary.csproj", "{B2A8F0F5-DE63-4F0C-9AA1-22E631317129}"
+EndProject
 Global
 																																																																GlobalSection(SolutionConfigurationPlatforms) = preSolution
 																																																																																																																																Debug|Any CPU = Debug|Any CPU
@@ -867,6 +869,10 @@ Global
 																																																																	{183B863A-3E62-484F-9BE9-AFA30B334EC6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 																																																																	{183B863A-3E62-484F-9BE9-AFA30B334EC6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 																																																																	{183B863A-3E62-484F-9BE9-AFA30B334EC6}.Release|Any CPU.Build.0 = Release|Any CPU
+																																																																	{B2A8F0F5-DE63-4F0C-9AA1-22E631317129}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+																																																																	{B2A8F0F5-DE63-4F0C-9AA1-22E631317129}.Debug|Any CPU.Build.0 = Debug|Any CPU
+																																																																	{B2A8F0F5-DE63-4F0C-9AA1-22E631317129}.Release|Any CPU.ActiveCfg = Release|Any CPU
+																																																																	{B2A8F0F5-DE63-4F0C-9AA1-22E631317129}.Release|Any CPU.Build.0 = Release|Any CPU
 																																																																EndGlobalSection
 																																																																GlobalSection(SolutionProperties) = preSolution
 																																																																																																																																HideSolutionNode = FALSE
@@ -1014,5 +1020,6 @@ Global
 																																																																	{C9C05970-ADE9-4476-A81D-F9AD53642B2D} = {0DB4C5C5-A8EE-43BA-B74C-5034A809E187}
 																																																																	{41CD2956-4921-4753-A3F0-9272C60C890F} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
 																																																																	{183B863A-3E62-484F-9BE9-AFA30B334EC6} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
+																																																																	{B2A8F0F5-DE63-4F0C-9AA1-22E631317129} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
 																																																																EndGlobalSection
 EndGlobal
