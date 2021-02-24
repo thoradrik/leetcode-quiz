@@ -1,59 +1,50 @@
-﻿namespace AlgorithmLib {
+﻿using System.Collections.Generic;
+
+namespace AlgorithmLib {
     public class Trie {
 
-        private class Node {
+        private class Node : Dictionary<char, Node> {
 
-            public bool IsString;
-            
-            public readonly Node[] Nodes = new Node[26];
+            public bool IsWord;
 
         }
 
-        private Node m_Root;
+        private readonly Node m_Root = new Node();
         
         public void Insert(string s) {
-            ref Node current = ref m_Root;
+            Node current = m_Root;
 
-            for (int ptr = 0; ptr < s.Length; ptr++) {
-                if (current == null) {
-                    current = new Node();
+            foreach (char c in s) {
+                if (!current.TryGetValue(c, out Node node)) {
+                    node = new Node();
+                    current.Add(c, node);
                 }
 
-                current = ref current.Nodes[s[ptr] - 'a'];
-            }
-            
-            if (current == null) {
-                current = new Node();
+                current = node;
             }
 
-            current.IsString = true;
+            current.IsWord = true;
         }
 
-        private bool TryFindNode(string word, out Node node) {
+        private bool TryFindNode(string s, out Node node) {
             node = m_Root;
-
-            int ptr = 0;
-
-            while (node != null && ptr < word.Length) {
-                if (node.Nodes == null) {
-                    node = null;
+            
+            foreach (char c in s) {
+                if (!node.TryGetValue(c, out node)) {
                     return false;
                 }
-
-                node = node.Nodes[word[ptr] - 'a'];
-                
-                ptr++;
             }
-
-            return node != null;
+            
+            return true;
         }
 
-        public bool HasString(string s) {
-            return TryFindNode(s, out Node node) && node.IsString;
+        public bool Search(string s) {
+            return TryFindNode(s, out Node node) && node.IsWord;
         }
     
-        public bool HasPrefix(string s) {
+        public bool StartsWith(string s) {
             return TryFindNode(s, out Node node);
         }
+        
     }
 }
