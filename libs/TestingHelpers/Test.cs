@@ -138,6 +138,16 @@ namespace Quiz {
                 case char[] ca_answer when expected is char[] ca_expected: return CheckArrayResult(ca_answer, ca_expected, (x, y) => x == y);
                 case string[] sa_answer when expected is string[] sa_expected: return CheckArrayResult(sa_answer, sa_expected, (x, y) => x == y);
 
+                case int[][] i2a_answer when expected is int[][] i2a_expected: return Check2ArrayResult(i2a_answer, i2a_expected, (x, y) => x == y);
+                case uint[][] ui2a_answer when expected is uint[][] ui2a_expected: return Check2ArrayResult(ui2a_answer, ui2a_expected, (x, y) => x == y);
+                case long[][] l2a_answer when expected is long[][] l2a_expected: return Check2ArrayResult(l2a_answer, l2a_expected, (x, y) => x == y);
+                case ulong[][] ul2a_answer when expected is ulong[][] ul2a_expected: return Check2ArrayResult(ul2a_answer, ul2a_expected, (x, y) => x == y);
+                case float[][] f2a_answer when expected is float[][] f2a_expected: return Check2ArrayResult(f2a_answer, f2a_expected, (x, y) => Math.Abs(x - y) < Single.Epsilon);
+                case double[][] d2a_answer when expected is double[][] d2a_expected: return Check2ArrayResult(d2a_answer, d2a_expected, (x, y) => Math.Abs(x - y) < Double.Epsilon);
+                case bool[][] b2a_answer when expected is bool[][] b2a_expected: return Check2ArrayResult(b2a_answer, b2a_expected, (x, y) => x == y);
+                case char[][] c2a_answer when expected is char[][] c2a_expected: return Check2ArrayResult(c2a_answer, c2a_expected, (x, y) => x == y);
+                case string[][] s2a_answer when expected is string[][] s2a_expected: return Check2ArrayResult(s2a_answer, s2a_expected, (x, y) => x == y);
+
                 case IList<int> il_answer when expected is IList<int> il_expected: return CheckListResult(il_answer, il_expected, (x, y) => x == y);
                 case IList<uint> uil_answer when expected is IList<uint> uil_expected: return CheckListResult(uil_answer, uil_expected, (x, y) => x == y);
                 case IList<long> ll_answer when expected is IList<long> ll_expected: return CheckListResult(ll_answer, ll_expected, (x, y) => x == y);
@@ -169,6 +179,20 @@ namespace Quiz {
                     return false;
                 }
 
+            }
+           
+            return true;
+        }
+
+        private static bool Check2ArrayResult<T>(T[][] answer, T[][] expected, Func<T, T, bool> comparison) {
+            if (answer.Length != expected.Length) {
+                return false;
+            } 
+            
+            for (int i = 0; i < answer.Length; i++) {
+                if (!CheckArrayResult(answer[i], expected[i], comparison)) {
+                    return false;
+                }
             }
            
             return true;
