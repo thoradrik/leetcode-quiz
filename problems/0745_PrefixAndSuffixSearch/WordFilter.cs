@@ -3,13 +3,13 @@
 namespace Quiz {
     public class WordFilter {
 
-        private class Node : Dictionary<char, Node> {
+        private class TrieNode : Dictionary<char, TrieNode> {
 
             public int Index;
 
         }
 
-        private readonly Node m_Root = new Node();
+        private readonly TrieNode m_TrieNode = new TrieNode();
         
         public WordFilter(string[] words) {
             for (int index = 0; index < words.Length; index++) {
@@ -18,11 +18,11 @@ namespace Quiz {
                 for (int i = 0; i < word.Length; i++) {
                     string form = word.Substring(i) + "\0" + word;
                     
-                    Node current = m_Root;
+                    TrieNode current = m_TrieNode;
 
                     foreach (char c in form) {
-                        if (!current.TryGetValue(c, out Node node)) {
-                            node = new Node();
+                        if (!current.TryGetValue(c, out TrieNode node)) {
+                            node = new TrieNode();
                             current.Add(c, node);
                         }
 
@@ -34,7 +34,7 @@ namespace Quiz {
         }
     
         public int F(string prefix, string suffix) {
-            Node current = m_Root;
+            TrieNode current = m_TrieNode;
 
             foreach (char c in suffix + "\0" + prefix) {
                 if (!current.TryGetValue(c, out current)) {

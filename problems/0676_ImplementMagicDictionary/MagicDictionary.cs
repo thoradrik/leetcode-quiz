@@ -3,20 +3,20 @@
 namespace Quiz {
     public class MagicDictionary {
 
-        private class Node : Dictionary<char, Node> {
+        private class TrieNode : Dictionary<char, TrieNode> {
 
             public bool IsWord;
 
         }
 
-        private readonly Node m_Root = new Node();
+        private readonly TrieNode m_TrieRoot = new TrieNode();
         
         public void Insert(string s) {
-            Node current = m_Root;
+            TrieNode current = m_TrieRoot;
 
             foreach (char c in s) {
-                if (!current.TryGetValue(c, out Node node)) {
-                    node = new Node();
+                if (!current.TryGetValue(c, out TrieNode node)) {
+                    node = new TrieNode();
                     current.Add(c, node);
                 }
 
@@ -33,11 +33,11 @@ namespace Quiz {
         }
         
         public bool Search(string searchWord) {
-            Node search(Node node, int ptr, int replaces) {
+            TrieNode search(TrieNode node, int ptr, int replaces) {
                 if (ptr < searchWord.Length) {
                     if (replaces > 0) {
-                        foreach ((char key, Node child) in node) {
-                            Node result = key == searchWord[ptr] ? search(child, ptr + 1, replaces) : search(child, ptr + 1, replaces - 1);
+                        foreach ((char key, TrieNode child) in node) {
+                            TrieNode result = key == searchWord[ptr] ? search(child, ptr + 1, replaces) : search(child, ptr + 1, replaces - 1);
 
                             if (result != null) {
                                 if (result.IsWord) {
@@ -63,7 +63,7 @@ namespace Quiz {
                 return node.IsWord ? node : null;
             }
 
-            return search(m_Root, 0, 1) != null;
+            return search(m_TrieRoot, 0, 1) != null;
         }
         
     }

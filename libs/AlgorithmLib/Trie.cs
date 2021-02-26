@@ -3,20 +3,20 @@
 namespace AlgorithmLib {
     public class Trie {
 
-        private class Node : Dictionary<char, Node> {
+        private class TrieNode : Dictionary<char, TrieNode> {
 
             public bool IsWord;
 
         }
 
-        private readonly Node m_Root = new Node();
+        private readonly TrieNode m_TrieRoot = new TrieNode();
         
         public void Insert(string s) {
-            Node current = m_Root;
+            TrieNode current = m_TrieRoot;
 
             foreach (char c in s) {
-                if (!current.TryGetValue(c, out Node node)) {
-                    node = new Node();
+                if (!current.TryGetValue(c, out TrieNode node)) {
+                    node = new TrieNode();
                     current.Add(c, node);
                 }
 
@@ -26,8 +26,8 @@ namespace AlgorithmLib {
             current.IsWord = true;
         }
 
-        private bool TryFindNode(string s, out Node node) {
-            node = m_Root;
+        private bool TryFindNode(string s, out TrieNode node) {
+            node = m_TrieRoot;
             
             foreach (char c in s) {
                 if (!node.TryGetValue(c, out node)) {
@@ -39,11 +39,11 @@ namespace AlgorithmLib {
         }
 
         public bool Search(string s) {
-            return TryFindNode(s, out Node node) && node.IsWord;
+            return TryFindNode(s, out TrieNode node) && node.IsWord;
         }
     
         public bool StartsWith(string s) {
-            return TryFindNode(s, out Node node);
+            return TryFindNode(s, out TrieNode node);
         }
         
     }

@@ -1,36 +1,33 @@
-﻿namespace Quiz {
+﻿using System.Collections.Generic;
+
+namespace Quiz {
     public class WordDictionary {
 
-        private class Node {
+        private class TrieNode : Dictionary<char, TrieNode> {
 
             public bool IsWord;
-            
-            public readonly Node[] Nodes = new Node[26];
 
         }
 
-        private Node m_Root;
+        private readonly TrieNode m_TrieRoot = new TrieNode();
     
         public void AddWord(string word) {
-            ref Node current = ref m_Root;
+            TrieNode current = m_TrieRoot;
 
-            for (int ptr = 0; ptr < word.Length; ptr++) {
-                if (current == null) {
-                    current = new Node();
+            foreach (char c in word) {
+                if (!current.TryGetValue(c, out TrieNode node)) {
+                    node = new TrieNode();
+                    current.Add(c, node);
                 }
 
-                current = ref current.Nodes[word[ptr] - 'a'];
-            }
-            
-            if (current == null) {
-                current = new Node();
+                current = node;
             }
 
             current.IsWord = true;
         }
     
         public bool Search(string word) {
-            Node search(Node node, int ptr) {
+            TrieNode search(TrieNode node, int ptr) {
                 if (node == null) {
                     return null;
                 }
@@ -38,20 +35,12 @@
                 if (ptr >= word.Length) {
                     return node;
                 }
-
-                if (node.Nodes == null) {
-                    return null;
-                }
-
+                
                 while (node != null && ptr < word.Length) {
-                    if (node.Nodes == null) {
-                        return null;
-                    }
-                    
-                    int c = word[ptr];
+                    char c = word[ptr];
                     if (c == '.') {
-                        for (int index = 0; index < node.Nodes.Length; index++) {
-                            Node found = search(node.Nodes[index], ptr + 1);
+                        foreach ((char key, TrieNode child) in node) {
+                            TrieNode found = search(child, ptr + 1);
                             if (found != null) {
                                 if (found.IsWord) {
                                     return found;
@@ -61,7 +50,10 @@
 
                         return null;
                     } else {
-                        node = node.Nodes[c - 'a'];
+                        if (!node.TryGetValue(c, out node)) {
+                            node = null;
+                        }
+
                         ptr++;
                     }
                 } 
@@ -69,7 +61,7 @@
                 return node;
             }
 
-            Node result = search(m_Root, 0);
+            TrieNode result = search(m_TrieRoot, 0);
             
             return result != null && result.IsWord;
         }
