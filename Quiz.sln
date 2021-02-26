@@ -299,6 +299,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrefixAndSuffixSearch", "pr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IndexPairsOfString", "problems\1065_IndexPairsOfString\IndexPairsOfString.csproj", "{0D40327E-8739-4C0C-A26B-5C991C28142C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MergeStringsAlternately", "problems\1768_MergeStringsAlternately\MergeStringsAlternately.csproj", "{AD7BD782-5F66-41B6-A8F5-3CBC09FD38E5}"
+EndProject
 Global
 																																																																GlobalSection(SolutionConfigurationPlatforms) = preSolution
 																																																																																																																																Debug|Any CPU = Debug|Any CPU
@@ -885,6 +887,10 @@ Global
 																																																																	{0D40327E-8739-4C0C-A26B-5C991C28142C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 																																																																	{0D40327E-8739-4C0C-A26B-5C991C28142C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 																																																																	{0D40327E-8739-4C0C-A26B-5C991C28142C}.Release|Any CPU.Build.0 = Release|Any CPU
+																																																																	{AD7BD782-5F66-41B6-A8F5-3CBC09FD38E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+																																																																	{AD7BD782-5F66-41B6-A8F5-3CBC09FD38E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+																																																																	{AD7BD782-5F66-41B6-A8F5-3CBC09FD38E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+																																																																	{AD7BD782-5F66-41B6-A8F5-3CBC09FD38E5}.Release|Any CPU.Build.0 = Release|Any CPU
 																																																																EndGlobalSection
 																																																																GlobalSection(SolutionProperties) = preSolution
 																																																																																																																																HideSolutionNode = FALSE
@@ -1035,5 +1041,6 @@ Global
 																																																																	{B2A8F0F5-DE63-4F0C-9AA1-22E631317129} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
 																																																																	{B402F66B-F7B5-47BF-834A-B0740AAECF07} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
 																																																																	{0D40327E-8739-4C0C-A26B-5C991C28142C} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
+																																																																	{AD7BD782-5F66-41B6-A8F5-3CBC09FD38E5} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
 																																																																EndGlobalSection
 EndGlobal
