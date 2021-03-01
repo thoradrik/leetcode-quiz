@@ -311,6 +311,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReverseVowelsOfString", "pr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RemoveVowelsFromString", "problems\1119_RemoveVowelsFromString\RemoveVowelsFromString.csproj", "{678F841E-8EA7-4AB7-87F5-A49DC1985C64}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReverseString2", "problems\0541_ReverseString2\ReverseString2.csproj", "{2E98C6B0-B2FD-4DB1-85DA-F6CA6FF7CA02}"
+EndProject
 Global
 																																																																GlobalSection(SolutionConfigurationPlatforms) = preSolution
 																																																																																																																																Debug|Any CPU = Debug|Any CPU
@@ -921,6 +923,10 @@ Global
 																																																																	{678F841E-8EA7-4AB7-87F5-A49DC1985C64}.Debug|Any CPU.Build.0 = Debug|Any CPU
 																																																																	{678F841E-8EA7-4AB7-87F5-A49DC1985C64}.Release|Any CPU.ActiveCfg = Release|Any CPU
 																																																																	{678F841E-8EA7-4AB7-87F5-A49DC1985C64}.Release|Any CPU.Build.0 = Release|Any CPU
+																																																																	{2E98C6B0-B2FD-4DB1-85DA-F6CA6FF7CA02}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+																																																																	{2E98C6B0-B2FD-4DB1-85DA-F6CA6FF7CA02}.Debug|Any CPU.Build.0 = Debug|Any CPU
+																																																																	{2E98C6B0-B2FD-4DB1-85DA-F6CA6FF7CA02}.Release|Any CPU.ActiveCfg = Release|Any CPU
+																																																																	{2E98C6B0-B2FD-4DB1-85DA-F6CA6FF7CA02}.Release|Any CPU.Build.0 = Release|Any CPU
 																																																																EndGlobalSection
 																																																																GlobalSection(SolutionProperties) = preSolution
 																																																																																																																																HideSolutionNode = FALSE
@@ -1077,5 +1083,6 @@ Global
 																																																																	{C02EF702-D5E5-4C81-8531-EADF5417FB12} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
 																																																																	{90DCF607-EB89-477A-BDC4-E940DB51B998} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
 																																																																	{678F841E-8EA7-4AB7-87F5-A49DC1985C64} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
+																																																																	{2E98C6B0-B2FD-4DB1-85DA-F6CA6FF7CA02} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
 																																																																EndGlobalSection
 EndGlobal
