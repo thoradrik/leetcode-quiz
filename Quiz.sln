@@ -307,6 +307,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReorderDataInLogFiles", "pr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReverseString", "problems\0344_ReverseString\ReverseString.csproj", "{C02EF702-D5E5-4C81-8531-EADF5417FB12}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReverseVowelsOfString", "problems\0345_ReverseVowelsOfString\ReverseVowelsOfString.csproj", "{90DCF607-EB89-477A-BDC4-E940DB51B998}"
+EndProject
 Global
 																																																																GlobalSection(SolutionConfigurationPlatforms) = preSolution
 																																																																																																																																Debug|Any CPU = Debug|Any CPU
@@ -909,6 +911,10 @@ Global
 																																																																	{C02EF702-D5E5-4C81-8531-EADF5417FB12}.Debug|Any CPU.Build.0 = Debug|Any CPU
 																																																																	{C02EF702-D5E5-4C81-8531-EADF5417FB12}.Release|Any CPU.ActiveCfg = Release|Any CPU
 																																																																	{C02EF702-D5E5-4C81-8531-EADF5417FB12}.Release|Any CPU.Build.0 = Release|Any CPU
+																																																																	{90DCF607-EB89-477A-BDC4-E940DB51B998}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+																																																																	{90DCF607-EB89-477A-BDC4-E940DB51B998}.Debug|Any CPU.Build.0 = Debug|Any CPU
+																																																																	{90DCF607-EB89-477A-BDC4-E940DB51B998}.Release|Any CPU.ActiveCfg = Release|Any CPU
+																																																																	{90DCF607-EB89-477A-BDC4-E940DB51B998}.Release|Any CPU.Build.0 = Release|Any CPU
 																																																																EndGlobalSection
 																																																																GlobalSection(SolutionProperties) = preSolution
 																																																																																																																																HideSolutionNode = FALSE
@@ -1063,5 +1069,6 @@ Global
 																																																																	{1FE48173-CE23-43C1-81FD-5BBD03078081} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
 																																																																	{D34C9DFF-058F-470D-9D3A-C5EFF9DC93E5} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
 																																																																	{C02EF702-D5E5-4C81-8531-EADF5417FB12} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
+																																																																	{90DCF607-EB89-477A-BDC4-E940DB51B998} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
 																																																																EndGlobalSection
 EndGlobal
