@@ -323,6 +323,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ValidPalindrome2", "problem
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ValidPalindrome", "problems\0125_ValidPalindrome\ValidPalindrome.csproj", "{E39EB564-CB81-4599-ABB2-4820F3148410}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlipGame", "problems\0293_FlipGame\FlipGame.csproj", "{896752AC-952A-41AC-8EEF-51194C64FCD7}"
+EndProject
 Global
 																																																																GlobalSection(SolutionConfigurationPlatforms) = preSolution
 																																																																																																																																Debug|Any CPU = Debug|Any CPU
@@ -957,6 +959,10 @@ Global
 																																																																	{E39EB564-CB81-4599-ABB2-4820F3148410}.Debug|Any CPU.Build.0 = Debug|Any CPU
 																																																																	{E39EB564-CB81-4599-ABB2-4820F3148410}.Release|Any CPU.ActiveCfg = Release|Any CPU
 																																																																	{E39EB564-CB81-4599-ABB2-4820F3148410}.Release|Any CPU.Build.0 = Release|Any CPU
+																																																																	{896752AC-952A-41AC-8EEF-51194C64FCD7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+																																																																	{896752AC-952A-41AC-8EEF-51194C64FCD7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+																																																																	{896752AC-952A-41AC-8EEF-51194C64FCD7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+																																																																	{896752AC-952A-41AC-8EEF-51194C64FCD7}.Release|Any CPU.Build.0 = Release|Any CPU
 																																																																EndGlobalSection
 																																																																GlobalSection(SolutionProperties) = preSolution
 																																																																																																																																HideSolutionNode = FALSE
@@ -1119,5 +1125,6 @@ Global
 																																																																	{6241A941-BE43-4ACB-9FE6-0BB2CB3EE039} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
 																																																																	{E8C4D33B-B542-4611-8531-EB7951FE1CA4} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
 																																																																	{E39EB564-CB81-4599-ABB2-4820F3148410} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
+																																																																	{896752AC-952A-41AC-8EEF-51194C64FCD7} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
 																																																																EndGlobalSection
 EndGlobal
