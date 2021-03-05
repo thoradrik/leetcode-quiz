@@ -327,6 +327,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlipGame", "problems\0293_F
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OccurrencesAfterBigram", "problems\1078_OccurrencesAfterBigram\OccurrencesAfterBigram.csproj", "{D65D12C3-BA16-4C50-94A9-F5654BECC549}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimilarRGBColor", "problems\0800_SimilarRGBColor\SimilarRGBColor.csproj", "{B860C8D5-89CE-4D4C-921C-FB8A077675C0}"
+EndProject
 Global
 																																																																GlobalSection(SolutionConfigurationPlatforms) = preSolution
 																																																																																																																																Debug|Any CPU = Debug|Any CPU
@@ -969,6 +971,10 @@ Global
 																																																																	{D65D12C3-BA16-4C50-94A9-F5654BECC549}.Debug|Any CPU.Build.0 = Debug|Any CPU
 																																																																	{D65D12C3-BA16-4C50-94A9-F5654BECC549}.Release|Any CPU.ActiveCfg = Release|Any CPU
 																																																																	{D65D12C3-BA16-4C50-94A9-F5654BECC549}.Release|Any CPU.Build.0 = Release|Any CPU
+																																																																	{B860C8D5-89CE-4D4C-921C-FB8A077675C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+																																																																	{B860C8D5-89CE-4D4C-921C-FB8A077675C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+																																																																	{B860C8D5-89CE-4D4C-921C-FB8A077675C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+																																																																	{B860C8D5-89CE-4D4C-921C-FB8A077675C0}.Release|Any CPU.Build.0 = Release|Any CPU
 																																																																EndGlobalSection
 																																																																GlobalSection(SolutionProperties) = preSolution
 																																																																																																																																HideSolutionNode = FALSE
@@ -1133,5 +1139,6 @@ Global
 																																																																	{E39EB564-CB81-4599-ABB2-4820F3148410} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
 																																																																	{896752AC-952A-41AC-8EEF-51194C64FCD7} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
 																																																																	{D65D12C3-BA16-4C50-94A9-F5654BECC549} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
+																																																																	{B860C8D5-89CE-4D4C-921C-FB8A077675C0} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
 																																																																EndGlobalSection
 EndGlobal
