@@ -343,6 +343,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PowerOfFour", "problems\034
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PowerOfThree", "problems\0326_PowerOfThree\PowerOfThree.csproj", "{55F3B74C-ED68-42DF-AE93-A4B1BB428936}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EncodeAndDecodeTinyURL", "problems\0535_EncodeAndDecodeTinyURL\EncodeAndDecodeTinyURL.csproj", "{F3B88BE3-69D2-4483-BE60-A4F4DDB7E71A}"
+EndProject
 Global
 																																																																GlobalSection(SolutionConfigurationPlatforms) = preSolution
 																																																																																																																																Debug|Any CPU = Debug|Any CPU
@@ -1017,6 +1019,10 @@ Global
 																																																																	{55F3B74C-ED68-42DF-AE93-A4B1BB428936}.Debug|Any CPU.Build.0 = Debug|Any CPU
 																																																																	{55F3B74C-ED68-42DF-AE93-A4B1BB428936}.Release|Any CPU.ActiveCfg = Release|Any CPU
 																																																																	{55F3B74C-ED68-42DF-AE93-A4B1BB428936}.Release|Any CPU.Build.0 = Release|Any CPU
+																																																																	{F3B88BE3-69D2-4483-BE60-A4F4DDB7E71A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+																																																																	{F3B88BE3-69D2-4483-BE60-A4F4DDB7E71A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+																																																																	{F3B88BE3-69D2-4483-BE60-A4F4DDB7E71A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+																																																																	{F3B88BE3-69D2-4483-BE60-A4F4DDB7E71A}.Release|Any CPU.Build.0 = Release|Any CPU
 																																																																EndGlobalSection
 																																																																GlobalSection(SolutionProperties) = preSolution
 																																																																																																																																HideSolutionNode = FALSE
@@ -1189,5 +1195,6 @@ Global
 																																																																	{2B69AAC8-BD3D-4728-A251-63D5E84F2B4B} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
 																																																																	{C0B942BA-E4CA-483A-9F6D-AF860F7CFB40} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
 																																																																	{55F3B74C-ED68-42DF-AE93-A4B1BB428936} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
+																																																																	{F3B88BE3-69D2-4483-BE60-A4F4DDB7E71A} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
 																																																																EndGlobalSection
 EndGlobal
