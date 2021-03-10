@@ -355,6 +355,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CloneGraph", "problems\0133
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CloneNaryTree", "problems\1490_CloneNaryTree\CloneNaryTree.csproj", "{59AD1A00-5F65-4E80-B9E6-204D031915CE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CloneBinaryTreeWithRandomPointer", "problems\1485_CloneBinaryTreeWithRandomPointer\CloneBinaryTreeWithRandomPointer.csproj", "{270A918B-4C29-4CFF-8A54-2274A8BE1A0A}"
+EndProject
 Global
 																																																																GlobalSection(SolutionConfigurationPlatforms) = preSolution
 																																																																																																																																Debug|Any CPU = Debug|Any CPU
@@ -1053,6 +1055,10 @@ Global
 																																																																	{59AD1A00-5F65-4E80-B9E6-204D031915CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 																																																																	{59AD1A00-5F65-4E80-B9E6-204D031915CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 																																																																	{59AD1A00-5F65-4E80-B9E6-204D031915CE}.Release|Any CPU.Build.0 = Release|Any CPU
+																																																																	{270A918B-4C29-4CFF-8A54-2274A8BE1A0A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+																																																																	{270A918B-4C29-4CFF-8A54-2274A8BE1A0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+																																																																	{270A918B-4C29-4CFF-8A54-2274A8BE1A0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+																																																																	{270A918B-4C29-4CFF-8A54-2274A8BE1A0A}.Release|Any CPU.Build.0 = Release|Any CPU
 																																																																EndGlobalSection
 																																																																GlobalSection(SolutionProperties) = preSolution
 																																																																																																																																HideSolutionNode = FALSE
@@ -1231,5 +1237,6 @@ Global
 																																																																	{19072020-36A3-4043-A58D-EC52B52C84B9} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
 																																																																	{479DC337-DCDA-4CD9-A95D-100425C206CD} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
 																																																																	{59AD1A00-5F65-4E80-B9E6-204D031915CE} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
+																																																																	{270A918B-4C29-4CFF-8A54-2274A8BE1A0A} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
 																																																																EndGlobalSection
 EndGlobal
