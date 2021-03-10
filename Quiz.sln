@@ -351,6 +351,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RearrangeSpacesBetweenWords
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HammingDistance", "problems\0461_HammingDistance\HammingDistance.csproj", "{19072020-36A3-4043-A58D-EC52B52C84B9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CloneGraph", "problems\0133_CloneGraph\CloneGraph.csproj", "{479DC337-DCDA-4CD9-A95D-100425C206CD}"
+EndProject
 Global
 																																																																GlobalSection(SolutionConfigurationPlatforms) = preSolution
 																																																																																																																																Debug|Any CPU = Debug|Any CPU
@@ -1041,6 +1043,10 @@ Global
 																																																																	{19072020-36A3-4043-A58D-EC52B52C84B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 																																																																	{19072020-36A3-4043-A58D-EC52B52C84B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 																																																																	{19072020-36A3-4043-A58D-EC52B52C84B9}.Release|Any CPU.Build.0 = Release|Any CPU
+																																																																	{479DC337-DCDA-4CD9-A95D-100425C206CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+																																																																	{479DC337-DCDA-4CD9-A95D-100425C206CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+																																																																	{479DC337-DCDA-4CD9-A95D-100425C206CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+																																																																	{479DC337-DCDA-4CD9-A95D-100425C206CD}.Release|Any CPU.Build.0 = Release|Any CPU
 																																																																EndGlobalSection
 																																																																GlobalSection(SolutionProperties) = preSolution
 																																																																																																																																HideSolutionNode = FALSE
@@ -1217,5 +1223,6 @@ Global
 																																																																	{B0C7DEAD-2D44-42CA-ADA2-7B798B9EC934} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
 																																																																	{20F92C98-42FF-4417-9263-43FD45C951D5} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
 																																																																	{19072020-36A3-4043-A58D-EC52B52C84B9} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
+																																																																	{479DC337-DCDA-4CD9-A95D-100425C206CD} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
 																																																																EndGlobalSection
 EndGlobal
