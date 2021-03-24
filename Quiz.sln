@@ -365,6 +365,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hexspeak", "problems\1271_H
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudentAttendanceRecord", "problems\0551_StudentAttendanceRecord\StudentAttendanceRecord.csproj", "{70A9E1ED-6E77-4641-9164-8E0D9382716E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudentAttendanceRecord2", "problems\0552_StudentAttendanceRecord2\StudentAttendanceRecord2.csproj", "{E46E9057-0B8F-405E-A837-2266B84A81E5}"
+EndProject
 Global
 																																																																GlobalSection(SolutionConfigurationPlatforms) = preSolution
 																																																																																																																																Debug|Any CPU = Debug|Any CPU
@@ -1083,6 +1085,10 @@ Global
 																																																																	{70A9E1ED-6E77-4641-9164-8E0D9382716E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 																																																																	{70A9E1ED-6E77-4641-9164-8E0D9382716E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 																																																																	{70A9E1ED-6E77-4641-9164-8E0D9382716E}.Release|Any CPU.Build.0 = Release|Any CPU
+																																																																	{E46E9057-0B8F-405E-A837-2266B84A81E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+																																																																	{E46E9057-0B8F-405E-A837-2266B84A81E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+																																																																	{E46E9057-0B8F-405E-A837-2266B84A81E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+																																																																	{E46E9057-0B8F-405E-A837-2266B84A81E5}.Release|Any CPU.Build.0 = Release|Any CPU
 																																																																EndGlobalSection
 																																																																GlobalSection(SolutionProperties) = preSolution
 																																																																																																																																HideSolutionNode = FALSE
@@ -1266,5 +1272,6 @@ Global
 																																																																	{730B1EC4-B901-40DB-9A76-2D6A9533A8FF} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
 																																																																	{1B512B18-1F3C-469F-9C5E-AA66689E6DC5} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
 																																																																	{70A9E1ED-6E77-4641-9164-8E0D9382716E} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
+																																																																	{E46E9057-0B8F-405E-A837-2266B84A81E5} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
 																																																																EndGlobalSection
 EndGlobal
