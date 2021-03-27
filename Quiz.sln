@@ -371,6 +371,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinaryNumberWithAlternating
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MajorityElement", "problems\0169_MajorityElement\MajorityElement.csproj", "{2FD8BF12-4FE1-4F6E-9404-AACC9B017B87}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CheckIfNumberIsMajorityElementInSortedArray", "problems\1150_CheckIfNumberIsMajorityElementInSortedArray\CheckIfNumberIsMajorityElementInSortedArray.csproj", "{C8897908-CCA8-4621-ADC2-744301B7E5DF}"
+EndProject
 Global
 																																																																GlobalSection(SolutionConfigurationPlatforms) = preSolution
 																																																																																																																																Debug|Any CPU = Debug|Any CPU
@@ -1101,6 +1103,10 @@ Global
 																																																																	{2FD8BF12-4FE1-4F6E-9404-AACC9B017B87}.Debug|Any CPU.Build.0 = Debug|Any CPU
 																																																																	{2FD8BF12-4FE1-4F6E-9404-AACC9B017B87}.Release|Any CPU.ActiveCfg = Release|Any CPU
 																																																																	{2FD8BF12-4FE1-4F6E-9404-AACC9B017B87}.Release|Any CPU.Build.0 = Release|Any CPU
+																																																																	{C8897908-CCA8-4621-ADC2-744301B7E5DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+																																																																	{C8897908-CCA8-4621-ADC2-744301B7E5DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+																																																																	{C8897908-CCA8-4621-ADC2-744301B7E5DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+																																																																	{C8897908-CCA8-4621-ADC2-744301B7E5DF}.Release|Any CPU.Build.0 = Release|Any CPU
 																																																																EndGlobalSection
 																																																																GlobalSection(SolutionProperties) = preSolution
 																																																																																																																																HideSolutionNode = FALSE
@@ -1287,5 +1293,6 @@ Global
 																																																																	{E46E9057-0B8F-405E-A837-2266B84A81E5} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
 																																																																	{B303F97F-8703-472E-8C93-92FAB5B871C0} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
 																																																																	{2FD8BF12-4FE1-4F6E-9404-AACC9B017B87} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
+																																																																	{C8897908-CCA8-4621-ADC2-744301B7E5DF} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
 																																																																EndGlobalSection
 EndGlobal
