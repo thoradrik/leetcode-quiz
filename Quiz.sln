@@ -373,6 +373,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MajorityElement", "problems
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CheckIfNumberIsMajorityElementInSortedArray", "problems\1150_CheckIfNumberIsMajorityElementInSortedArray\CheckIfNumberIsMajorityElementInSortedArray.csproj", "{C8897908-CCA8-4621-ADC2-744301B7E5DF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SymmetricTree", "problems\0101_SymmetricTree\SymmetricTree.csproj", "{D59FC1A9-5320-4B38-A6A5-5057DE6E1A61}"
+EndProject
 Global
 																																																																GlobalSection(SolutionConfigurationPlatforms) = preSolution
 																																																																																																																																Debug|Any CPU = Debug|Any CPU
@@ -1107,6 +1109,10 @@ Global
 																																																																	{C8897908-CCA8-4621-ADC2-744301B7E5DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 																																																																	{C8897908-CCA8-4621-ADC2-744301B7E5DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 																																																																	{C8897908-CCA8-4621-ADC2-744301B7E5DF}.Release|Any CPU.Build.0 = Release|Any CPU
+																																																																	{D59FC1A9-5320-4B38-A6A5-5057DE6E1A61}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+																																																																	{D59FC1A9-5320-4B38-A6A5-5057DE6E1A61}.Debug|Any CPU.Build.0 = Debug|Any CPU
+																																																																	{D59FC1A9-5320-4B38-A6A5-5057DE6E1A61}.Release|Any CPU.ActiveCfg = Release|Any CPU
+																																																																	{D59FC1A9-5320-4B38-A6A5-5057DE6E1A61}.Release|Any CPU.Build.0 = Release|Any CPU
 																																																																EndGlobalSection
 																																																																GlobalSection(SolutionProperties) = preSolution
 																																																																																																																																HideSolutionNode = FALSE
