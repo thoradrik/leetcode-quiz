@@ -375,6 +375,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CheckIfNumberIsMajorityElem
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SymmetricTree", "problems\0101_SymmetricTree\SymmetricTree.csproj", "{D59FC1A9-5320-4B38-A6A5-5057DE6E1A61}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MinimumDepthOfBinaryTree", "problems\0111_MinimumDepthOfBinaryTree\MinimumDepthOfBinaryTree.csproj", "{94A5DFEA-6EFC-4D97-B2E5-02D5F2D51653}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MaximumDepthOfBinaryTree", "problems\0104_MaximumDepthOfBinaryTree\MaximumDepthOfBinaryTree.csproj", "{58724F85-21B9-4082-A2BB-A336FDD688EA}"
+EndProject
 Global
 																																																																GlobalSection(SolutionConfigurationPlatforms) = preSolution
 																																																																																																																																Debug|Any CPU = Debug|Any CPU
@@ -1113,6 +1117,14 @@ Global
 																																																																	{D59FC1A9-5320-4B38-A6A5-5057DE6E1A61}.Debug|Any CPU.Build.0 = Debug|Any CPU
 																																																																	{D59FC1A9-5320-4B38-A6A5-5057DE6E1A61}.Release|Any CPU.ActiveCfg = Release|Any CPU
 																																																																	{D59FC1A9-5320-4B38-A6A5-5057DE6E1A61}.Release|Any CPU.Build.0 = Release|Any CPU
+																																																																	{94A5DFEA-6EFC-4D97-B2E5-02D5F2D51653}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+																																																																	{94A5DFEA-6EFC-4D97-B2E5-02D5F2D51653}.Debug|Any CPU.Build.0 = Debug|Any CPU
+																																																																	{94A5DFEA-6EFC-4D97-B2E5-02D5F2D51653}.Release|Any CPU.ActiveCfg = Release|Any CPU
+																																																																	{94A5DFEA-6EFC-4D97-B2E5-02D5F2D51653}.Release|Any CPU.Build.0 = Release|Any CPU
+																																																																	{58724F85-21B9-4082-A2BB-A336FDD688EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+																																																																	{58724F85-21B9-4082-A2BB-A336FDD688EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+																																																																	{58724F85-21B9-4082-A2BB-A336FDD688EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+																																																																	{58724F85-21B9-4082-A2BB-A336FDD688EA}.Release|Any CPU.Build.0 = Release|Any CPU
 																																																																EndGlobalSection
 																																																																GlobalSection(SolutionProperties) = preSolution
 																																																																																																																																HideSolutionNode = FALSE
@@ -1300,5 +1312,8 @@ Global
 																																																																	{B303F97F-8703-472E-8C93-92FAB5B871C0} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
 																																																																	{2FD8BF12-4FE1-4F6E-9404-AACC9B017B87} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
 																																																																	{C8897908-CCA8-4621-ADC2-744301B7E5DF} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
+																																																																	{D59FC1A9-5320-4B38-A6A5-5057DE6E1A61} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
+																																																																	{94A5DFEA-6EFC-4D97-B2E5-02D5F2D51653} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
+																																																																	{58724F85-21B9-4082-A2BB-A336FDD688EA} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
 																																																																EndGlobalSection
 EndGlobal
