@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Quiz {
+﻿namespace Quiz {
     public class Program : ProgramBase {
         
         public static void Main() {
