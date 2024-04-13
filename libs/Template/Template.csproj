@@ -1,6 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
+    <OutputType>Exe</OutputType>
     <RootNamespace>Quiz</RootNamespace>
     <TargetFramework>net8.0</TargetFramework>
     <LangVersion>latest</LangVersion>
