@@ -1,3 +1,5 @@
+using System.Text;
+
 namespace Quiz;
 
 public class ListNode : IEquatable<ListNode> {
@@ -31,11 +33,22 @@ public class ListNode : IEquatable<ListNode> {
     }
         
     public override string ToString() {
-        if (next != null) {
-            return val + "," + next;
-        } else {
-            return val.ToString();
+        StringBuilder sb = new StringBuilder();
+        sb.Append("{");
+
+        sb.Append(val);
+        
+        ListNode current = next;
+        while (current != null) {
+            sb.Append(",");
+            sb.Append(current.val);
+            
+            current = current.next;
         }
+        
+        sb.Append("}");
+
+        return sb.ToString();
     }
     
 }
