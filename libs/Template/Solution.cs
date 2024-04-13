@@ -1,9 +1,9 @@
-﻿namespace Quiz {
-    public class Solution {
+﻿namespace Quiz;
 
-        public int Method(int test) {
-            throw new System.NotImplementedException();
-        }
+public class Solution {
 
+    public int Method(int test) {
+        throw new System.NotImplementedException();
     }
+
 }
