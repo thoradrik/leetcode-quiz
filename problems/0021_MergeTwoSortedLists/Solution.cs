@@ -1,35 +1,35 @@
-﻿namespace Quiz {
-    public class Solution {
+﻿namespace Quiz;
 
-        public ListNode MergeTwoLists(ListNode l1, ListNode l2) {
-            ListNode a = l1;
-            ListNode b = l2;
+public class Solution {
 
-            ListNode r = new ListNode();
-            ListNode i = r;
+    public ListNode MergeTwoLists(ListNode l1, ListNode l2) {
+        ListNode a = l1;
+        ListNode b = l2;
 
-            while (a != null || b != null) {
-                if (a == null) {
-                    i.next = b;
-                    break;
-                } else if (b == null) {
+        ListNode r = new ListNode();
+        ListNode i = r;
+
+        while (a != null || b != null) {
+            if (a == null) {
+                i.next = b;
+                break;
+            } else if (b == null) {
+                i.next = a;
+                break;
+            } else {
+                if (a.val < b.val) {
                     i.next = a;
-                    break;
+                    i = a;
+                    a = a.next;
                 } else {
-                    if (a.val < b.val) {
-                        i.next = a;
-                        i = a;
-                        a = a.next;
-                    } else {
-                        i.next = b;
-                        i = b;
-                        b = b.next;
-                    }
+                    i.next = b;
+                    i = b;
+                    b = b.next;
                 }
             }
-
-            return r.next;
         }
 
+        return r.next;
     }
+
 }

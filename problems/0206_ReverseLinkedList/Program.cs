@@ -1,17 +1,18 @@
-﻿namespace Quiz {
-    public class Program : ProgramBase {
+﻿using static LeetcodeLib.LinkedListHelper;
+
+namespace Quiz;
+
+public class Program : ProgramBase {
         
-        public static void Main() {
-            Solution solution = new Solution();
+    public static void Main() {
+        Solution solution = new Solution();
 
-            Test.Check(solution.ReverseList, IntArray("[]"), IntArray("[]"));
-            Test.Check(solution.ReverseList, IntArray("[1]"), IntArray("[1]"));
-            Test.Check(solution.ReverseList, IntArray("[1,2]"), IntArray("[2,1]"));
-            Test.Check(solution.ReverseList, IntArray("[1,2,3]"), IntArray("[3,2,1]"));
-            Test.Check(solution.ReverseList, IntArray("[1,2,3,4]"), IntArray("[4,3,2,1]"));
-            Test.Check(solution.ReverseList, IntArray("[1,2,3,4,5]"), IntArray("[5,4,3,2,1]"));
-        }
-
+        Test.Check(solution.ReverseList, MakeLinkedList("[]"), MakeLinkedList("[]"));
+        Test.Check(solution.ReverseList, MakeLinkedList("[1]"), MakeLinkedList("[1]"));
+        Test.Check(solution.ReverseList, MakeLinkedList("[1,2]"), MakeLinkedList("[2,1]"));
+        Test.Check(solution.ReverseList, MakeLinkedList("[1,2,3]"), MakeLinkedList("[3,2,1]"));
+        Test.Check(solution.ReverseList, MakeLinkedList("[1,2,3,4]"), MakeLinkedList("[4,3,2,1]"));
+        Test.Check(solution.ReverseList, MakeLinkedList("[1,2,3,4,5]"), MakeLinkedList("[5,4,3,2,1]"));
     }
 
 }

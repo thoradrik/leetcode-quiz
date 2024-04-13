@@ -5,6 +5,7 @@
     <RootNamespace>Quiz</RootNamespace>
   </PropertyGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\libs\TestingHelpers\TestingHelpers.csproj" />
+    <ProjectReference Include="..\..\libs\LeetcodeLib\LeetcodeLib.csproj"/>
+    <ProjectReference Include="..\..\libs\TestingHelpers\TestingHelpers.csproj"/>
   </ItemGroup>
 </Project>

@@ -1,42 +1,20 @@
-﻿using System.Collections.Generic;
+﻿namespace Quiz;
 
-namespace Quiz {
-    public class Solution {
+public class Solution {
 
-        public int[] ReverseList(int[] arr) {
-            ListNode node = null;
+    public ListNode ReverseList(ListNode head) {
+        ListNode prev = null;
+        ListNode current = head;
 
-            for (int index = arr.Length - 1; index >= 0; index--) {
-                node = new ListNode(arr[index], node);
-            }
-
-            node = ReverseList(node);
-
-            List<int> list = new List<int>();
-            
-            while (node != null) {
-                list.Add(node.val);
+        while (current != null) {
+            ListNode next = current.next;
+            current.next = prev;
                 
-                node = node.next;
-            }
-
-            return list.ToArray();
+            prev = current;
+            current = next;
         }
 
-        public ListNode ReverseList(ListNode head) {
-            ListNode prev = null;
-            ListNode current = head;
-
-            while (current != null) {
-                ListNode next = current.next;
-                current.next = prev;
-                
-                prev = current;
-                current = next;
-            }
-
-            return prev;
-        }
-
+        return prev;
     }
+
 }
