@@ -1,17 +1,17 @@
-namespace AlgorithmLib {
-    public interface IBinaryTreeNode<T> : IBinaryTreeNode {
+namespace AlgorithmLib;
 
-        new T Value { get; }
+public interface IBinaryTreeNode<T> : IBinaryTreeNode {
 
-        new IBinaryTreeNode<T> Left { get; }
+    new T Value { get; }
 
-        new IBinaryTreeNode<T> Right { get; }
+    new IBinaryTreeNode<T> Left { get; }
 
-        object IBinaryTreeNode.Value => Value;
+    new IBinaryTreeNode<T> Right { get; }
 
-        IBinaryTreeNode IBinaryTreeNode.Left => Left;
+    object IBinaryTreeNode.Value => Value;
 
-        IBinaryTreeNode IBinaryTreeNode.Right => Right;
+    IBinaryTreeNode IBinaryTreeNode.Left => Left;
 
-    }
+    IBinaryTreeNode IBinaryTreeNode.Right => Right;
+
 }

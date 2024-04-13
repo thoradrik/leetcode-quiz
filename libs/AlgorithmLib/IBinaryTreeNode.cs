@@ -1,11 +1,11 @@
-namespace AlgorithmLib {
-    public interface IBinaryTreeNode {
+namespace AlgorithmLib;
 
-        object Value { get; }
+public interface IBinaryTreeNode {
 
-        IBinaryTreeNode Left { get; }
+    object Value { get; }
 
-        IBinaryTreeNode Right { get; }
+    IBinaryTreeNode Left { get; }
 
-    }
+    IBinaryTreeNode Right { get; }
+
 }
