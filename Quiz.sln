@@ -395,6 +395,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeleteMiddleNodeOfLinkedLis
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RemoveNthNodeFromEndOfList", "problems\0019_RemoveNthNodeFromEndOfList\RemoveNthNodeFromEndOfList.csproj", "{D54E1DA3-92DA-4572-9CC4-5F4C4A376315}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NumberOfStudentsUnableToEatLunch", "problems\1700_NumberOfStudentsUnableToEatLunch\NumberOfStudentsUnableToEatLunch.csproj", "{82690050-382E-4901-AE05-469B0051854C}"
+EndProject
 Global
 																																																																GlobalSection(SolutionConfigurationPlatforms) = preSolution
 																																																																																																																																Debug|Any CPU = Debug|Any CPU
@@ -1173,6 +1175,10 @@ Global
 																																																																	{D54E1DA3-92DA-4572-9CC4-5F4C4A376315}.Debug|Any CPU.Build.0 = Debug|Any CPU
 																																																																	{D54E1DA3-92DA-4572-9CC4-5F4C4A376315}.Release|Any CPU.ActiveCfg = Release|Any CPU
 																																																																	{D54E1DA3-92DA-4572-9CC4-5F4C4A376315}.Release|Any CPU.Build.0 = Release|Any CPU
+																																																																	{82690050-382E-4901-AE05-469B0051854C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+																																																																	{82690050-382E-4901-AE05-469B0051854C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+																																																																	{82690050-382E-4901-AE05-469B0051854C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+																																																																	{82690050-382E-4901-AE05-469B0051854C}.Release|Any CPU.Build.0 = Release|Any CPU
 																																																																EndGlobalSection
 																																																																GlobalSection(SolutionProperties) = preSolution
 																																																																																																																																HideSolutionNode = FALSE
@@ -1371,5 +1377,6 @@ Global
 																																																																	{78EC13BD-4BA9-4305-91CC-DC2A6F044475} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
 																																																																	{A4980B20-5ED5-49F9-865F-4FB3EB653BFD} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
 																																																																	{D54E1DA3-92DA-4572-9CC4-5F4C4A376315} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
+																																																																	{82690050-382E-4901-AE05-469B0051854C} = {CB307D0E-CFAC-4BA3-BE1B-9C5C2A0929A0}
 																																																																EndGlobalSection
 EndGlobal

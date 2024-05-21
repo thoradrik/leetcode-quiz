@@ -11,19 +11,19 @@ namespace Quiz;
 public static class Test {
 
     public static void Check<TArg, TResult>(Func<TArg, TResult> func, TArg arg, TResult expected) {
-        Check(() => func(arg), new object[] { arg }, expected);
+        Check(() => func(arg), [arg], expected);
     }
 
     public static void Check<TArg1, TArg2, TResult>(Func<TArg1, TArg2, TResult> func, TArg1 arg1, TArg2 arg2, TResult expected) {
-        Check(() => func(arg1, arg2), new object[] { arg1, arg2 }, expected);
+        Check(() => func(arg1, arg2), [arg1, arg2], expected);
     }
 
     public static void Check<TArg1, TArg2, TArg3, TResult>(Func<TArg1, TArg2, TArg3, TResult> func, TArg1 arg1, TArg2 arg2, TArg3 arg3, TResult expected) {
-        Check(() => func(arg1, arg2, arg3), new object[] { arg1, arg2, arg3 }, expected);
+        Check(() => func(arg1, arg2, arg3), [arg1, arg2, arg3], expected);
     }
 
     public static void Check<TArg1, TArg2, TArg3, TArg4, TResult>(Func<TArg1, TArg2, TArg3, TArg4, TResult> func, TArg1 arg1, TArg2 arg2, TArg3 arg3, TArg4 arg4, TResult expected) {
-        Check(() => func(arg1, arg2, arg3, arg4), new object[] { arg1, arg2, arg3, arg4 }, expected);
+        Check(() => func(arg1, arg2, arg3, arg4), [arg1, arg2, arg3, arg4], expected);
     }
 
     private static void Check<TResult>(Func<TResult> result, object[] input, TResult expected) {
@@ -66,19 +66,19 @@ public static class Test {
     }
 
     public static void Print<TArg, TResult>(Func<TArg, TResult> func, TArg arg) {
-        Print(() => func(arg), new object[] { arg });
+        Print(() => func(arg), [arg]);
     }
 
     public static void Print<TArg1, TArg2, TResult>(Func<TArg1, TArg2, TResult> func, TArg1 arg1, TArg2 arg2) {
-        Print(() => func(arg1, arg2), new object[] { arg1, arg2 });
+        Print(() => func(arg1, arg2), [arg1, arg2]);
     }
 
     public static void Print<TArg1, TArg2, TArg3, TResult>(Func<TArg1, TArg2, TArg3, TResult> func, TArg1 arg1, TArg2 arg2, TArg3 arg3) {
-        Print(() => func(arg1, arg2, arg3), new object[] { arg1, arg2, arg3 });
+        Print(() => func(arg1, arg2, arg3), [arg1, arg2, arg3]);
     }
 
     public static void Print<TArg1, TArg2, TArg3, TArg4, TResult>(Func<TArg1, TArg2, TArg3, TArg4, TResult> func, TArg1 arg1, TArg2 arg2, TArg3 arg3, TArg4 arg4) {
-        Print(() => func(arg1, arg2, arg3, arg4), new object[] { arg1, arg2, arg3, arg4 });
+        Print(() => func(arg1, arg2, arg3, arg4), [arg1, arg2, arg3, arg4]);
     }
         
     private static void Print<TResult>(Func<TResult> result, object[] input) {
@@ -216,12 +216,12 @@ public static class Test {
             return false;
         }
 
-        HashSet<T> hs1 = new HashSet<T>();
+        HashSet<T> hs1 = [];
             
         hs1.UnionWith(answer);
         hs1.ExceptWith(expected);
            
-        HashSet<T> hs2 = new HashSet<T>();
+        HashSet<T> hs2 = [];
             
         hs2.UnionWith(expected);
         hs2.ExceptWith(answer);
