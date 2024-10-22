@@ -49,6 +49,7 @@
     <Project Path="problems\0121_BestTimeToBuyAndSellStock\BestTimeToBuyAndSellStock.csproj" Type="Classic C#" />
     <Project Path="problems\0125_ValidPalindrome\ValidPalindrome.csproj" Type="Classic C#" />
     <Project Path="problems\0126_WordLadder2\WordLadder2.csproj" Type="Classic C#" />
+    <Project Path="problems\0128_LongestConsecutiveSequence\LongestConsecutiveSequence.csproj" Type="Classic C#" />
     <Project Path="problems\0133_CloneGraph\CloneGraph.csproj" Type="Classic C#" />
     <Project Path="problems\0136_SingleNumber\SingleNumber.csproj" Type="Classic C#" />
     <Project Path="problems\0138_CopyListWithRandomPointer\CopyListWithRandomPointer.csproj" Type="Classic C#" />
