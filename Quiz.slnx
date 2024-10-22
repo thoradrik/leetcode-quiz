@@ -204,6 +204,7 @@
     <Project Path="problems\2652_SumMultiples\SumMultiples.csproj" Type="Classic C#" />
   </Folder>
   <Folder Name="/problems-solved-suboptimal/">
+    <Project Path="problems\0010_RegularExpressionMatching\RegularExpressionMatching.csproj" Type="Classic C#" />
     <Project Path="problems\0047_Permutations2\Permutations2.csproj" Type="Classic C#" />
     <Project Path="problems\0084_LargestRectangleInHistogram\LargestRectangleInHistogram.csproj" Type="Classic C#" />
     <Project Path="problems\0085_MaximalRectangle\MaximalRectangle.csproj" Type="Classic C#" />
