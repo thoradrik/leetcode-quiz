@@ -9,7 +9,7 @@ namespace Quiz {
 
             Array.Sort(candidates);
 
-            Stack<int> variant = new Stack<int>();
+            var variant = new Stack<int>();
 
             void backtrack(int remaining, int start) {
                 if (remaining == 0) {
@@ -30,9 +30,9 @@ namespace Quiz {
 
                         index++;
                     }
-                }   
+                }
             }
-            
+
             backtrack(target, 0);
 
             return list;

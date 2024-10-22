@@ -1,8 +1,8 @@
 ﻿namespace Quiz {
     public class Program : ProgramBase {
-        
+
         public static void Main() {
-            Solution solution = new Solution();
+            var solution = new Solution();
 
             Test.Check(solution.reverseBits, 0b00000000000000000000000000000000u, 0b00000000000000000000000000000000u);
             Test.Check(solution.reverseBits, 0b11111111111111111111111111111111u, 0b11111111111111111111111111111111u);

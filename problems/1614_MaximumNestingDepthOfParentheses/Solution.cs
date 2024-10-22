@@ -4,8 +4,8 @@ namespace Quiz {
     public class Solution {
         
         public int MaxDepth(string s) {
-            int max_depth = 0;
-            int depth = 0;
+            var max_depth = 0;
+            var depth = 0;
             
             foreach (char c in s) {
                 if (c == '(') {

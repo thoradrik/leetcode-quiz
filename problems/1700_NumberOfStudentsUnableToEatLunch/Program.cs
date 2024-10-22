@@ -3,7 +3,7 @@
 public class Program : ProgramBase {
     
     public static void Main() {
-        Solution solution = new Solution();
+        var solution = new Solution();
 
         Test.Check(solution.CountStudents, IntArray("[0]"), IntArray("[0]"), 0);
         Test.Check(solution.CountStudents, IntArray("[0]"), IntArray("[1]"), 1);

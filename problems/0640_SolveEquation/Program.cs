@@ -1,8 +1,8 @@
 ﻿namespace Quiz {
     public class Program : ProgramBase {
-        
+
         public static void Main() {
-            Solution solution = new Solution();
+            var solution = new Solution();
 
             Test.Check(solution.SolveEquation, "x=0", "x=0");
             Test.Check(solution.SolveEquation, "x=1", "x=1");

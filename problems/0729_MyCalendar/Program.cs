@@ -1,8 +1,8 @@
 ﻿namespace Quiz {
     public class Program : ProgramBase {
-        
+
         public static void Main() {
-            MyCalendar solution = new MyCalendar();
+            var solution = new MyCalendar();
 
             Test.Check(solution.Book, 10, 20, true);
             Test.Check(solution.Book, 15, 25, false);

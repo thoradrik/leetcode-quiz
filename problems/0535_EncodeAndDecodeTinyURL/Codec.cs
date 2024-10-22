@@ -7,7 +7,7 @@ namespace Quiz {
         private static readonly Dictionary<string, string> m_Map = new Dictionary<string, string>();
 
         public string encode(string longUrl) {
-            string key = Guid.NewGuid().ToString("N");
+            var key = Guid.NewGuid().ToString("N");
             m_Map[key] = longUrl;
             return "http://tinyurl.com/" + key;
         }

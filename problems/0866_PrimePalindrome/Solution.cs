@@ -5,14 +5,14 @@ namespace Quiz {
     public class Solution {
 
         private readonly List<int> m_Primes = new List<int>();
-        
+
         public void BuildPrimes() {
             m_Primes.Add(2);
-            
-            for (int i = 3; i < 200000000; i += 2) {
-                
-                int max = (int)Math.Ceiling(Math.Sqrt(i));
-                for (int j = 0; j < m_Primes.Count; j++) {
+
+            for (var i = 3; i < 200000000; i += 2) {
+
+                var max = (int)Math.Ceiling(Math.Sqrt(i));
+                for (var j = 0; j < m_Primes.Count; j++) {
                     int prime_j = m_Primes[j];
                     if (i % prime_j == 0) {
                         goto next_candidate;
@@ -21,49 +21,49 @@ namespace Quiz {
                         break;
                     }
                 }
-                
+
                 m_Primes.Add(i);
 
-                next_candidate: 
+                next_candidate:
                 ;
             }
         }
 
         public void CheckPalyndromes() {
-            int count = 0;
+            var count = 0;
 
-            int[] digits = new int[9];
-            
-            for (int i = 0; i < m_Primes.Count; i++) {
+            var digits = new int[9];
+
+            for (var i = 0; i < m_Primes.Count; i++) {
                 int prime = m_Primes[i];
-                
-                int digits_count = (int)Math.Ceiling(Math.Log10(prime));
-                for (int j = 0; j < digits_count; j++) {
+
+                var digits_count = (int)Math.Ceiling(Math.Log10(prime));
+                for (var j = 0; j < digits_count; j++) {
                     digits[j] = prime % 10;
                     prime = prime / 10;
                 }
 
-                for (int j = 0; j < digits_count; j++) {
+                for (var j = 0; j < digits_count; j++) {
                     if (digits[j] != digits[digits_count - j - 1]) {
                         goto next_prime;
-                    }   
+                    }
                 }
 
                 Console.Write(m_Primes[i]);
                 Console.Write(", ");
                 count++;
-                
+
                 if (count % 20 == 0) {
                     Console.WriteLine();
                 }
-                
-            next_prime: 
+
+            next_prime:
                 ;
             }
         }
 
         public int PrimePalindrome(int N) {
-            for (int i = 0; i < PRIME_PALYNDROMES.Length; i++) {
+            for (var i = 0; i < PRIME_PALYNDROMES.Length; i++) {
                 if (PRIME_PALYNDROMES[i] >= N) {
                     return PRIME_PALYNDROMES[i];
                 }
@@ -113,6 +113,6 @@ namespace Quiz {
             9896989, 9902099, 9907099, 9908099, 9916199, 9918199, 9919199, 9921299, 9923299, 9926299, 9927299, 9931399, 9932399, 9935399, 9938399, 9957599, 9965699, 9978799, 9980899, 9981899,
             9989899, 100030001
         };
-            
+
     }
 }

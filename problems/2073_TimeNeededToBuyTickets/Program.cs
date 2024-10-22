@@ -3,7 +3,7 @@
 public class Program : ProgramBase {
     
     public static void Main() {
-        Solution solution = new Solution();
+        var solution = new Solution();
 
         Test.Check(solution.TimeRequiredToBuy, IntArray("[1]"), 0, 1);
         Test.Check(solution.TimeRequiredToBuy, IntArray("[2]"), 0, 2);

@@ -3,19 +3,19 @@ using System.Collections.Generic;
 
 namespace Quiz {
     public class Solution {
-        
-        public IList<int> DiffWaysToCompute(string input) {
-            Token[] tokens = Tokenize(input);
 
-            Dictionary<Tuple<int, int>, List<int>> memo = new Dictionary<Tuple<int, int>, List<int>>();
+        public IList<int> DiffWaysToCompute(string input) {
+            var tokens = Tokenize(input);
+
+            var memo = new Dictionary<Tuple<int, int>, List<int>>();
 
             List<int> backtrace(int start, int end) {
-                Tuple<int, int> key = new Tuple<int, int>(start, end);
+                var key = new Tuple<int, int>(start, end);
 
-                if (memo.TryGetValue(key, out List<int> result)) {
+                if (memo.TryGetValue(key, out var result)) {
                     return result;
                 }
-                
+
                 result = new List<int>();
 
                 if (start == end) {
@@ -46,7 +46,7 @@ namespace Quiz {
             return backtrace(0, tokens.Length - 1);
         }
 
-        
+
         private class Token { }
 
         private class Number : Token {
@@ -54,7 +54,7 @@ namespace Quiz {
             public int Value;
 
             public override string ToString() => Value.ToString();
-            
+
         }
 
         private class Operation : Token {
@@ -71,16 +71,16 @@ namespace Quiz {
             }
 
             public override string ToString() => Char.ToString();
-            
+
         }
 
         private Token[] Tokenize(string input) {
-            List<Token> list = new List<Token>();
+            var list = new List<Token>();
 
             int v_index = -1;
-            int v_len = 0;
+            var v_len = 0;
 
-            for (int index = 0; index < input.Length; index++) {
+            for (var index = 0; index < input.Length; index++) {
                 char c = input[index];
                 if (c >= '0' && c <= '9') {
                     if (v_index >= 0) {
@@ -92,10 +92,10 @@ namespace Quiz {
                 } else if (c == '+' || c == '-' || c == '*') {
                     if (v_index >= 0) {
                         list.Add(new Number { Value = Int32.Parse(input.Substring(v_index, v_len)) });
-                        
+
                         v_index = -1;
                         v_len = 0;
-                        
+
                         list.Add(new Operation { Char = c });
                     } else {
                         throw new Exception("Invalid char");
@@ -108,9 +108,9 @@ namespace Quiz {
             if (v_index >= 0) {
                 list.Add(new Number { Value = Int32.Parse(input.Substring(v_index, v_len)) });
             }
-            
+
             return list.ToArray();
         }
-        
+
     }
 }

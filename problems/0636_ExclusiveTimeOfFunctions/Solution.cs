@@ -18,11 +18,11 @@ namespace Quiz {
             public readonly int Start;
 
         }
-        
-        public int[] ExclusiveTime(int n, IList<string> logs) {
-            int[] times = new int[n];
 
-            Stack<Frame> stack = new Stack<Frame>();
+        public int[] ExclusiveTime(int n, IList<string> logs) {
+            var times = new int[n];
+
+            var stack = new Stack<Frame>();
 
             foreach (string s in logs) {
                 string[] ss = s.Split(':');
@@ -32,21 +32,21 @@ namespace Quiz {
                 if (ss[1][0] == 's') {
                     stack.Push(new Frame(function, time_stamp));
                 } else {
-                    Frame frame = stack.Pop();
-                    
+                    var frame = stack.Pop();
+
                     int frame_length = time_stamp - frame.Start + 1;
-                    if (stack.TryPeek(out Frame prev)) {
+                    if (stack.TryPeek(out var prev)) {
                         prev.Length -= frame_length;
                     }
-                    
+
                     frame.Length += frame_length;
 
                     times[frame.Function] += frame.Length;
                 }
             }
-            
+
             return times;
         }
-        
+
     }
 }

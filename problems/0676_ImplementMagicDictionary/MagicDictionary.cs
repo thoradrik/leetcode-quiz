@@ -10,12 +10,12 @@ namespace Quiz {
         }
 
         private readonly TrieNode m_TrieRoot = new TrieNode();
-        
+
         public void Insert(string s) {
-            TrieNode current = m_TrieRoot;
+            var current = m_TrieRoot;
 
             foreach (char c in s) {
-                if (!current.TryGetValue(c, out TrieNode node)) {
+                if (!current.TryGetValue(c, out var node)) {
                     node = new TrieNode();
                     current.Add(c, node);
                 }
@@ -25,19 +25,19 @@ namespace Quiz {
 
             current.IsWord = true;
         }
-    
+
         public void BuildDict(string[] dictionary) {
             foreach (string s in dictionary) {
                 Insert(s);
             }
         }
-        
+
         public bool Search(string searchWord) {
             TrieNode search(TrieNode node, int ptr, int replaces) {
                 if (ptr < searchWord.Length) {
                     if (replaces > 0) {
-                        foreach ((char key, TrieNode child) in node) {
-                            TrieNode result = key == searchWord[ptr] ? search(child, ptr + 1, replaces) : search(child, ptr + 1, replaces - 1);
+                        foreach ((char key, var child) in node) {
+                            var result = key == searchWord[ptr] ? search(child, ptr + 1, replaces) : search(child, ptr + 1, replaces - 1);
 
                             if (result != null) {
                                 if (result.IsWord) {
@@ -65,6 +65,6 @@ namespace Quiz {
 
             return search(m_TrieRoot, 0, 1) != null;
         }
-        
+
     }
 }

@@ -1,8 +1,8 @@
 ﻿namespace Quiz {
     public class Program : ProgramBase {
-        
+
         public static void Main() {
-            Solution solution = new Solution();
+            var solution = new Solution();
 
             Test.Check(solution.HasAlternatingBits, 0b0, true);
             Test.Check(solution.HasAlternatingBits, 0b1, true);

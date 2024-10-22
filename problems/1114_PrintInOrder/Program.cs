@@ -3,20 +3,20 @@ using System.Threading;
 
 namespace Quiz {
     public class Program : ProgramBase {
-        
+
         public static void Main() {
-            Foo solution = new Foo();
-            
-            Thread first = new Thread(() => solution.First(() => Console.WriteLine("First")));
+            var solution = new Foo();
 
-            Thread second = new Thread(() => solution.Second(() => Console.WriteLine("Second")));
+            var first = new Thread(() => solution.First(() => Console.WriteLine("First")));
 
-            Thread third = new Thread(() => solution.Third(() => Console.WriteLine("Third")));
-            
+            var second = new Thread(() => solution.Second(() => Console.WriteLine("Second")));
+
+            var third = new Thread(() => solution.Third(() => Console.WriteLine("Third")));
+
             first.Start();
             third.Start();
             second.Start();
         }
-        
+
     }
 }

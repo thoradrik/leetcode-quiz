@@ -4,14 +4,14 @@ namespace Quiz {
     public class Solution {
 
         public Node CopyRandomList(Node head) {
-            Dictionary<Node, Node> map = new Dictionary<Node, Node>();
+            var map = new Dictionary<Node, Node>();
 
             Node clone_node(Node original) {
                 if (original == null) {
                     return null;
                 }
-                
-                if (map.TryGetValue(original, out Node clone)) {
+
+                if (map.TryGetValue(original, out var clone)) {
                     return clone;
                 } else {
                     clone = new Node(original.val);

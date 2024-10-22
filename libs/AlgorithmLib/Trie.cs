@@ -9,12 +9,12 @@ public class Trie {
     }
 
     private readonly TrieNode m_TrieRoot = new TrieNode();
-        
+
     public void Insert(string s) {
-        TrieNode current = m_TrieRoot;
+        var current = m_TrieRoot;
 
         foreach (char c in s) {
-            if (!current.TryGetValue(c, out TrieNode node)) {
+            if (!current.TryGetValue(c, out var node)) {
                 node = new TrieNode();
                 current.Add(c, node);
             }
@@ -27,22 +27,22 @@ public class Trie {
 
     private bool TryFindNode(string s, out TrieNode node) {
         node = m_TrieRoot;
-            
+
         foreach (char c in s) {
             if (!node.TryGetValue(c, out node)) {
                 return false;
             }
         }
-            
+
         return true;
     }
 
     public bool Search(string s) {
-        return TryFindNode(s, out TrieNode node) && node.IsWord;
+        return TryFindNode(s, out var node) && node.IsWord;
     }
-    
+
     public bool StartsWith(string s) {
-        return TryFindNode(s, out TrieNode node);
+        return TryFindNode(s, out var node);
     }
-        
+
 }

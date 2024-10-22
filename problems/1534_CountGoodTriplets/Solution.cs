@@ -4,9 +4,9 @@ namespace Quiz {
     public class Solution {
 
         public int CountGoodTriplets(int[] arr, int a, int b, int c) {
-            int count = 0;
+            var count = 0;
             
-            for (int i = 0; i < arr.Length - 2; i++) {
+            for (var i = 0; i < arr.Length - 2; i++) {
                 int ai = arr[i];
                 
                 for (int j = i + 1; j < arr.Length - 1; j++) {

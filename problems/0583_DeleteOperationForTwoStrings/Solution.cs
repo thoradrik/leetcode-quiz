@@ -2,9 +2,9 @@
 
 namespace Quiz {
     public class Solution {
-        
+
         public int MinDistance(string word1, string word2) {
-            int[,] dp = new int[word1.Length + 1, word2.Length + 1];
+            var dp = new int[word1.Length + 1, word2.Length + 1];
 
             for (int i = word1.Length - 1; i >= 0; i--) {
                 dp[i, word2.Length] = dp[i + 1, word2.Length] + 1;
@@ -23,8 +23,8 @@ namespace Quiz {
                 }
             }
 
-            return dp[0, 0];        
+            return dp[0, 0];
         }
-        
+
     }
 }

@@ -1,8 +1,8 @@
 ﻿namespace Quiz {
     public class Program : ProgramBase {
-        
+
         public static void Main() {
-            WordDictionary solution = new WordDictionary();
+            var solution = new WordDictionary();
 
             solution.AddWord("apple");
             solution.AddWord("apply");
@@ -19,7 +19,7 @@
             solution.AddWord("pan");
             solution.AddWord("fan");
             solution.AddWord("dan");
-            
+
             Test.Check(solution.Search, "apple", true);
             Test.Check(solution.Search, "apple.", false);
             Test.Check(solution.Search, ".pple.", false);

@@ -1,8 +1,8 @@
 ﻿namespace Quiz {
     public class Program : ProgramBase {
-        
+
         public static void Main() {
-            Solution solution = new Solution();
+            var solution = new Solution();
 
             Test.Check(solution.ExclusiveTime, 1, StringArray("[\"0:start:0\",\"0:end:0\"]"), IntArray("[1]"));
             Test.Check(solution.ExclusiveTime, 1, StringArray("[\"0:start:0\",\"0:end:1\"]"), IntArray("[2]"));

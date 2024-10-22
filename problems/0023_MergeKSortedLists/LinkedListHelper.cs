@@ -17,7 +17,7 @@ internal static class LinkedListHelper {
     public static ListNode[] ArrayK(string s) {
         int[][] nn = JsonSerializer.Deserialize<int[][]>(s);
 
-        ListNode[] list_nodes = new ListNode[nn.Length];
+        var list_nodes = new ListNode[nn.Length];
 
         for (var j = 0; j < nn.Length; j++) {
             ListNode list_node = null;

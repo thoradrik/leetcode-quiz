@@ -1,8 +1,8 @@
 ﻿namespace Quiz {
     public class Program : ProgramBase {
-        
+
         public static void Main() {
-            Solution solution = new Solution();
+            var solution = new Solution();
 
             Test.Check(solution.HammingDistance, 0b00000000000000000000000000000000, 0b00000000000000000000000000000000, 0);
             Test.Check(solution.HammingDistance, 0b00000000000000000000000000000000, 0b00000000000000000000000000000001, 1);

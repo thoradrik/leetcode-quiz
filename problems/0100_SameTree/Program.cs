@@ -4,7 +4,7 @@ namespace Quiz {
     public class Program : ProgramBase {
 
         public static void Main() {
-            Solution solution = new Solution();
+            var solution = new Solution();
 
             Test.Check(solution.IsSameTree, TreeHelper.CreateTreeFromBFS("[]"), TreeHelper.CreateTreeFromBFS("[]"), true);
             Test.Check(solution.IsSameTree, TreeHelper.CreateTreeFromBFS("[]"), TreeHelper.CreateTreeFromBFS("[1]"), false);

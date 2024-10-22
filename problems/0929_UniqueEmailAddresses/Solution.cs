@@ -3,13 +3,13 @@ using System.Collections.Generic;
 
 namespace Quiz {
     public class Solution {
-        
+
         public int NumUniqueEmails(string[] emails) {
-            HashSet<string> set = new HashSet<string>();
+            var set = new HashSet<string>();
 
             foreach (string email in emails) {
                 int a_index = email.IndexOf('@', StringComparison.Ordinal);
-                
+
                 string name = email.Substring(0, a_index);
 
                 name = name.Replace(".", String.Empty);
@@ -26,6 +26,6 @@ namespace Quiz {
 
             return set.Count;
         }
-        
+
     }
 }

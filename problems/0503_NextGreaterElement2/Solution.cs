@@ -2,12 +2,12 @@
 
 namespace Quiz {
     public class Solution {
-        
+
         public int[] NextGreaterElements(int[] nums) {
-            int[] nge = new int[nums.Length];
-            
-            Stack<int> stack = new Stack<int>();
-            
+            var nge = new int[nums.Length];
+
+            var stack = new Stack<int>();
+
             for (int j = 2 * nums.Length - 1; j >= 0; j--) {
                 int i = j % nums.Length;
 
@@ -26,6 +26,6 @@ namespace Quiz {
 
             return nge;
         }
-        
+
     }
 }

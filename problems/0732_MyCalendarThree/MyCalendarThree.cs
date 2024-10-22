@@ -4,7 +4,7 @@ namespace Quiz {
     public class MyCalendarThree {
 
         public MyCalendarThree() {
-        
+
         }
 
         private class Interval {
@@ -16,13 +16,13 @@ namespace Quiz {
             }
 
             private int m_Start;
-            
+
             private int m_End;
 
             private int m_Count;
 
             private Interval m_L;
-            
+
             private Interval m_R;
 
             private void Precede(Interval interval) {
@@ -55,24 +55,24 @@ namespace Quiz {
 
             private void Join(Interval interval) {
                 if (interval.m_Start < m_Start) {
-                    Interval before = new Interval(interval.m_Start, m_Start, interval.m_Count);
+                    var before = new Interval(interval.m_Start, m_Start, interval.m_Count);
 
                     Precede(before);
-                    
+
                     interval = new Interval(m_Start, interval.m_End, interval.m_Count);
                 }
-                
+
                 if (m_End < interval.m_End) {
-                    Interval after = new Interval(m_End, interval.m_End, interval.m_Count);
+                    var after = new Interval(m_End, interval.m_End, interval.m_Count);
 
                     Follow(after);
-                    
+
                     interval = new Interval(interval.m_Start, m_End, interval.m_Count);
                 }
 
                 if (m_Start < interval.m_Start) {
-                    Interval before = new Interval(m_Start, interval.m_Start, m_Count);
-                    
+                    var before = new Interval(m_Start, interval.m_Start, m_Count);
+
                     before.m_L = m_L;
                     before.m_R = this;
                     if (m_L != null) {
@@ -84,8 +84,8 @@ namespace Quiz {
                 }
 
                 if (interval.m_End < m_End) {
-                    Interval after = new Interval(interval.m_End, m_End, m_Count);
-                    
+                    var after = new Interval(interval.m_End, m_End, m_Count);
+
                     after.m_L = this;
                     after.m_R = m_R;
                     if (m_R != null) {
@@ -95,10 +95,10 @@ namespace Quiz {
 
                     m_End = interval.m_End;
                 }
-                
+
                 m_Count += interval.m_Count;
             }
-            
+
             public void Overlap(Interval interval) {
                 if (interval.m_End <= m_Start) {
                     Precede(interval);
@@ -110,30 +110,30 @@ namespace Quiz {
             }
 
             public int GetMax() {
-                int max = 0;
+                var max = 0;
 
-                Interval interval = m_L;
-                
+                var interval = m_L;
+
                 while (interval != null) {
                     if (interval.m_Count > max) {
                         max = interval.m_Count;
                     }
-                    
+
                     interval = interval.m_L;
                 }
-                
+
                 if (m_Count > max) {
                     max = m_Count;
                 }
-                
+
                 interval = m_R;
 
                 while (interval != null) {
-                    
+
                     if (interval.m_Count > max) {
                         max = interval.m_Count;
                     }
-                    
+
                     interval = interval.m_R;
                 }
 
@@ -148,7 +148,7 @@ namespace Quiz {
                 }
 
                 // Console.WriteLine("  {0} = {1}", this, m_Count);
-                
+
                 if (process_after) {
                     if (m_R != null) {
                         m_R.Print(false, true);
@@ -161,11 +161,11 @@ namespace Quiz {
             }
 
         }
-    
+
         private Interval m_Interval;
-        
+
         public int Book(int start, int end) {
-            Interval interval = new Interval(start, end, 1);
+            var interval = new Interval(start, end, 1);
 
             if (m_Interval == null) {
                 m_Interval = interval;
@@ -177,6 +177,6 @@ namespace Quiz {
 
             return m_Interval.GetMax();
         }
-        
+
     }
 }

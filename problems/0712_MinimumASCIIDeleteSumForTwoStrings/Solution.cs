@@ -2,9 +2,9 @@
 
 namespace Quiz {
     public class Solution {
-        
+
         public int MinimumDeleteSum(string s1, string s2) {
-            int[,] dp = new int[s1.Length + 1, s2.Length + 1];
+            var dp = new int[s1.Length + 1, s2.Length + 1];
 
             for (int i = s1.Length - 1; i >= 0; i--) {
                 dp[i, s2.Length] = dp[i + 1, s2.Length] + s1[i];
@@ -25,6 +25,6 @@ namespace Quiz {
 
             return dp[0, 0];
         }
-        
+
     }
 }

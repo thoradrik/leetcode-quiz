@@ -3,9 +3,9 @@
 namespace Quiz;
 
 public class Program : ProgramBase {
-        
+
     public static void Main() {
-        Solution solution = new Solution();
+        var solution = new Solution();
 
         // Test.Print(solution.SortedListToBST, MakeLinkedList("[]"));
         // Test.Print(solution.SortedListToBST, MakeLinkedList("[0]"));

@@ -10,12 +10,12 @@ namespace Quiz {
         }
 
         private readonly Node m_Root = new Node();
-        
+
         public void Insert(string word) {
-            Node current = m_Root;
+            var current = m_Root;
 
             foreach (char c in word) {
-                if (!current.TryGetValue(c, out Node node)) {
+                if (!current.TryGetValue(c, out var node)) {
                     node = new Node();
                     current.Add(c, node);
                 }
@@ -28,22 +28,22 @@ namespace Quiz {
 
         private bool TryFindNode(string prefix, out Node node) {
             node = m_Root;
-            
+
             foreach (char c in prefix) {
                 if (!node.TryGetValue(c, out node)) {
                     return false;
                 }
             }
-            
+
             return true;
         }
 
         public bool Search(string word) {
-            return TryFindNode(word, out Node node) && node.IsWord;
+            return TryFindNode(word, out var node) && node.IsWord;
         }
-    
+
         public bool StartsWith(string prefix) {
-            return TryFindNode(prefix, out Node node);
+            return TryFindNode(prefix, out var node);
         }
     }
 }

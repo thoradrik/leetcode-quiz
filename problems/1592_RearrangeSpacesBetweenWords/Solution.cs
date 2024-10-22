@@ -5,14 +5,14 @@ namespace Quiz {
     public class Solution {
         
         public string ReorderSpaces(string text) {
-            int spaces = 0;
+            var spaces = 0;
 
-            List<(int, int)> words = new List<(int,int)>();
+            var words = new List<(int,int)>();
 
             int word_start = -1;
-            int word_length = 0;
+            var word_length = 0;
 
-            for (int i = 0; i < text.Length; i++) {
+            for (var i = 0; i < text.Length; i++) {
                 if (text[i] == ' ') {
                     if (word_length > 0) {
                         words.Add((word_start, word_length));
@@ -36,14 +36,14 @@ namespace Quiz {
                 words.Add((word_start, word_length));
             }
 
-            StringBuilder sb = new StringBuilder(text.Length);
+            var sb = new StringBuilder(text.Length);
 
             if (words.Count > 1) {
                 int gaps_count = words.Count - 1;
                 int middle_spaces = spaces / gaps_count;
                 int trailing_spaces = spaces % gaps_count;
                 
-                for (int index = 0; index < words.Count; index++) {
+                for (var index = 0; index < words.Count; index++) {
                     (int start, int length) = words[index];
                     if (index > 0) {
                         sb.Append(' ', middle_spaces);

@@ -3,9 +3,9 @@ using System.Collections.Generic;
 
 namespace Quiz {
     public class Solution {
-        
+
         public string SimilarRGB(string color) {
-            
+
             int parse_hex(string s, int index) {
                 char c = s[index];
                 if (c >= '0' && c <= '9') {
@@ -14,7 +14,7 @@ namespace Quiz {
                     return c - 'a' + 10;
                 }
             }
-            
+
             int parse_hex2(string s, int index) {
                 return (parse_hex(s, index) << 4) + parse_hex(s, index + 1);
             }
@@ -22,7 +22,7 @@ namespace Quiz {
             int r = parse_hex2(color, 1);
             int g = parse_hex2(color, 3);
             int b = parse_hex2(color, 5);
-            
+
             IEnumerable<int> values(int c) {
                 int h = c >> 4;
                 int l = c & 0xF;
@@ -37,9 +37,9 @@ namespace Quiz {
                 }
             }
 
-            int min_distance = 0xFFFFFF;
-            int min_color = 0;
-            
+            var min_distance = 0xFFFFFF;
+            var min_color = 0;
+
             foreach (int rr in values(r)) {
                 foreach (int gg in values(g)) {
                     foreach (int bb in values(b)) {
@@ -51,9 +51,9 @@ namespace Quiz {
                     }
                 }
             }
-            
+
             return String.Format("#{0:x6}", min_color);
         }
-        
+
     }
 }

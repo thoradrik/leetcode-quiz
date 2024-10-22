@@ -5,8 +5,8 @@
             if (n <= 0) {
                 return true;
             }
-            
-            for (int i = 0; i < flowerbed.Length; i++) {
+
+            for (var i = 0; i < flowerbed.Length; i++) {
                 if (flowerbed[i] > 0) {
                     if (i > 0) {
                         flowerbed[i - 1] = -1;
@@ -16,11 +16,11 @@
                     }
                 }
             }
-            
-            for (int i = 0; i < flowerbed.Length; i++) {
+
+            for (var i = 0; i < flowerbed.Length; i++) {
                 if (flowerbed[i] == 0) {
                     n--;
-                    
+
                     if (n <= 0) {
                         return true;
                     }

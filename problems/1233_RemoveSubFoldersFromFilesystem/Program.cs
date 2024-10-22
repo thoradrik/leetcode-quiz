@@ -2,7 +2,7 @@
     public class Program : ProgramBase {
         
         public static void Main() {
-            Solution solution = new Solution();
+            var solution = new Solution();
 
             Test.Check(solution.RemoveSubfolders, StringArray("[\"/a\"]"), StringArray("[\"/a\"]"));
             Test.Check(solution.RemoveSubfolders, StringArray("[\"/a\",\"/b\"]"), StringArray("[\"/a\",\"/b\"]"));

@@ -3,8 +3,8 @@
 public static class PermutationGenerator {
 
     public static void Generate<T>(T[] array, Action<T[]> output) {
-        int[] stack = new int[array.Length];
-        int ptr = 0;
+        var stack = new int[array.Length];
+        var ptr = 0;
 
         output(array);
 
@@ -28,9 +28,9 @@ public static class PermutationGenerator {
     }
 
     private static void Swap<T>(ref T a, ref T b) {
-        T tmp = a;
+        var tmp = a;
         a = b;
         b = tmp;
     }
-        
+
 }

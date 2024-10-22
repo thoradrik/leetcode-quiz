@@ -2,9 +2,9 @@
 
 namespace Quiz {
     public class Solution {
-        
+
         public IList<string> GenerateParenthesis(int n) {
-            List<string> list = new List<string>();
+            var list = new List<string>();
 
             void go_next(string s, int used, int opened) {
                 if (s.Length == n * 2) {
@@ -20,9 +20,9 @@ namespace Quiz {
             }
 
             go_next("", 0, 0);
-            
+
             return list;
         }
-        
+
     }
 }

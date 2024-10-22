@@ -1,8 +1,8 @@
 ﻿namespace Quiz {
     public class Program : ProgramBase {
-        
+
         public static void Main() {
-            Solution solution = new Solution();
+            var solution = new Solution();
 
             Test.Check(solution.SuperPow, 0, IntArray("[0]"), 1);
             Test.Check(solution.SuperPow, 0, IntArray("[1]"), 0);

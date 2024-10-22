@@ -1,8 +1,8 @@
 ﻿namespace Quiz {
     public class Program : ProgramBase {
-        
+
         public static void Main() {
-            Solution solution = new Solution();
+            var solution = new Solution();
 
             Test.Check(solution.Calculate, "0", 0);
             Test.Check(solution.Calculate, "0 +1", 1);
@@ -38,7 +38,7 @@
             Test.Check(solution.Calculate, "3/2", 1);
             Test.Check(solution.Calculate, " 3+5 / 2 ", 5);
             Test.Check(solution.Calculate, "6-4 / 2", 4);
-            
+
             Test.Check(solution.Calculate, "(1)", 1);
             Test.Check(solution.Calculate, "((2))", 2);
             Test.Check(solution.Calculate, "(1+1)", 2);
@@ -47,16 +47,16 @@
             Test.Check(solution.Calculate, "12-(1+1)", 10);
             Test.Check(solution.Calculate, "2*(1+1)", 4);
             Test.Check(solution.Calculate, "4/(1+1)", 2);
-            
+
             Test.Check(solution.Calculate, "(4-2)/(1+1)", 1);
             Test.Check(solution.Calculate, "(10+4*2)/(1+1)", 9);
             Test.Check(solution.Calculate, "(1+4*2)/(1+10/5)", 3);
-            
+
             Test.Check(solution.Calculate, "(10-4/(2+2))/(5-(5+5)/5)", 3);
-            
+
             Test.Check(solution.Calculate, "2*(5+5*2)/3+(6/2+8)", 21);
             Test.Check(solution.Calculate, "(2+6* 3+5- (3*14/7+2)*5)+3", -12);
-            
+
             Test.Check(solution.Calculate, "0-2147483648", -2147483648);
 
             Test.Check(solution.Calculate, "-2+ 1", -1);

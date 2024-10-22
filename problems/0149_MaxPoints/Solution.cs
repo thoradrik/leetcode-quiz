@@ -64,7 +64,7 @@ namespace Quiz {
             }
 
         }
-        
+
         public static decimal Sqrt(decimal x, decimal epsilon = 0.0M) {
             if (x < 0) throw new OverflowException("Cannot calculate square root from a negative number");
 
@@ -76,77 +76,77 @@ namespace Quiz {
                 }
                 current = (previous + x / previous) / 2;
             } while (Math.Abs(previous - current) > epsilon);
-            
+
             return current;
         }
-        
+
         public int MaxPoints(int[][] points) {
             if (points.Length == 0) return 0;
-            
-            Dictionary<Tuple<int, int>, int> ps_hs = new Dictionary<Tuple<int, int>, int>();
-            
+
+            var ps_hs = new Dictionary<Tuple<int, int>, int>();
+
             foreach (int[] point in points) {
-                Tuple<int, int> t = new Tuple<int, int>(point[0], point[1]);
-                
+                var t = new Tuple<int, int>(point[0], point[1]);
+
                 if (!ps_hs.TryGetValue(t, out int count)) {
                     ps_hs[t] = 1;
                 } else {
                     ps_hs[t] = count + 1;
                 }
             }
-            
-            List<Point> ps = new List<Point>();
 
-            foreach (KeyValuePair<Tuple<int,int>,int> pair in ps_hs) {
-                Tuple<int,int> key = pair.Key;
+            var ps = new List<Point>();
+
+            foreach (var pair in ps_hs) {
+                var key = pair.Key;
                 ps.Add(new Point(key.Item1, key.Item2, pair.Value));
             }
 
             if (ps.Count == 1) return ps[0].Count;
-            
-            ps.Sort((a, b) => (int)a.X * (int)b.Y - (int)b.X * (int)a.Y);
-            
-            Dictionary<Line, HashSet<Point>> line_map = new Dictionary<Line, HashSet<Point>>();
 
-            for (int i = 0; i < ps.Count; i++) {
+            ps.Sort((a, b) => (int)a.X * (int)b.Y - (int)b.X * (int)a.Y);
+
+            var line_map = new Dictionary<Line, HashSet<Point>>();
+
+            for (var i = 0; i < ps.Count; i++) {
                 for (int j = i + 1; j < ps.Count; j++) {
-                    decimal a = ps[i].Y - ps[j].Y; 
-                    decimal b = ps[j].X - ps[i].X; 
+                    decimal a = ps[i].Y - ps[j].Y;
+                    decimal b = ps[j].X - ps[i].X;
                     decimal c = ps[i].X * ps[j].Y - ps[j].X * ps[i].Y;
                     decimal n = Sqrt(a * a + b * b);
                     decimal an = a / n;
                     decimal bn = b / n;
                     decimal cn = c / n;
-                    Line line = new Line(an, bn, cn);
+                    var line = new Line(an, bn, cn);
 
-                    if (!line_map.TryGetValue(line, out HashSet<Point> line_ps)) {
+                    if (!line_map.TryGetValue(line, out var line_ps)) {
                         line_ps = new HashSet<Point>();
                         line_map[line] = line_ps;
                     }
 
                     line_ps.Add(ps[i]);
                     line_ps.Add(ps[j]);
-                }   
+                }
             }
 
-            int max = 0;
-            
-            foreach (KeyValuePair<Line,HashSet<Point>> pair in line_map) {
-                HashSet<Point> hs = pair.Value;
+            var max = 0;
 
-                int count = 0;
-                
-                foreach (Point p in hs) {
+            foreach (var pair in line_map) {
+                var hs = pair.Value;
+
+                var count = 0;
+
+                foreach (var p in hs) {
                     count += p.Count;
                 }
-                
+
                 if (count > max) {
                     max = count;
                 }
             }
-            
+
             return max;
         }
-        
+
     }
 }

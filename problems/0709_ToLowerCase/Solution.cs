@@ -2,9 +2,9 @@
 
 namespace Quiz {
     public class Solution {
-        
+
         public string ToLowerCase(string str) {
-            StringBuilder sb = new StringBuilder(str.Length);
+            var sb = new StringBuilder(str.Length);
 
             foreach (char c in str) {
                 if (c >= 'A' && c <= 'Z') {
@@ -13,9 +13,9 @@ namespace Quiz {
                     sb.Append(c);
                 }
             }
-            
+
             return sb.ToString();
         }
-        
+
     }
 }

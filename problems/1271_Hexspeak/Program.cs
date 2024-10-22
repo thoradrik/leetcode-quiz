@@ -2,7 +2,7 @@
     public class Program : ProgramBase {
         
         public static void Main() {
-            Solution solution = new Solution();
+            var solution = new Solution();
 
             Test.Check(solution.ToHexspeak, "0", "O");
             Test.Check(solution.ToHexspeak, "1", "I");

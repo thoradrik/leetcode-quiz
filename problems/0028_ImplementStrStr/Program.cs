@@ -1,9 +1,9 @@
 ﻿namespace Quiz {
     public class Program : ProgramBase {
-        
+
         public static void Main() {
-            Solution solution = new Solution();
-            
+            var solution = new Solution();
+
             Test.Check(solution.StrStr, "", "", 0);
             Test.Check(solution.StrStr, "a", "b", -1);
             Test.Check(solution.StrStr, "a", "a", 0);

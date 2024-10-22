@@ -4,8 +4,8 @@ namespace Quiz {
     public class Solution {
 
         public IList<int> SelfDividingNumbers(int left, int right) {
-            List<int> list = new List<int>();
-            
+            var list = new List<int>();
+
             for (int i = left; i <= right; i++) {
                 int n = i;
 
@@ -13,13 +13,13 @@ namespace Quiz {
                     int k = n % 10;
                     if (k == 0 || i % k != 0) {
                         goto next_i;
-                    } 
+                    }
                     n /= 10;
                 }
-                
+
                 list.Add(i);
-                
-            next_i: 
+
+            next_i:
                 ;
             }
 

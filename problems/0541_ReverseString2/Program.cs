@@ -2,7 +2,7 @@
     public class Program : ProgramBase {
 
         public static void Main() {
-            Solution solution = new Solution();
+            var solution = new Solution();
 
             Test.Check(solution.ReverseStr, "", 2, "");
             Test.Check(solution.ReverseStr, "a", 2, "a");

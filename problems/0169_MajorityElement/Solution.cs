@@ -1,10 +1,10 @@
 ﻿namespace Quiz {
     public class Solution {
-        
+
         public int MajorityElement(int[] nums) {
-            int candidate = 0;
-            int count = 0;
-            
+            var candidate = 0;
+            var count = 0;
+
             foreach (int num in nums) {
                 if (count == 0) {
                     candidate = num;
@@ -19,6 +19,6 @@
 
             return candidate;
         }
-        
+
     }
 }

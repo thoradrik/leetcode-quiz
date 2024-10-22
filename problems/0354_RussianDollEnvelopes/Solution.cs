@@ -22,7 +22,7 @@ namespace Quiz {
             public bool CanEnvelop(Envelope e) {
                 return m_Width > e.m_Width && m_Height > e.m_Height;
             }
-            
+
             public class Comparer : IComparer<Envelope> {
 
                 public int Compare(Envelope x, Envelope y) {
@@ -41,21 +41,21 @@ namespace Quiz {
             }
 
         }
-        
+
         private Envelope[] m_ES;
-        
+
         private int[] m_Maxes;
 
         private readonly Envelope.Comparer m_Comparer = new Envelope.Comparer();
-        
+
         public int MaxEnvelopes(int[][] envelopes) {
             m_ES = Array.ConvertAll(envelopes, e => new Envelope(e));
             m_Maxes = new int[m_ES.Length];
 
             Array.Sort(m_ES, m_Comparer);
 
-            int max_path = 0;
-            
+            var max_path = 0;
+
             for (int i = m_ES.Length - 1; i >= 0; i--) {
                 int path = FindMaxPath(i);
                 if (path > max_path) {
@@ -70,12 +70,12 @@ namespace Quiz {
             if (m_Maxes[e_i] > 0) {
                 return m_Maxes[e_i];
             }
-            
-            int max_path = 0;
-            
+
+            var max_path = 0;
+
             for (int i = e_i + 1; i < m_ES.Length; i++) {
                 if (m_ES[i].CanEnvelop(m_ES[e_i])) {
-                    int path = FindMaxPath(i);    
+                    int path = FindMaxPath(i);
                     if (path > max_path) {
                         max_path = path;
                     }
@@ -83,9 +83,9 @@ namespace Quiz {
             }
 
             int result = max_path + 1;
-            
+
             m_Maxes[e_i] = result;
-        
+
             return result;
         }
 

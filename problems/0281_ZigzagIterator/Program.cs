@@ -1,9 +1,9 @@
 ﻿namespace Quiz {
     public class Program : ProgramBase {
-        
+
         public static void Main() {
-            Solution solution = new Solution();
-            
+            var solution = new Solution();
+
             Test.Check(solution.Method, IntArray("[]"), IntArray("[]"), IntArray("[]"));
             Test.Check(solution.Method, IntArray("[1]"), IntArray("[]"), IntArray("[1]"));
             Test.Check(solution.Method, IntArray("[]"), IntArray("[1]"), IntArray("[1]"));

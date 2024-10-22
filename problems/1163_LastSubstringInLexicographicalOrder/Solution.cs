@@ -4,13 +4,13 @@ namespace Quiz {
     public class Solution {
         
         public string LastSubstring(string s) {
-            int max_start = 0;
+            var max_start = 0;
             int max_length = s.Length;
             
-            for (int start = 1; start < s.Length; start++) {
-                int step = 0;
+            for (var start = 1; start < s.Length; start++) {
+                var step = 0;
                 
-                for (int i = 0; i < Math.Min(s.Length - start, max_length); i++) {
+                for (var i = 0; i < Math.Min(s.Length - start, max_length); i++) {
                     char c_s = s[start + i];
                     char c_m = s[max_start + i];
                     if (c_s < c_m) {

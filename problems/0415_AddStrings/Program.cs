@@ -1,8 +1,8 @@
 ﻿namespace Quiz {
     public class Program : ProgramBase {
-        
+
         public static void Main() {
-            Solution solution = new Solution();
+            var solution = new Solution();
 
             Test.Check(solution.AddStrings, "0", "0", "0");
             Test.Check(solution.AddStrings, "0", "1", "1");

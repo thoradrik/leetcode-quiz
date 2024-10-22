@@ -4,20 +4,20 @@ namespace Quiz {
     public class Solution {
 
         public string AddStrings(IList<string> nums) {
-            int[] ni = new int[nums.Count];
-            
-            for (int i = 0; i < nums.Count; i++) {
+            var ni = new int[nums.Count];
+
+            for (var i = 0; i < nums.Count; i++) {
                 ni[i] = nums[i].Length - 1;
             }
-            
-            int k = 0;
-            
-            Stack<char> result = new Stack<char>();
+
+            var k = 0;
+
+            var result = new Stack<char>();
 
             while (true) {
                 bool b = k > 0;
-                
-                for (int i = 0; i < ni.Length; i++) {
+
+                for (var i = 0; i < ni.Length; i++) {
                     b |= ni[i] >= 0;
                 }
 
@@ -25,16 +25,16 @@ namespace Quiz {
                     break;
                 }
 
-                for (int i = 0; i < ni.Length; i++) {
+                for (var i = 0; i < ni.Length; i++) {
                     if (ni[i] >= 0) {
                         int c = nums[i][ni[i]] - '0';
                         ni[i]--;
                         k += c;
                     }
                 }
-                
+
                 result.Push((char)(k % 10 + '0'));
-                
+
                 k /= 10;
             }
 
@@ -43,17 +43,17 @@ namespace Quiz {
 
         private string MultiplyHelper(string num1, int num2, int trailing_zeroes) {
             int ai = num1.Length - 1;
-            int k = 0;
-            
-            Stack<char> result = new Stack<char>();
+            var k = 0;
 
-            for (int i = 0; i < trailing_zeroes; i++) {
+            var result = new Stack<char>();
+
+            for (var i = 0; i < trailing_zeroes; i++) {
                 result.Push('0');
             }
-            
+
             while (ai >= 0 || k > 0) {
                 int c1 = ai >= 0 ? num1[ai--] - '0' : 0;
-            
+
                 k += c1 * num2;
 
                 result.Push((char)(k % 10 + '0'));
@@ -74,10 +74,10 @@ namespace Quiz {
             } else if (num1.Length < num2.Length) {
                 return Multiply(num2, num1);
             }
-            
+
             int ai = num2.Length - 1;
 
-            List<string> list = new List<string>(num2.Length);
+            var list = new List<string>(num2.Length);
 
             for (int i = ai; i >= 0; i--) {
                 int n = num2[i] - '0';

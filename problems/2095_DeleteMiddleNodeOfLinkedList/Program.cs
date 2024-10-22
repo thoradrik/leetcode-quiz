@@ -5,7 +5,7 @@ namespace Quiz;
 public class Program : ProgramBase {
     
     public static void Main() {
-        Solution solution = new Solution();
+        var solution = new Solution();
         
         Test.Check(solution.DeleteMiddle, MakeLinkedList("[0]"),  MakeLinkedList("[]"));
         Test.Check(solution.DeleteMiddle, MakeLinkedList("[1,2]"), MakeLinkedList("[1]"));

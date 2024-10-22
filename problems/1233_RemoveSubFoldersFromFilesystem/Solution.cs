@@ -26,7 +26,7 @@ namespace Quiz {
                         node.Children = new Dictionary<string, Node>();
                     }
 
-                    if (!node.Children.TryGetValue(name, out Node child_node)) {
+                    if (!node.Children.TryGetValue(name, out var child_node)) {
                         child_node = new Node {
                             Name = name
                         };
@@ -38,20 +38,20 @@ namespace Quiz {
                 }
             }
             
-            Node root = new Node();
+            var root = new Node();
 
             foreach (string f_path in folder) {
                 push(root, f_path);
             }
 
-            List<string> list = new List<string>();
+            var list = new List<string>();
 
             void pop(Node node, string parent_path) {
                 string node_path = parent_path + node.Name;
                 if (node.Delete) {
                     list.Add(node_path);
                 } else {
-                    foreach (KeyValuePair<string, Node> pair in node.Children) {
+                    foreach (var pair in node.Children) {
                         pop(pair.Value, node_path);
                     }
                 }

@@ -5,9 +5,9 @@ namespace Quiz {
 
         public string ShortestPalindrome(string s) {
             int length = s.Length;
-            
+
             for (; length > 0; length--) {
-                int start = 0;
+                var start = 0;
                 int end = length - 1;
 
                 while (s[start] == s[end] && start < end) {
@@ -23,8 +23,8 @@ namespace Quiz {
             if (length <= 0) {
                 return s;
             }
-            
-            StringBuilder sb = new StringBuilder(length + s.Length);
+
+            var sb = new StringBuilder(length + s.Length);
 
             for (int i = s.Length - 1; i >= length; i--) {
                 sb.Append(s[i]);
@@ -34,6 +34,6 @@ namespace Quiz {
 
             return sb.ToString();
         }
-        
+
     }
 }

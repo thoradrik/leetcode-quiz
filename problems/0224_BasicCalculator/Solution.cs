@@ -13,13 +13,13 @@ namespace Quiz {
             public int Count { get; private set; }
             public void Advance() => Count++;
         }
-        
+
         private Token[] Tokenizer(string s) {
-            List<Token> list = new List<Token>();
+            var list = new List<Token>();
 
             Token pending = null;
-            
-            for (int i = 0; i < s.Length; i++) {
+
+            for (var i = 0; i < s.Length; i++) {
                 char c = s[i];
                 if (c == ' ') {
                     if (pending != null) {
@@ -31,7 +31,7 @@ namespace Quiz {
                         list.Add(pending);
                         pending = null;
                     }
-                    
+
                     list.Add(new Token(i));
                 } else if (c >= '0' && c <= '9') {
                     if (pending != null) {
@@ -43,14 +43,14 @@ namespace Quiz {
                     throw new Exception("Tokenize: Unexpected symbol");
                 }
             }
-            
+
             if (pending != null) {
                 list.Add(pending);
             }
-            
+
             return list.ToArray();
         }
-        
+
         private partial class Lexeme { }
         private class OperationLexeme : Lexeme { }
         private class AddSubLexeme : OperationLexeme { }
@@ -62,19 +62,19 @@ namespace Quiz {
         private class PLexeme : Lexeme { }
         private class OPLexeme : PLexeme { }
         private class CPLexeme : PLexeme { }
-        
+
         private partial class NumberLexeme : Lexeme {
             public NumberLexeme(long value) => Value = value;
             public long Value { get; }
         }
 
         private Lexeme[] Lexer(string s, Token[] tokens) {
-            List<Lexeme> list = new List<Lexeme>();
+            var list = new List<Lexeme>();
             Lexeme prev = null;
 
-            bool negate_pending = false;
-            
-            foreach (Token token in tokens) {
+            var negate_pending = false;
+
+            foreach (var token in tokens) {
                 string ts = s.Substring(token.Start, token.Count);
 
                 if (ts == "+" || ts == "-" || ts == "*" || ts == "/" || ts == "(" || ts == ")") {
@@ -90,7 +90,7 @@ namespace Quiz {
                     if (prev is OperationLexeme) {
                         negate_pending = true;
                     } else {
-                        lexeme = new SubLexeme();        
+                        lexeme = new SubLexeme();
                     }
                 } else if (ts == "*") {
                     lexeme = new MulLexeme();
@@ -136,7 +136,7 @@ namespace Quiz {
             public bool TryPeek<T>(int depth, out T lexeme) where T : Lexeme {
                 int index = m_Position + depth - 1;
                 if (index < m_Lexemes.Length) {
-                    Lexeme l_o = m_Lexemes[index];
+                    var l_o = m_Lexemes[index];
                     if (l_o is T l_t) {
                         lexeme = l_t;
                         return true;
@@ -149,11 +149,11 @@ namespace Quiz {
             public void Advance(int steps) => m_Position += steps;
 
         }
-        
+
         private abstract class Node {
-            
+
             public abstract long Evaluate();
-            
+
         }
 
         private partial class ValueNode : Node {
@@ -170,7 +170,7 @@ namespace Quiz {
             if (!stream.TryPeek(1, out NumberLexeme lexeme)) {
                 return false;
             }
-            
+
             stream.Advance(1);
 
             stack.Push(new ValueNode(lexeme.Value));
@@ -188,7 +188,7 @@ namespace Quiz {
             public Node Left { get; }
 
             public Node Right { get; }
-            
+
         }
 
         private partial class MulExpression : Expression {
@@ -226,18 +226,18 @@ namespace Quiz {
             if (!stream.TryPeek(2, out OPLexeme _)) {
                 return false;
             }
-            
+
             stream.Advance(1);
 
             if (TryParseParentheses(stream, stack)) {
-                
+
             }
 
-            if (!stack.TryPop(out Node r_value)) {
+            if (!stack.TryPop(out var r_value)) {
                 throw new Exception("TryParseMulDiv_BeforeParentheses: RValue cant be obtained from stack");
             }
 
-            if (!stack.TryPop(out Node l_value)) {
+            if (!stack.TryPop(out var l_value)) {
                 throw new Exception("TryParseMulDiv_BeforeParentheses: LValue cant be obtained from stack");
             }
 
@@ -261,7 +261,7 @@ namespace Quiz {
                 return false;
             }
 
-            if (!stack.TryPop(out Node l_value)) {
+            if (!stack.TryPop(out var l_value)) {
                 throw new Exception("TryParseMulDiv_Simple: LValue cant be obtained from stack");
             }
 
@@ -298,7 +298,7 @@ namespace Quiz {
             if (!stream.TryPeek(1, out AddSubLexeme lexeme)) {
                 return false;
             }
-            
+
             if (TryParseAddSub_BeforeParentheses(stream, stack, lexeme)) {
                 return true;
             }
@@ -308,7 +308,7 @@ namespace Quiz {
             if (TryParseAddSub_Simple(stream, stack, lexeme)) {
                 return true;
             }
-            
+
             return false;
         }
 
@@ -316,20 +316,20 @@ namespace Quiz {
             if (!stream.TryPeek(2, out OPLexeme _)) {
                 return false;
             }
-            
+
             stream.Advance(1);
 
             if (TryParseParentheses(stream, stack)) {
                 while (TryParseMulDiv(stream, stack)) {
-                    
+
                 }
             }
 
-            if (!stack.TryPop(out Node r_value)) {
+            if (!stack.TryPop(out var r_value)) {
                 throw new Exception("TryParseAddSub_BeforeParentheses: RValue cant be obtained from stack");
             }
 
-            if (!stack.TryPop(out Node l_value)) {
+            if (!stack.TryPop(out var l_value)) {
                 l_value = new ValueNode(0);
             }
 
@@ -348,20 +348,20 @@ namespace Quiz {
             if (!stream.TryPeek(3, out MulDivLexeme _)) {
                 return false;
             }
-            
+
             stream.Advance(1);
 
             if (TryParseValue(stream, stack)) {
                 while (TryParseMulDiv(stream, stack)) {
-                    
+
                 }
             }
 
-            if (!stack.TryPop(out Node r_value)) {
+            if (!stack.TryPop(out var r_value)) {
                 throw new Exception("TryParseAddSub_BeforeMulDiv: RValue cant be obtained from stack");
             }
 
-            if (!stack.TryPop(out Node l_value)) {
+            if (!stack.TryPop(out var l_value)) {
                 throw new Exception("TryParseAddSub_BeforeMulDiv: LValue cant be obtained from stack");
             }
 
@@ -385,7 +385,7 @@ namespace Quiz {
                 return false;
             }
 
-            if (!stack.TryPop(out Node l_value)) {
+            if (!stack.TryPop(out var l_value)) {
                 l_value = new ValueNode(0);
             }
 
@@ -409,14 +409,14 @@ namespace Quiz {
             public Node Inner { get; }
 
             public override long Evaluate() => Inner.Evaluate();
-            
+
         }
 
         private bool TryParseParentheses(LexemeStream stream, Stack<Node> stack) {
             if (!stream.TryPeek(1, out OPLexeme _)) {
                 return false;
             }
-            
+
             stream.Advance(1);
 
             while (true) {
@@ -437,14 +437,14 @@ namespace Quiz {
                 }
 
                 if (stream.TryPeek(1, out CPLexeme _)) {
-                    if (!stack.TryPop(out Node inner)) {
+                    if (!stack.TryPop(out var inner)) {
                         throw new Exception("TryParseParentheses: InnerValue cant be obtained from stack");
                     }
 
                     stream.Advance(1);
-                    
+
                     stack.Push(new ParenthesesNode(inner));
-                    
+
                     return true;
                 } else {
                     throw new Exception("TryParseParentheses: Failed to parse CPLexeme");
@@ -458,37 +458,37 @@ namespace Quiz {
                     while (TryParseParentheses(stream, stack)) { }
                     continue;
                 }
-                
+
                 if (TryParseMulDiv(stream, stack)) {
                     while (TryParseMulDiv(stream, stack)) { }
                     continue;
                 }
-                
+
                 if (TryParseAddSub(stream, stack)) {
                     while (TryParseAddSub(stream, stack)) { }
                     continue;
                 }
-                
+
                 if (TryParseValue(stream, stack)) {
                     continue;
                 }
-                
+
                 throw new Exception("TryParseExpression: Cannot recognize pattern");
             }
 
             return stack.Count >= 1;
         }
-        
-        public int Calculate(string s) {
-            Token[] tokens = Tokenizer(s);
 
-            Lexeme[] lexemes = Lexer(s, tokens);
-            
+        public int Calculate(string s) {
+            var tokens = Tokenizer(s);
+
+            var lexemes = Lexer(s, tokens);
+
             // PrintLexemes(lexemes);
 
-            LexemeStream stream = new LexemeStream(lexemes);
+            var stream = new LexemeStream(lexemes);
 
-            Stack<Node> stack = new Stack<Node>();
+            var stack = new Stack<Node>();
 
             if (!TryParseExpression(stream, stack)) {
                 throw new Exception("Calculate: Failed to parse expression");
@@ -503,6 +503,6 @@ namespace Quiz {
 
             return (int)root.Evaluate();
         }
-        
+
     }
 }

@@ -2,7 +2,7 @@
     public class Program : ProgramBase {
         
         public static void Main() {
-            Solution solution = new Solution();
+            var solution = new Solution();
 
             Test.Check(solution.WaysToMakeFair, IntArray("[1]"), 1);
             Test.Check(solution.WaysToMakeFair, IntArray("[1,1]"), 1);

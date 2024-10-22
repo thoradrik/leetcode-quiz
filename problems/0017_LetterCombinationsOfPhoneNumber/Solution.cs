@@ -13,15 +13,15 @@ namespace Quiz {
             /* 8 */ new[] { 't', 'u', 'v' },
             /* 9 */ new[] { 'w', 'x', 'y', 'z' },
         };
-        
+
         public IList<string> LetterCombinations(string digits) {
-            List<string> list = new List<string>();
+            var list = new List<string>();
 
             if (digits.Length > 0) {
-                int depth = 0;
+                var depth = 0;
 
-                int[] indexes = new int[digits.Length];
-                char[] buffer = new char[digits.Length];
+                var indexes = new int[digits.Length];
+                var buffer = new char[digits.Length];
 
                 while (true) {
                     if (depth >= indexes.Length) {
@@ -51,6 +51,6 @@ namespace Quiz {
 
             return list;
         }
-        
+
     }
 }

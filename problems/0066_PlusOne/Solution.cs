@@ -10,9 +10,9 @@ namespace Quiz {
                 digits[i]++;
             }
 
-            Stack<int> result = new Stack<int>(digits.Length);
-            
-            int k = 0;
+            var result = new Stack<int>(digits.Length);
+
+            var k = 0;
 
             while (i >= 0) {
                 k += digits[i];
@@ -24,7 +24,7 @@ namespace Quiz {
             if (k > 0) {
                 result.Push(k);
             }
-            
+
             return result.ToArray();
         }
 

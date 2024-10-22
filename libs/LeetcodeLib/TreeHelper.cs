@@ -9,29 +9,29 @@ public static class TreeHelper {
     public static TreeNode CreateTreeFromBFS(IList<int?> bfs) {
         if (bfs.Count < 1) {
             return null;
-        } 
-            
-        TreeNode root = new TreeNode();
+        }
+
+        var root = new TreeNode();
 
         root.val = bfs[0].Value;
 
-        Queue<TreeNode> next = new Queue<TreeNode>();
+        var next = new Queue<TreeNode>();
 
         next.Enqueue(root);
 
-        int ptr = 1;
-            
+        var ptr = 1;
+
         do {
-            Queue<TreeNode> prev = next;
+            var prev = next;
 
             next = new Queue<TreeNode>();
-                
-            while (prev.TryDequeue(out TreeNode parent)) {
+
+            while (prev.TryDequeue(out var parent)) {
                 if (ptr < bfs.Count) {
                     int? left_value = bfs[ptr];
 
                     if (left_value != null) {
-                        TreeNode left = new TreeNode(left_value.Value);
+                        var left = new TreeNode(left_value.Value);
                         parent.left = left;
                         next.Enqueue(left);
                     }
@@ -41,7 +41,7 @@ public static class TreeHelper {
                 if (ptr < bfs.Count) {
                     int? right_value = bfs[ptr];
                     if (right_value != null) {
-                        TreeNode right = new TreeNode(right_value.Value);
+                        var right = new TreeNode(right_value.Value);
                         parent.right = right;
                         next.Enqueue(right);
                     }

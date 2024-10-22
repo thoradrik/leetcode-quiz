@@ -1,8 +1,8 @@
 ﻿namespace Quiz {
     public class Program : ProgramBase {
-        
+
         public static void Main() {
-            Solution solution = new Solution();
+            var solution = new Solution();
 
             Test.Print(solution.CombinationSum, IntArray("[]"), 1);
             Test.Print(solution.CombinationSum, IntArray("[2]"), 1);

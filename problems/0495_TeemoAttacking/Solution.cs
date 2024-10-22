@@ -8,7 +8,7 @@ namespace Quiz {
             if (timeSeries.Length <= 0 || duration <= 0) {
                 return 0;
             }
-            
+
             int start = -1;
             int end = -1;
 
@@ -28,7 +28,7 @@ namespace Quiz {
                         }
                     }
                 }
-                
+
                 start = time;
                 end = time + duration;
             }
@@ -40,7 +40,7 @@ namespace Quiz {
             return total;
         }
         */
-        
+
         public int FindPoisonedDuration(int[] timeSeries, int duration) {
             if (timeSeries.Length == 0) {
                 return 0;
@@ -48,16 +48,16 @@ namespace Quiz {
             if (timeSeries.Length == 1) {
                 return duration;
             }
-            
-            int total = 0;
-            
-            for (int index = 1; index < timeSeries.Length; index++) {
+
+            var total = 0;
+
+            for (var index = 1; index < timeSeries.Length; index++) {
                 int gap = timeSeries[index] - timeSeries[index - 1];
                 total += Math.Min(gap, duration);
             }
 
             return total + duration;
         }
-        
+
     }
 }

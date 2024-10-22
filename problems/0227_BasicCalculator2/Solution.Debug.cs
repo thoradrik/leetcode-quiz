@@ -8,7 +8,7 @@ namespace Quiz {
         private static void PrintTokens(IEnumerable<Token> tokens) {
             Console.Write(" ");
 
-            foreach (Token token in tokens) {
+            foreach (var token in tokens) {
                 Console.Write(" {0}", token);
             }
 
@@ -16,7 +16,7 @@ namespace Quiz {
         }
 
         private static void PrintExpressionTree(Node node, int level) {
-            for (int i = 0; i < level; i++) {
+            for (var i = 0; i < level; i++) {
                 Console.Write("  ");
             }
 
@@ -27,7 +27,7 @@ namespace Quiz {
                 PrintExpressionTree(e.Right, level + 1);
             }
         }
-        
+
         private partial class Token {
 
             public override string ToString() {
@@ -39,7 +39,7 @@ namespace Quiz {
                     return string.Format("[{0}]", Type);
                 }
             }
-            
+
         }
 
         private partial class MulExpression {
@@ -49,19 +49,19 @@ namespace Quiz {
         }
 
         private partial class DivExpression {
-            
+
             public override string ToString() => "DivExpression";
 
         }
 
         private partial class SubExpression {
-            
+
             public override string ToString() => "SubExpression";
 
         }
 
         private partial class AddExpression {
-            
+
             public override string ToString() => "AddExpression";
 
         }
@@ -75,19 +75,19 @@ namespace Quiz {
         private partial class TokenStream {
 
             public override string ToString() {
-                StringBuilder sb = new StringBuilder();
+                var sb = new StringBuilder();
 
                 for (int i = m_Position; i < m_Tokens.Count; i++) {
                     if (sb.Length > 0) {
                         sb.Append(" ");
                     }
-                    
+
                     sb.AppendFormat("{0}:{1}", i, m_Tokens[i]);
                 }
-                
+
                 return sb.ToString();
             }
-            
+
         }
 
     }

@@ -2,7 +2,7 @@
 
 namespace Quiz {
     public class Solution {
-        
+
         /*
         public int CountPrimes(int n) {
             if (n <= 2) {
@@ -13,7 +13,7 @@ namespace Quiz {
                 int n_sq = (int)Math.Sqrt(n);
 
                 List<int> primes = new List<int>(n_sq);
-                
+
                 primes.Add(2);
 
                 int i = 3;
@@ -29,7 +29,7 @@ namespace Quiz {
                     }
 
                     primes.Add(i);
-                
+
                 next_i:
                     i += 2;
                 }
@@ -38,23 +38,23 @@ namespace Quiz {
             }
         }
         */
-        
+
         public int CountPrimes(int n) {
             if (n <= 2) {
                 return 0;
             } else if (n <= 3) {
                 return 1;
             } else {
-                int n_sq = (int)Math.Sqrt(n);
+                var n_sq = (int)Math.Sqrt(n);
 
-                bool[] nums = new bool[n];
+                var nums = new bool[n];
 
                 nums[0] = true;
                 nums[1] = true;
 
-                int primes = 0;
-                
-                for (int i = 1; i < n; i += 2) {
+                var primes = 0;
+
+                for (var i = 1; i < n; i += 2) {
                     if (nums[i]) {
                         continue;
                     }
@@ -67,7 +67,7 @@ namespace Quiz {
                         }
                     }
                 }
-                
+
                 return primes + 1;
             }
         }

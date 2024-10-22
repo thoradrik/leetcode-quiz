@@ -1,8 +1,8 @@
 ﻿namespace Quiz {
     public class Program : ProgramBase {
-        
+
         public static void Main() {
-            Solution solution = new Solution();
+            var solution = new Solution();
 
             Test.Check(solution.IsHappy, 1, true);
             Test.Check(solution.IsHappy, 2, false);
@@ -35,13 +35,13 @@
             for (int i = 0; i <= 100; i++) {
                 if (solution.IsHappy(i)) {
                     Console.WriteLine(i);
-                } 
+                }
             }
 
             for (int i = Int32.MaxValue; i >= 0; i--) {
                 if (solution.IsHappy(i)) {
                     Console.WriteLine(i);
-                } 
+                }
             }
             */
         }

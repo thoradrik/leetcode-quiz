@@ -1,10 +1,10 @@
 ﻿namespace Quiz {
     public class Program : ProgramBase {
-        
-        public static void Main() {
-            Solution solution = new Solution();
 
-            for (int i = 0; i < 20; i++) {
+        public static void Main() {
+            var solution = new Solution();
+
+            for (var i = 0; i < 20; i++) {
                 Test.Check(solution.AddOperators, "", 1, StringArray("[]"));
                 Test.Check(solution.AddOperators, "1", 2, StringArray("[]"));
                 Test.Check(solution.AddOperators, "2", 2, StringArray("[\"2\"]"));

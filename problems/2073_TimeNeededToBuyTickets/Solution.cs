@@ -7,7 +7,7 @@ public class Solution {
 
         int sum = mine;
         
-        for (int i = 0; i < k; i++) {
+        for (var i = 0; i < k; i++) {
             sum += Math.Min(tickets[i], mine);
         }
         

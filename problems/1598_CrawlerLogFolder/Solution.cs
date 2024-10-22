@@ -4,7 +4,7 @@ namespace Quiz {
     public class Solution {
         
         public int MinOperations(string[] logs) {
-            int depth = 0;
+            var depth = 0;
 
             foreach (string log in logs) {
                 if (log == "../") {

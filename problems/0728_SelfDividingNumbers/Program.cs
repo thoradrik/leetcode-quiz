@@ -3,9 +3,9 @@ using System.Text.Json;
 
 namespace Quiz {
     public class Program : ProgramBase {
-        
+
         public static void Main() {
-            Solution solution = new Solution();
+            var solution = new Solution();
 
             Test.Check(solution.SelfDividingNumbers, 1, 1, List("[1]"));
             Test.Check(solution.SelfDividingNumbers, 1, 22, List("[1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12, 15, 22]"));

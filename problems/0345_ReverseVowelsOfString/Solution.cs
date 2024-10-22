@@ -1,12 +1,12 @@
 ﻿namespace Quiz {
     public class Solution {
-        
+
         public string ReverseVowels(string s) {
             char[] chars = s.ToCharArray();
 
             bool is_vowel(char c) => c == 'a' || c == 'A' || c == 'e' || c == 'E' || c == 'i' ||  c == 'I' || c == 'o' || c == 'O' || c == 'u' || c == 'U';
-            
-            int start = 0;
+
+            var start = 0;
             int end = chars.Length - 1;
 
             do {
@@ -21,7 +21,7 @@
                 if (start < end) {
                     ref char x = ref chars[start];
                     ref char y = ref chars[end];
-                
+
                     x ^= y;
                     y ^= x;
                     x ^= y;
@@ -35,6 +35,6 @@
 
             return new string(chars);
         }
-        
+
     }
 }

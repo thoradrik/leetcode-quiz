@@ -1,8 +1,8 @@
 ﻿namespace Quiz {
     public class Program : ProgramBase {
-        
+
         public static void Main() {
-            Solution solution = new Solution();
+            var solution = new Solution();
 
             Test.Check(solution.WordBreak, "aaaaaa", StringArray("[\"aaaa\",\"aa\"]"), true);
             Test.Check(solution.WordBreak, "aaaaaaa", StringArray("[\"aaaa\",\"aa\"]"), false);

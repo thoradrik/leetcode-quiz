@@ -7,19 +7,19 @@ namespace Quiz {
             Array.Sort(nums);
 
             int a = nums[0];
-            int i = 1;
-            
+            var i = 1;
+
             while (i < nums.Length) {
                 int b = nums[i];
                 if (a == b) {
                     return a;
                 }
-                
+
                 a = b;
-             
+
                 i++;
             }
-            
+
             return -1;
         }
 

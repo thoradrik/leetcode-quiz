@@ -4,14 +4,14 @@ namespace Quiz {
     public class Solution {
         
         public NodeCopy CopyRandomBinaryTree(Node root) {
-            Dictionary<Node, NodeCopy> map = new Dictionary<Node, NodeCopy>();
+            var map = new Dictionary<Node, NodeCopy>();
 
             NodeCopy clone_node(Node original) {
                 if (original == null) {
                     return null;
                 }
                 
-                if (map.TryGetValue(original, out NodeCopy clone)) {
+                if (map.TryGetValue(original, out var clone)) {
                     return clone;
                 } else {
                     clone = new NodeCopy(original.val);

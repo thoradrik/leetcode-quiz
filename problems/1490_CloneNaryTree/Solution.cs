@@ -7,9 +7,9 @@
             }
             
             Node clone_node(Node original) {
-                Node clone = new Node(original.val);
+                var clone = new Node(original.val);
 
-                foreach (Node child in original.children) {
+                foreach (var child in original.children) {
                     clone.children.Add(clone_node(child));
                 }
                 

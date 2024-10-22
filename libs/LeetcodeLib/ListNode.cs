@@ -3,13 +3,13 @@ using System.Text;
 namespace Quiz;
 
 public class ListNode : IEquatable<ListNode> {
-        
+
     // ReSharper disable InconsistentNaming
     public int val;
-        
+
     public ListNode next;
     // ReSharper restore InconsistentNaming
-        
+
     public ListNode(int val=0, ListNode next=null) {
         this.val = val;
         this.next = next;
@@ -31,24 +31,24 @@ public class ListNode : IEquatable<ListNode> {
     public override int GetHashCode() {
         return HashCode.Combine(val, next);
     }
-        
+
     public override string ToString() {
-        StringBuilder sb = new StringBuilder();
+        var sb = new StringBuilder();
         sb.Append("{");
 
         sb.Append(val);
-        
-        ListNode current = next;
+
+        var current = next;
         while (current != null) {
             sb.Append(",");
             sb.Append(current.val);
-            
+
             current = current.next;
         }
-        
+
         sb.Append("}");
 
         return sb.ToString();
     }
-    
+
 }

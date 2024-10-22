@@ -5,18 +5,18 @@ using AlgorithmLib;
 
 namespace Quiz {
     public class Solution {
-        
+
         public IList<string> LetterCasePermutation(string S) {
-            List<string> list = new List<string>();
-            
+            var list = new List<string>();
+
             CombinationGenerator.Generate(
-                S.Length, 
-                ptr => IsLetter(S[ptr]) ? 2 : 1, 
+                S.Length,
+                ptr => IsLetter(S[ptr]) ? 2 : 1,
                 (ptr, index) => index,
                 flags => {
-                    StringBuilder sb = new StringBuilder(S.Length);
-                    
-                    for (int i = 0; i < flags.Length; i++) {
+                    var sb = new StringBuilder(S.Length);
+
+                    for (var i = 0; i < flags.Length; i++) {
                         char c = S[i];
 
                         if (IsLower(c)) {
@@ -27,7 +27,7 @@ namespace Quiz {
                             sb.Append(c);
                         }
                     }
-                    
+
                     list.Add(sb.ToString());
                 }
             );

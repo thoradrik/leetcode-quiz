@@ -3,10 +3,10 @@ using LeetcodeLib;
 
 namespace Quiz {
     public class Solution {
-        
+
         public IList<int> RightSideView(TreeNode root) {
-            List<int> list = new List<int>();
-            
+            var list = new List<int>();
+
             void backtrace(TreeNode node, int level) {
                 if (list.Count <= level) {
                     list.Add(node.val);
@@ -26,6 +26,6 @@ namespace Quiz {
 
             return list;
         }
-        
+
     }
 }

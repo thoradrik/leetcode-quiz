@@ -55,7 +55,7 @@ public class Solution {
         return r.next;
     }
     */
-        
+
     public ListNode MergeKLists(ListNode[] lists) {
         if (lists.Length <= 0) {
             return null;
@@ -68,10 +68,10 @@ public class Solution {
         if (length == 1) {
             return lists[0];
         } else if (length % 2 == 0) {
-            for (int i = 0; i < (length >> 1); i++) {
+            for (var i = 0; i < (length >> 1); i++) {
                 lists[i] = MergeTwoLists(lists[(i << 1)], lists[(i << 1) + 1]);
             }
-                
+
             return MergeKLists(lists, length >> 1);
         } else {
             return MergeTwoLists(lists[length - 1], MergeKLists(lists, length - 1));
@@ -79,8 +79,8 @@ public class Solution {
     }
 
     private ListNode MergeTwoLists(ListNode a, ListNode b) {
-        ListNode r = new ListNode();
-        ListNode i = r;
+        var r = new ListNode();
+        var i = r;
 
         while (a != null || b != null) {
             if (a == null) {

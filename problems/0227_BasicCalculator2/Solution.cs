@@ -3,17 +3,17 @@ using System.Collections.Generic;
 
 namespace Quiz {
     public partial class Solution {
-        
+
         public int Calculate(string s) {
-            List<Token> tokens = Tokenize(s);
+            var tokens = Tokenize(s);
 
             PrintTokens(tokens);
-            
+
             Lexer(s, tokens);
-            
+
             PrintTokens(tokens);
 
-            Stack<Node> stack = new Stack<Node>();
+            var stack = new Stack<Node>();
 
             if (!TryParseExpression(new TokenStream(tokens), stack)) {
                 throw new Exception("Failed to parse expression");
@@ -37,7 +37,7 @@ namespace Quiz {
             Mul,
             Div
         }
-        
+
         private partial class Token {
 
             public Token(int start) {
@@ -46,7 +46,7 @@ namespace Quiz {
             }
 
             public int Start { get; }
-            
+
             public int Count { get; set; }
 
             public TokenType Type { get; set; }
@@ -54,17 +54,17 @@ namespace Quiz {
             public int Value { get; set; }
 
             public bool IsNumber => Type == TokenType.Number;
-            
+
             public bool IsOperation => Type == TokenType.Add || Type == TokenType.Sub || Type == TokenType.Mul || Type == TokenType.Div;
-            
+
         }
 
         private List<Token> Tokenize(string s) {
-            List<Token> list = new List<Token>();
-            
+            var list = new List<Token>();
+
             Token pending = null;
-            
-            for (int i = 0; i < s.Length; i++) {
+
+            for (var i = 0; i < s.Length; i++) {
                 char c = s[i];
                 if (c == ' ') {
                     if (pending != null) {
@@ -76,7 +76,7 @@ namespace Quiz {
                         list.Add(pending);
                         pending = null;
                     }
-                    
+
                     list.Add(new Token(i));
                 } else if (c >= '0' && c <= '9') {
                     if (pending != null) {
@@ -88,18 +88,18 @@ namespace Quiz {
                     throw new Exception("Tokenize: Unexpected symbol");
                 }
             }
-            
+
             if (pending != null) {
                 list.Add(pending);
             }
-            
+
             return list;
         }
 
         private void Lexer(string s, List<Token> tokens) {
             Token prev = null;
-            
-            foreach (Token token in tokens) {
+
+            foreach (var token in tokens) {
                 string ts = s.Substring(token.Start, token.Count);
 
                 if (ts == "+") {
@@ -128,7 +128,7 @@ namespace Quiz {
                         throw new Exception("Lexer: Trailing operation");
                     }
                 }
-                
+
                 prev = token;
             }
         }
@@ -147,7 +147,7 @@ namespace Quiz {
             }
 
             public Node Left { get; }
-            
+
             public Node Right { get; }
         }
 
@@ -221,7 +221,7 @@ namespace Quiz {
             public void Pop(int steps = 1) {
                 m_Position += steps;
             }
-            
+
         }
 
         private bool TryParseExpression(TokenStream stream, Stack<Node> stack) {
@@ -231,17 +231,17 @@ namespace Quiz {
                 }
                 if (TryParseMulDiv(stream, stack)) {
                     while (TryParseMulDiv(stream, stack)) {
-                        
+
                     }
                     continue;
                 }
                 if (TryParseAddSub(stream, stack)) {
                     while (TryParseAddSub(stream, stack)) {
-                        
+
                     }
                     continue;
                 }
-                
+
                 throw new Exception("TryParseExpression: Cannot recognize pattern");
             }
 
@@ -249,20 +249,20 @@ namespace Quiz {
         }
 
         private bool TryParseValue(TokenStream stream, Stack<Node> stack) {
-            if (stream.TryPeek(1, out Token token)) {
+            if (stream.TryPeek(1, out var token)) {
                 if (token.IsNumber) {
                     stream.Pop();
                     stack.Push(new ValueExpression(token.Value));
-                
+
                     return true;
                 }
             }
-            
+
             return false;
         }
 
         private bool TryParseMulDiv(TokenStream stream, Stack<Node> stack) {
-            if (stream.TryPeek(1, out Token op)) {
+            if (stream.TryPeek(1, out var op)) {
                 if (op.Type == TokenType.Mul || op.Type == TokenType.Div) {
                     if (TryParseMulDiv_Simple(stream, stack, op)) {
                         return true;
@@ -273,7 +273,7 @@ namespace Quiz {
         }
 
         private static bool TryParseMulDiv_Simple(TokenStream stream, Stack<Node> stack, Token op) {
-            if (!stream.TryPeek(2, out Token r_token)) {
+            if (!stream.TryPeek(2, out var r_token)) {
                 throw new Exception("TryParseMulDiv_Simple: RValue cant be obtained from token stream");
             }
 
@@ -281,13 +281,13 @@ namespace Quiz {
                 return false;
             }
 
-            if (!stack.TryPop(out Node l_value)) {
+            if (!stack.TryPop(out var l_value)) {
                 throw new Exception("TryParseMulDiv_Simple: LValue cant be obtained from stack");
             }
 
             stream.Pop(2);
 
-            ValueExpression r_value = new ValueExpression(r_token.Value);
+            var r_value = new ValueExpression(r_token.Value);
             if (op.Type == TokenType.Mul) {
                 stack.Push(new MulExpression(l_value, r_value));
             } else {
@@ -298,7 +298,7 @@ namespace Quiz {
         }
 
         private bool TryParseAddSub(TokenStream stream, Stack<Node> stack) {
-            if (stream.TryPeek(1, out Token op)) {
+            if (stream.TryPeek(1, out var op)) {
                 if (op.Type == TokenType.Add || op.Type == TokenType.Sub) {
                     if (TryParseAddSub_BeforeMulDiv(stream, stack, op)) {
                         return true;
@@ -312,27 +312,27 @@ namespace Quiz {
         }
 
         private bool TryParseAddSub_BeforeMulDiv(TokenStream stream, Stack<Node> stack, Token op) {
-            if (!stream.TryPeek(3, out Token next_op)) {
+            if (!stream.TryPeek(3, out var next_op)) {
                 return false;
             }
 
             if (next_op.Type != TokenType.Mul && next_op.Type != TokenType.Div) {
                 return false;
             }
-            
+
             stream.Pop();
 
             if (TryParseValue(stream, stack)) {
                 while (TryParseMulDiv(stream, stack)) {
-                    
+
                 }
             }
 
-            if (!stack.TryPop(out Node r_value)) {
+            if (!stack.TryPop(out var r_value)) {
                 throw new Exception("TryParseAddSub_BeforeMulDiv: RValue cant be obtained from stack");
             }
 
-            if (!stack.TryPop(out Node l_value)) {
+            if (!stack.TryPop(out var l_value)) {
                 throw new Exception("TryParseAddSub_BeforeMulDiv: LValue cant be obtained from stack");
             }
 
@@ -346,21 +346,21 @@ namespace Quiz {
         }
 
         private static bool TryParseAddSub_Simple(TokenStream stream, Stack<Node> stack, Token op) {
-            if (!stream.TryPeek(2, out Token r_token)) {
+            if (!stream.TryPeek(2, out var r_token)) {
                 throw new Exception("TryParseAddSub_Simple: RValue cant be obtained from token stream");
             }
 
             if (!r_token.IsNumber) {
                 return false;
             }
-            
-            if (!stack.TryPop(out Node l_value)) {
+
+            if (!stack.TryPop(out var l_value)) {
                 throw new Exception("TryParseAddSub_Simple: LValue cant be obtained from stack");
             }
 
             stream.Pop(2);
 
-            ValueExpression r_value = new ValueExpression(r_token.Value);
+            var r_value = new ValueExpression(r_token.Value);
             if (op.Type == TokenType.Add) {
                 stack.Push(new AddExpression(l_value, r_value));
             } else {

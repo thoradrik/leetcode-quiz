@@ -5,15 +5,15 @@ namespace Quiz;
 public class Solution {
 
     public TreeNode SortedListToBST(ListNode head) {
-        int length = 0;
+        var length = 0;
 
-        ListNode ptr = head;
+        var ptr = head;
         while (ptr != null) {
             length++;
             ptr = ptr.next;
         }
 
-        return SortedListToBST(head, length, out ListNode end);
+        return SortedListToBST(head, length, out var end);
     }
 
     private TreeNode SortedListToBST(ListNode start, int length, out ListNode end) {
@@ -29,15 +29,15 @@ public class Solution {
         } else {
             int half = length / 2;
             if (length % 2 == 0) {
-                TreeNode left = SortedListToBST(start, half - 1, out ListNode middle);
-                TreeNode right = SortedListToBST(middle.next, half, out end);
+                var left = SortedListToBST(start, half - 1, out var middle);
+                var right = SortedListToBST(middle.next, half, out end);
                 return new TreeNode(middle.val) {
                     left = left,
                     right = right
                 };
             } else {
-                TreeNode left = SortedListToBST(start, half, out ListNode middle);
-                TreeNode right = SortedListToBST(middle.next, half, out end);
+                var left = SortedListToBST(start, half, out var middle);
+                var right = SortedListToBST(middle.next, half, out end);
                 return new TreeNode(middle.val) {
                     left = left,
                     right = right

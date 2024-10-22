@@ -4,9 +4,9 @@ namespace Quiz {
     public class Solution {
 
         public string RemoveOuterParentheses(string S) {
-            StringBuilder sb = new StringBuilder();
+            var sb = new StringBuilder();
 
-            int depth = 0;
+            var depth = 0;
             foreach (char c in S) {
                 if (c == '(') {
                     if (depth > 0) {
@@ -20,9 +20,9 @@ namespace Quiz {
                     }
                 }
             }
-            
+
             return sb.ToString();
         }
-        
+
     }
 }

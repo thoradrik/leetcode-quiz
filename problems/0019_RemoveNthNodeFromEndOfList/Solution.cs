@@ -3,15 +3,15 @@
 public class Solution {
 
     public ListNode RemoveNthFromEnd(ListNode head, int n) {
-        ListNode current = head;
-        
+        var current = head;
+
         while (n > 0) {
             current = current.next;
             n--;
         }
-        
-        ListNode slow = head;
-        ListNode fast = current;
+
+        var slow = head;
+        var fast = current;
         ListNode prev = null;
         while (fast != null) {
             prev = slow;
@@ -32,16 +32,16 @@ public class Solution {
             return null;
         }
 
-        int count = 0;
+        var count = 0;
 
-        ListNode current = head;
+        var current = head;
         while (current != null) {
             count++;
             current = current.next;
         }
 
         int index = count - n;
-        
+
         current = head;
         ListNode prev = null;
         while (current != null && index > 0) {

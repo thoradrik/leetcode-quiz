@@ -2,7 +2,7 @@
     public class Program : ProgramBase {
         
         public static void Main() {
-            Solution solution = new Solution();
+            var solution = new Solution();
 
             Test.Check(solution.CanConvertString, "a", "b", 1, true);
             Test.Check(solution.CanConvertString, "a", "c", 1, false);

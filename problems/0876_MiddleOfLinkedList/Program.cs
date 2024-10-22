@@ -3,12 +3,12 @@
 namespace Quiz;
 
 public class Program : ProgramBase {
-    
+
     public static void Main() {
-        Solution solution = new Solution();
+        var solution = new Solution();
 
         ListNode item;
-        
+
         Test.Check(solution.MiddleNode, MakeLinkedList("[0]", 0, out item), item);
         Test.Check(solution.MiddleNode, MakeLinkedList("[1,2]", 1, out item), item);
         Test.Check(solution.MiddleNode, MakeLinkedList("[1,2,3]", 1, out item), item);

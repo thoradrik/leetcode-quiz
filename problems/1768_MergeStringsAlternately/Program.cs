@@ -2,7 +2,7 @@
     public class Program : ProgramBase {
         
         public static void Main() {
-            Solution solution = new Solution();
+            var solution = new Solution();
 
             Test.Check(solution.MergeAlternately, "a", "b", "ab");
             Test.Check(solution.MergeAlternately, "aa", "b", "aba");

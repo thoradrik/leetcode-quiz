@@ -4,12 +4,12 @@ using System.Linq;
 
 namespace Quiz {
     public class Solution {
-        
-        public IList<string> RemoveInvalidParentheses(string s) {
-            HashSet<string> hs = new HashSet<string>();
 
-            int excess_op = 0;
-            int excess_cp = 0;
+        public IList<string> RemoveInvalidParentheses(string s) {
+            var hs = new HashSet<string>();
+
+            var excess_op = 0;
+            var excess_cp = 0;
             foreach (char c in s) {
                 if (c == '(') {
                     excess_op++;
@@ -21,8 +21,8 @@ namespace Quiz {
                     }
                 }
             }
-            
-            char[] buffer = new char[s.Length];
+
+            var buffer = new char[s.Length];
             void go_next(int s_index, int b_index, int op, int cp, int ballance) {
                 while (s_index < s.Length) {
                     char c = s[s_index];
@@ -58,9 +58,9 @@ namespace Quiz {
             }
 
             go_next(0, 0, excess_op, excess_cp, 0);
-            
+
             return hs.ToArray();
         }
-        
+
     }
 }

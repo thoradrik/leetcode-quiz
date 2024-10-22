@@ -2,11 +2,11 @@
 
 namespace Quiz {
     public class Solution {
-        
+
         public IList<IList<int>> Combine(int n, int k) {
             IList<IList<int>> list = new List<IList<int>>();
 
-            Stack<int> stack = new Stack<int>();
+            var stack = new Stack<int>();
 
             void backtrack(int kk, int start) {
                 if (kk == 0) {
@@ -23,9 +23,9 @@ namespace Quiz {
             }
 
             backtrack(k, 1);
-            
+
             return list;
         }
-        
+
     }
 }

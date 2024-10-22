@@ -4,7 +4,7 @@ namespace Quiz {
     public class Solution {
 
         public bool IsValid(string s) {
-            Stack<char> stack = new Stack<char>();
+            var stack = new Stack<char>();
 
             foreach (char c in s) {
                 if (c == '(') {

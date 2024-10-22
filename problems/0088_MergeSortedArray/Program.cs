@@ -1,8 +1,8 @@
 ﻿namespace Quiz {
     public class Program : ProgramBase {
-        
+
         public static void Main() {
-            Solution solution = new Solution();
+            var solution = new Solution();
 
             int[] Func(int[] a1, int a2, int[] a3, int a4) {
                 solution.Merge(a1, a2, a3, a4);

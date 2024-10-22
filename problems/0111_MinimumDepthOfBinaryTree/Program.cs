@@ -2,9 +2,9 @@
 
 namespace Quiz {
     public class Program : ProgramBase {
-        
+
         public static void Main() {
-            Solution solution = new Solution();
+            var solution = new Solution();
 
             Test.Check(solution.MinDepth, TreeHelper.CreateTreeFromBFS("[]"), 0);
             Test.Check(solution.MinDepth, TreeHelper.CreateTreeFromBFS("[1]"), 1);

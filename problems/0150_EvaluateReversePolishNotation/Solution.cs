@@ -3,11 +3,11 @@ using System.Collections.Generic;
 
 namespace Quiz {
     public class Solution {
-        
-        public int EvalRPN(string[] tokens) {
-            Stack<int> stack = new Stack<int>();
 
-            for (int i = 0; i < tokens.Length; i++) {
+        public int EvalRPN(string[] tokens) {
+            var stack = new Stack<int>();
+
+            for (var i = 0; i < tokens.Length; i++) {
                 string token = tokens[i];
                 if (token == "+" || token == "-" || token == "*" || token == "/") {
                     if (stack.TryPop(out int b) && stack.TryPop(out int a)) {
@@ -29,6 +29,6 @@ namespace Quiz {
 
             return stack.Pop();
         }
-        
+
     }
 }

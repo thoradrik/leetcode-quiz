@@ -2,17 +2,17 @@
 
 namespace Quiz {
     public class Solution {
-        
-        public int GetImportance(IList<Employee> employees, int id) {
-            Dictionary<int, Employee> e_map = new Dictionary<int, Employee>();
 
-            foreach (Employee employee in employees) {
+        public int GetImportance(IList<Employee> employees, int id) {
+            var e_map = new Dictionary<int, Employee>();
+
+            foreach (var employee in employees) {
                 e_map[employee.id] = employee;
             }
 
-            int sum = 0;
-            
-            HashSet<int> memo = new HashSet<int>();
+            var sum = 0;
+
+            var memo = new HashSet<int>();
 
             void dfs(int employee_id) {
                 if (memo.Contains(employee_id)) {
@@ -21,19 +21,19 @@ namespace Quiz {
                     memo.Add(employee_id);
                 }
 
-                Employee employee = e_map[employee_id];
-                
+                var employee = e_map[employee_id];
+
                 sum += employee.importance;
-                
+
                 foreach (int subordinate_id in employee.subordinates) {
                     dfs(subordinate_id);
                 }
             }
 
             dfs(id);
-            
+
             return sum;
         }
-        
+
     }
 }

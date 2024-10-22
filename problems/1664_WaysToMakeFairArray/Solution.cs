@@ -6,9 +6,9 @@
                 return 1;
             }
 
-            int[] s_sum = new int[nums.Length];
+            var s_sum = new int[nums.Length];
 
-            for (int i = 0; i < nums.Length; i++) {
+            for (var i = 0; i < nums.Length; i++) {
                 if (i < 2) {
                     s_sum[i] = nums[i];
                 } else {
@@ -16,7 +16,7 @@
                 }
             }
 
-            int[] e_sum = new int[nums.Length];
+            var e_sum = new int[nums.Length];
 
             for (int i = nums.Length - 1; i >= 0; i--) {
                 if (i > nums.Length - 3) {
@@ -26,11 +26,11 @@
                 }
             }
             
-            int count = 0;
+            var count = 0;
 
-            for (int i = 0; i < nums.Length; i++) {
-                int odd_sum = 0;
-                int even_sum = 0;
+            for (var i = 0; i < nums.Length; i++) {
+                var odd_sum = 0;
+                var even_sum = 0;
                 if (i % 2 == 0) {
                     // E O E [O] O E O E
                     even_sum += i >= 1 ? s_sum[i - 1] : 0;

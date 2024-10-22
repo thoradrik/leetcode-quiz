@@ -2,12 +2,12 @@
 
 namespace Quiz {
     public class Solution {
-        
+
         public int[] DiStringMatch(string S) {
-            int low = 0;
+            var low = 0;
             int high = S.Length;
 
-            List<int> list = new List<int>(S.Length + 1);
+            var list = new List<int>(S.Length + 1);
 
             foreach (char c in S) {
                 if (c == 'I') {
@@ -16,11 +16,11 @@ namespace Quiz {
                     list.Add(high--);
                 }
             }
-            
+
             list.Add(low);
 
             return list.ToArray();
         }
-        
+
     }
 }

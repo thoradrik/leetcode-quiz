@@ -2,9 +2,9 @@
 
 namespace Quiz {
     public class Solution {
-        
+
         public int[] TwoSum(int[] numbers, int target) {
-            int left = 0;
+            var left = 0;
             int right = numbers.Length - 1;
 
             while (left < right) {
@@ -27,6 +27,6 @@ namespace Quiz {
 
             throw new Exception();
         }
-        
+
     }
 }

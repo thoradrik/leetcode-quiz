@@ -2,12 +2,12 @@
 
 namespace Quiz {
     public class Solution {
-        
+
         public IList<IList<int>> Permute(int[] nums) {
             IList<IList<int>> list = new List<IList<int>>();
-            
-            int[] stack = new int[nums.Length];
-            int ptr = 0;
+
+            var stack = new int[nums.Length];
+            var ptr = 0;
 
             list.Add(new List<int>(nums));
 
@@ -28,15 +28,15 @@ namespace Quiz {
                     ptr++;
                 }
             }
-            
+
             return list;
         }
 
         private static void Swap<T>(ref T a, ref T b) {
-            T tmp = a;
+            var tmp = a;
             a = b;
             b = tmp;
         }
-        
+
     }
 }

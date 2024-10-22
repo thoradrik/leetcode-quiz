@@ -18,33 +18,33 @@ namespace Quiz {
 
         public int SumSubarrayMins(int[] arr) {
             long sum = 0;
-            
-            Stack<Item> stack = new Stack<Item>();
 
-            int dot = 0;
-            for (int i = 0; i < arr.Length; i++) {
+            var stack = new Stack<Item>();
 
-                int count = 1;
+            var dot = 0;
+            for (var i = 0; i < arr.Length; i++) {
 
-                while (stack.TryPeek(out Item item) && item.Min >= arr[i]) {
+                var count = 1;
+
+                while (stack.TryPeek(out var item) && item.Min >= arr[i]) {
                     stack.Pop();
                     count += item.Count;
                     dot -= item.Min * item.Count;
                 }
-                
+
                 stack.Push(new Item(arr[i], count));
-                
+
                 dot += arr[i] * count;
                 sum += dot;
             }
-            
+
             return (int)(sum % 1000000007);
         }
 
         public int SumSubarrayMins_Naive(int[] arr) {
             long sum = 0;
-            
-            for (int i = 0; i < arr.Length; i++) {
+
+            for (var i = 0; i < arr.Length; i++) {
                 int min = arr[i];
                 for (int j = i; j < arr.Length; j++) {
                     int a = arr[j];
@@ -54,10 +54,10 @@ namespace Quiz {
                     sum += min;
                 }
             }
-            
+
             return (int)(sum % 1000000007);
         }
 
-        
+
     }
 }

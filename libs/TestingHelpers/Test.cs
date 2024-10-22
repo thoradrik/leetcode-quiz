@@ -28,29 +28,29 @@ public static class Test {
 
     private static void Check<TResult>(Func<TResult> result, object[] input, TResult expected) {
         Console.WriteLine("TEST {0}", Value(input));
-            
-        Stopwatch stopwatch = Stopwatch.StartNew();
-            
+
+        var stopwatch = Stopwatch.StartNew();
+
         TResult answer;
         try {
             answer = result();
         } catch (Exception ex) {
             Console.Write("  ");
-                
+
             using (ConsoleIndicator.Exception()) {
                 Console.Write("!!! EXCEPTION !!!");
             }
-                
+
             Console.WriteLine(" {0}", ex.Message);
-                
+
             return;
         }
 
         stopwatch.Stop();
-            
+
         if (CheckResult(answer, expected)) {
             Console.Write("  ");
-                
+
             using (ConsoleIndicator.Passed()) {
                 Console.Write("PASSED");
             }
@@ -61,7 +61,7 @@ public static class Test {
                 Console.Write("!!! FAILED !!!");
             }
         }
-            
+
         Console.WriteLine(" [{0}ms] ANSWER {1} EXPECTED {2}", stopwatch.ElapsedMilliseconds, Value(answer), Value(expected));
     }
 
@@ -80,42 +80,42 @@ public static class Test {
     public static void Print<TArg1, TArg2, TArg3, TArg4, TResult>(Func<TArg1, TArg2, TArg3, TArg4, TResult> func, TArg1 arg1, TArg2 arg2, TArg3 arg3, TArg4 arg4) {
         Print(() => func(arg1, arg2, arg3, arg4), [arg1, arg2, arg3, arg4]);
     }
-        
+
     private static void Print<TResult>(Func<TResult> result, object[] input) {
         Console.WriteLine("TEST {0}", Value(input));
-            
-        Stopwatch stopwatch = Stopwatch.StartNew();
-            
+
+        var stopwatch = Stopwatch.StartNew();
+
         TResult answer;
         try {
             answer = result();
         } catch (Exception ex) {
             Console.Write("  ");
-                
+
             using (ConsoleIndicator.Exception()) {
                 Console.Write("!!! EXCEPTION !!!");
             }
-                
+
             Console.WriteLine(" {0}", ex.Message);
-                
+
             return;
         }
 
         stopwatch.Stop();
-            
+
         Console.Write("  ");
-                
+
         using (ConsoleIndicator.Result()) {
             Console.Write("RETURNED");
         }
-            
+
         Console.WriteLine(" [{0}ms] ANSWER {1}", stopwatch.ElapsedMilliseconds, Value(answer));
     }
 
     private static bool CheckResult(object answer, object expected) {
         switch (answer) {
             case null: return expected == null;
-                
+
             case int i_answer when expected is int i_expected: return i_answer == i_expected;
             case uint ui_answer when expected is uint ui_expected: return ui_answer == ui_expected;
             case long l_answer when expected is long l_expected: return l_answer == l_expected;
@@ -155,14 +155,14 @@ public static class Test {
             case IList<bool> bl_answer when expected is IList<bool> bl_expected: return CheckListResult(bl_answer, bl_expected, (x, y) => x == y);
             case IList<char> cl_answer when expected is IList<char> cl_expected: return CheckListResult(cl_answer, cl_expected, (x, y) => x == y);
             case IList<string> sl_answer when expected is IList<string> sl_expected: return CheckListResult(sl_answer, sl_expected, (x, y) => x == y);
-                
+
             case HashSet<int> ih_answer when expected is HashSet<int> ih_expected: return CheckHashSet(ih_answer, ih_expected);
             case HashSet<uint> uih_answer when expected is HashSet<uint> uih_expected: return CheckHashSet(uih_answer, uih_expected);
             case HashSet<long> lh_answer when expected is HashSet<long> lh_expected: return CheckHashSet(lh_answer, lh_expected);
             case HashSet<ulong> ulh_answer when expected is HashSet<ulong> ulh_expected: return CheckHashSet(ulh_answer, ulh_expected);
             case HashSet<char> ch_answer when expected is HashSet<char> ch_expected: return CheckHashSet(ch_answer, ch_expected);
             case HashSet<string> sh_answer when expected is HashSet<string> sh_expected: return CheckHashSet(sh_answer, sh_expected);
-                
+
             default: return answer.Equals(expected);
         }
     }
@@ -170,44 +170,44 @@ public static class Test {
     private static bool CheckArrayResult<T>(T[] answer, T[] expected, Func<T, T, bool> comparison) {
         if (answer.Length != expected.Length) {
             return false;
-        } 
-            
-        for (int i = 0; i < answer.Length; i++) {
+        }
+
+        for (var i = 0; i < answer.Length; i++) {
             if (!comparison(answer[i], expected[i])) {
                 return false;
             }
 
         }
-           
+
         return true;
     }
 
     private static bool Check2ArrayResult<T>(T[][] answer, T[][] expected, Func<T, T, bool> comparison) {
         if (answer.Length != expected.Length) {
             return false;
-        } 
-            
-        for (int i = 0; i < answer.Length; i++) {
+        }
+
+        for (var i = 0; i < answer.Length; i++) {
             if (!CheckArrayResult(answer[i], expected[i], comparison)) {
                 return false;
             }
         }
-           
+
         return true;
     }
 
     private static bool CheckListResult<T>(IList<T> answer, IList<T> expected, Func<T, T, bool> comparison) {
         if (answer.Count != expected.Count) {
             return false;
-        } 
-            
-        for (int i = 0; i < answer.Count; i++) {
+        }
+
+        for (var i = 0; i < answer.Count; i++) {
             if (!comparison(answer[i], expected[i])) {
                 return false;
             }
 
         }
-           
+
         return true;
     }
 
@@ -217,15 +217,15 @@ public static class Test {
         }
 
         HashSet<T> hs1 = [];
-            
+
         hs1.UnionWith(answer);
         hs1.ExceptWith(expected);
-           
+
         HashSet<T> hs2 = [];
-            
+
         hs2.UnionWith(expected);
         hs2.ExceptWith(answer);
-            
+
         return hs1.Count == 0 && hs2.Count == 0;
     }
 
@@ -255,18 +255,18 @@ public static class Test {
         } else if (value is char[][] c2a) {
             return Format2Array(c2a);
         } else if (value is object[] objs) {
-            StringBuilder sb = new StringBuilder();
-                
+            var sb = new StringBuilder();
+
             sb.Append("[");
-                
-            for (int i = 0; i < objs.Length; i++) {
+
+            for (var i = 0; i < objs.Length; i++) {
                 if (i > 0) {
                     sb.Append(",");
                 }
-                    
+
                 sb.Append(Value(objs[i]));
             }
-                
+
             sb.AppendFormat("] (Length={0})", objs.Length);
 
             return sb.ToString();
@@ -299,33 +299,33 @@ public static class Test {
         } else if (value is IList<IList<string>> sll) {
             return Format("{0} (Count={1})", JsonSerializer.Serialize(sll, OPTIONS), sll.Count);
         } else if (value is HashSet<int> ih) {
-            List<int> i_l = ih.ToList();
+            var i_l = ih.ToList();
             i_l.Sort();
             return Format("{0} (Count={1})", JsonSerializer.Serialize(i_l, OPTIONS), ih.Count);
         } else if (value is HashSet<uint> uih) {
-            List<uint> ui_l = uih.ToList();
+            var ui_l = uih.ToList();
             ui_l.Sort();
             return Format("{0} (Count={1})", JsonSerializer.Serialize(ui_l, OPTIONS), uih.Count);
         } else if (value is HashSet<long> lh) {
-            List<long> l_l = lh.ToList();
+            var l_l = lh.ToList();
             l_l.Sort();
             return Format("{0} (Count={1})", JsonSerializer.Serialize(l_l, OPTIONS), lh.Count);
         } else if (value is HashSet<ulong> ulh) {
-            List<ulong> ul_l = ulh.ToList();
+            var ul_l = ulh.ToList();
             ul_l.Sort();
             return Format("{0} (Count={1})", JsonSerializer.Serialize(ul_l, OPTIONS), ulh.Count);
         } else if (value is HashSet<char> ch) {
-            List<char> c_l = ch.ToList();
+            var c_l = ch.ToList();
             c_l.Sort();
             return Format("{0} (Count={1})", JsonSerializer.Serialize(c_l, OPTIONS), ch.Count);
         } else if (value is HashSet<string> sh) {
-            List<string> s_l = sh.ToList();
+            var s_l = sh.ToList();
             s_l.Sort();
             return Format("{0} (Count={1})", JsonSerializer.Serialize(s_l, OPTIONS), sh.Count);
         } else if (value is string s) {
             return Format("\"{0}\"", s);
         } else if (value is IBinaryTreeNode itn) {
-            StringBuilder sb = new StringBuilder();
+            var sb = new StringBuilder();
             sb.Append("\r\n");
             FormatBinaryTreeNode(itn, sb, "ROOT", 0);
             return sb.ToString();
@@ -345,14 +345,14 @@ public static class Test {
         if (n <= 0) {
             return Format("[{0}x0]", n);
         }
-            
-        StringBuilder sb = new StringBuilder();
+
+        var sb = new StringBuilder();
 
         sb.AppendFormat("[{0}x{1}] = ", m, n);
-            
-        for (int i = 0; i < m; i++) {
+
+        for (var i = 0; i < m; i++) {
             sb.Append("\r\n[");
-            for (int j = 0; j < n; j++) {
+            for (var j = 0; j < n; j++) {
                 if (j > 0) {
                     sb.Append(" ");
                 }
@@ -367,15 +367,15 @@ public static class Test {
 
     private static void FormatBinaryTreeNode(IBinaryTreeNode node, StringBuilder sb, string prefix, int level) {
         sb.Append("  ");
-            
-        for (int i = 0; i < level; i++) {
+
+        for (var i = 0; i < level; i++) {
             sb.Append("  ");
         }
 
         if (!IsNullOrEmpty(prefix)) {
             sb.AppendFormat("{0}: ", prefix);
         }
-            
+
         if (node == null) {
             sb.Append("(null)\r\n");
         } else {

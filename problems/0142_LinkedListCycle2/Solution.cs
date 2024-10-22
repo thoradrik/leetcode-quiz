@@ -7,8 +7,8 @@ public class Solution {
             return null;
         }
 
-        ListNode turtle = head;
-        ListNode hear = head;
+        var turtle = head;
+        var hear = head;
 
         while (true) {
             turtle = turtle.next;
@@ -25,9 +25,9 @@ public class Solution {
                 break;
             }
         }
-            
-        ListNode a = head;
-        ListNode b = turtle;
+
+        var a = head;
+        var b = turtle;
 
         while (a != b) {
             a = a.next;

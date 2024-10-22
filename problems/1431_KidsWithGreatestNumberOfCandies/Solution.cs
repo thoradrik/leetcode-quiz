@@ -5,9 +5,9 @@ namespace Quiz {
     public class Solution {
         
         public IList<bool> KidsWithCandies(int[] candies, int extraCandies) {
-            int max = 0;
+            var max = 0;
 
-            for (int i = 0; i < candies.Length; i++) {
+            for (var i = 0; i < candies.Length; i++) {
                 max = Math.Max(max, candies[i]);
             }
 

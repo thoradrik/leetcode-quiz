@@ -2,7 +2,7 @@
 
 namespace Quiz {
     public class Solution {
-        
+
         public int MaximalSquare(char[][] matrix) {
             int max_height = matrix.Length;
             if (max_height <= 0) {
@@ -13,13 +13,13 @@ namespace Quiz {
                 return 0;
             }
 
-            int[,] dp = new int[max_height + 1, max_width + 1];
+            var dp = new int[max_height + 1, max_width + 1];
 
-            int max_area = 0;
+            var max_area = 0;
 
             for (int row = max_height - 1; row >= 0; row--) {
                 for (int col = max_width - 1; col >= 0; col--) {
-                    int length = 0;
+                    var length = 0;
 
                     if (matrix[row][col] == '1') {
                         int length_n = dp[row + 1, col + 1];
@@ -31,16 +31,16 @@ namespace Quiz {
                             length = 1;
                         }
                     }
-                    
+
                     max_area = Math.Max(max_area, length * length);
-                    
+
                     dp[row, col] = length;
-                }   
+                }
             }
-            
-            
+
+
             return max_area;
         }
-        
+
     }
 }

@@ -1,9 +1,9 @@
 ﻿namespace Quiz {
     public class Program : ProgramBase {
-        
+
         public static void Main() {
-            Solution solution = new Solution();
-            
+            var solution = new Solution();
+
             Test.Check(solution.AddStrings, new[] { "492", "2460", "12300" }, "15252");
 
             Test.Check(solution.Multiply, "123", "124", "15252");

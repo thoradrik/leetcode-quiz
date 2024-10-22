@@ -10,12 +10,12 @@ namespace Quiz {
         }
 
         private readonly TrieNode m_TrieRoot = new TrieNode();
-    
+
         public void AddWord(string word) {
-            TrieNode current = m_TrieRoot;
+            var current = m_TrieRoot;
 
             foreach (char c in word) {
-                if (!current.TryGetValue(c, out TrieNode node)) {
+                if (!current.TryGetValue(c, out var node)) {
                     node = new TrieNode();
                     current.Add(c, node);
                 }
@@ -25,7 +25,7 @@ namespace Quiz {
 
             current.IsWord = true;
         }
-    
+
         public bool Search(string word) {
             TrieNode search(TrieNode node, int ptr) {
                 if (node == null) {
@@ -35,12 +35,12 @@ namespace Quiz {
                 if (ptr >= word.Length) {
                     return node;
                 }
-                
+
                 while (node != null && ptr < word.Length) {
                     char c = word[ptr];
                     if (c == '.') {
-                        foreach ((char key, TrieNode child) in node) {
-                            TrieNode found = search(child, ptr + 1);
+                        foreach ((char key, var child) in node) {
+                            var found = search(child, ptr + 1);
                             if (found != null) {
                                 if (found.IsWord) {
                                     return found;
@@ -56,15 +56,15 @@ namespace Quiz {
 
                         ptr++;
                     }
-                } 
+                }
 
                 return node;
             }
 
-            TrieNode result = search(m_TrieRoot, 0);
-            
+            var result = search(m_TrieRoot, 0);
+
             return result != null && result.IsWord;
         }
-        
+
     }
 }

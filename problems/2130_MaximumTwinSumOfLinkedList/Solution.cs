@@ -3,22 +3,22 @@
 public class Solution {
 
     public int PairSum(ListNode head) {
-        ListNode half = head;
+        var half = head;
         
         ListNode tail = null;
-        ListNode current = head;
+        var current = head;
         while (half != null && half.next != null) {
             half = half.next.next;
             
-            ListNode next = current.next;
+            var next = current.next;
             current.next = tail;
                 
             tail = current;
             current = next;
         }
 
-        ListNode current_f = tail;
-        ListNode current_s = current;
+        var current_f = tail;
+        var current_s = current;
 
         int max = current_f.val + current_s.val;
 
@@ -33,10 +33,10 @@ public class Solution {
     }
 
     public int PairSum_SubOptimal_V1(ListNode head) {
-        ListNode half = head;
+        var half = head;
         
         ListNode tail = null;
-        ListNode current = head;
+        var current = head;
         while (half != null && half.next != null) {
             tail = new ListNode(current.val, tail);
 
@@ -45,8 +45,8 @@ public class Solution {
         }
 
 
-        ListNode current_f = tail;
-        ListNode current_s = current;
+        var current_f = tail;
+        var current_s = current;
 
         int max = current_f.val + current_s.val;
 

@@ -1,9 +1,9 @@
 ﻿namespace Quiz {
     public class Program : ProgramBase {
-        
+
         public static void Main() {
-            
-            WordFilter solution = new WordFilter(new [] {
+
+            var solution = new WordFilter(new [] {
                 /* 0 */ "angle",
                 /* 1 */ "apple",
                 /* 2 */ "jungle",
@@ -29,7 +29,7 @@
             Test.Check(solution.F, "b", "od", 8);
             Test.Check(solution.F, "br", "d", 7);
             Test.Check(solution.F, "br", "ed", -1);
-            
+
             solution = new WordFilter(new [] {
                 "cabaabaaaa",
                 "ccbcababac",

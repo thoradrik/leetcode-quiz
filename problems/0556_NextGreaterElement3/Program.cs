@@ -1,8 +1,8 @@
 ﻿namespace Quiz {
     public class Program : ProgramBase {
-        
+
         public static void Main() {
-            Solution solution = new Solution();
+            var solution = new Solution();
 
             Test.Check(solution.NextGreaterElement, 241, 412);
             Test.Check(solution.NextGreaterElement, 23241, 23412);
@@ -14,7 +14,7 @@
             Test.Check(solution.NextGreaterElement, 516, 561);
             Test.Check(solution.NextGreaterElement, 5116, 5161);
             Test.Check(solution.NextGreaterElement, 51166, 51616);
-            
+
             Test.Check(solution.NextGreaterElement, 1, -1);
             Test.Check(solution.NextGreaterElement, 11, -1);
             Test.Check(solution.NextGreaterElement, 102, 120);

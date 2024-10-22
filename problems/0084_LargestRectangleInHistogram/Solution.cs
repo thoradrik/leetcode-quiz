@@ -20,19 +20,19 @@ namespace Quiz {
         } 
         
         public int LargestRectangleArea(int[] heights) {
-            int max_area = 0;
+            var max_area = 0;
 
             List<Rect> rects = null;
 
-            for (int i = 0; i < heights.Length; i++) {
+            for (var i = 0; i < heights.Length; i++) {
                 int height = heights[i];
 
-                int max_length = 0;
+                var max_length = 0;
 
-                List<Rect> new_rects = new List<Rect>();
+                var new_rects = new List<Rect>();
 
                 if (rects != null) {
-                    foreach (Rect rect in rects) {
+                    foreach (var rect in rects) {
                         if (rect.Height < height) {
                             rect.Length += 1;
                             new_rects.Add(rect);
@@ -55,7 +55,7 @@ namespace Quiz {
             }
 
             if (rects != null) {
-                foreach (Rect rect in rects) {
+                foreach (var rect in rects) {
                     max_area = Math.Max(max_area, rect.Area);
                 }
             }

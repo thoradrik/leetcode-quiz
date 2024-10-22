@@ -2,10 +2,10 @@
 
 namespace Quiz {
     public class Solution {
-        
+
         public int CalPoints(string[] ops) {
-            int[] stack = new int[ops.Length];
-            int ptr = 0;
+            var stack = new int[ops.Length];
+            var ptr = 0;
 
             foreach (string op in ops) {
                 if (op == "C") {
@@ -21,15 +21,15 @@ namespace Quiz {
                     ptr++;
                 }
             }
- 
-            int sum = 0;
 
-            for (int i = 0; i < ptr; i++) {
+            var sum = 0;
+
+            for (var i = 0; i < ptr; i++) {
                 sum += stack[i];
             }
-            
+
             return sum;
         }
-        
+
     }
 }

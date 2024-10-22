@@ -4,12 +4,12 @@ public class Solution {
 
     public ListNode ReverseList(ListNode head) {
         ListNode prev = null;
-        ListNode current = head;
+        var current = head;
 
         while (current != null) {
-            ListNode next = current.next;
+            var next = current.next;
             current.next = prev;
-                
+
             prev = current;
             current = next;
         }

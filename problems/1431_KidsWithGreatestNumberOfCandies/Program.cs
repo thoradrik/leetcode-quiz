@@ -2,7 +2,7 @@
     public class Program : ProgramBase {
         
         public static void Main() {
-            Solution solution = new Solution();
+            var solution = new Solution();
 
             Test.Check(solution.KidsWithCandies, IntArray("[]"), 0, BoolArray("[]"));
             Test.Check(solution.KidsWithCandies, IntArray("[]"), 1, BoolArray("[]"));

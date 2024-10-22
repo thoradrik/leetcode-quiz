@@ -1,8 +1,8 @@
 ﻿namespace Quiz {
     public class Program : ProgramBase {
-        
+
         public static void Main() {
-            Solution solution = new Solution();
+            var solution = new Solution();
 
             Test.Print(solution.RemoveInvalidParentheses, ")(");
             Test.Print(solution.RemoveInvalidParentheses, ")(aaa");

@@ -1,8 +1,8 @@
 ﻿namespace Quiz {
     public class Solution {
-        
+
         public bool IsPalindrome(string s) {
-            int start = 0;
+            var start = 0;
             int end = s.Length - 1;
 
             s = s.ToLower();
@@ -21,7 +21,7 @@
                     end--;
                     continue;
                 }
-                
+
                 if (c_start != c_end) {
                     return false;
                 }

@@ -1,8 +1,8 @@
 ﻿namespace Quiz {
     public class Program : ProgramBase {
-        
+
         public static void Main() {
-            MyCalendarTwo solution = new MyCalendarTwo();
+            var solution = new MyCalendarTwo();
 
             // Test.Check(solution.Book, 10, 20, true);
             // Test.Check(solution.Book, 50, 60, true);
@@ -21,7 +21,7 @@
             Test.Check(solution.Book, 1,6, true);
             Test.Check(solution.Book, 46,50, true);
             Test.Check(solution.Book, 11,18, true);
-            
+
             // Test.Check(solution.Book, 12,26,true);
             // Test.Check(solution.Book, 70,85,true);
             // Test.Check(solution.Book, 55,67,true);
@@ -62,7 +62,7 @@
             // Test.Check(solution.Book, 98,100,false);
             // Test.Check(solution.Book, 31, 41, true);
             // Test.Check(solution.Book, 35, 53, false);
-                
+
             // Test.Check(solution.Book, 24,40, true);
             // Test.Check(solution.Book, 43,50, true);
             // Test.Check(solution.Book, 27,43, true);

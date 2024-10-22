@@ -9,7 +9,7 @@ namespace Quiz {
             
             int max_lenght = -1;
             
-            for (int i = 0; i < s.Length; i++) {
+            for (var i = 0; i < s.Length; i++) {
                 int c = s[i] - 'a';
                 
                 min[c] = min[c] >= 0 ? Math.Min(min[c], i) : i;

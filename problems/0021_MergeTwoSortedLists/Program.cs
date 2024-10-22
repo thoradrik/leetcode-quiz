@@ -3,9 +3,9 @@
 namespace Quiz;
 
 public class Program : ProgramBase {
-        
+
     public static void Main() {
-        Solution solution = new Solution();
+        var solution = new Solution();
 
         Test.Check(solution.MergeTwoLists, MakeLinkedList("[]"), MakeLinkedList("[]"), MakeLinkedList("[]"));
         Test.Check(solution.MergeTwoLists, MakeLinkedList("[0]"), MakeLinkedList("[]"), MakeLinkedList("[0]"));

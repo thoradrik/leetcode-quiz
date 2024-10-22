@@ -4,11 +4,11 @@ namespace Quiz {
     public class Solution {
         
         public string ToHexspeak(string num) {
-            StringBuilder hex = new StringBuilder();
+            var hex = new StringBuilder();
 
             long acc = 0;
 
-            for (int i = 0; i < num.Length; i++) {
+            for (var i = 0; i < num.Length; i++) {
                 acc *= 10;
                 acc += num[i] - '0';
             }

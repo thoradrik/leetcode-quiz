@@ -1,8 +1,8 @@
 ﻿namespace Quiz {
     public class Program : ProgramBase {
-        
+
         public static void Main() {
-            Solution solution = new Solution();
+            var solution = new Solution();
 
             Test.Check(solution.NextGreaterElements, IntArray("[]"), IntArray("[]"));
             Test.Check(solution.NextGreaterElements, IntArray("[1]"), IntArray("[-1]"));

@@ -3,7 +3,7 @@ using AlgorithmLib;
 
 namespace Quiz {
     public class Solution {
-        
+
         public string[] Expand(string s) {
             IList<IList<char>> map = new List<IList<char>>();
 
@@ -25,18 +25,18 @@ namespace Quiz {
                 }
             }
 
-            List<string> list = new List<string>();
-            
+            var list = new List<string>();
+
             CombinationGenerator.Generate(
                 map.Count,
                 map,
                 items => list.Add(new string(items))
             );
-            
+
             list.Sort();
 
             return list.ToArray();
         }
-        
+
     }
 }

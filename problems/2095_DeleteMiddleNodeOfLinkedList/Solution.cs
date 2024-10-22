@@ -7,8 +7,8 @@ public class Solution {
             return null;
         }
         
-        ListNode current = head;
-        ListNode fast = head;
+        var current = head;
+        var fast = head;
 
         ListNode prev = null;
         

@@ -6,12 +6,12 @@ namespace Quiz {
         
         public string ReverseParentheses(string s) {
             List<char> Recursive(int start, out int stop) {
-                List<char> result = new List<char>();
+                var result = new List<char>();
 
                 for (stop = start + 1; stop < s.Length; stop++) {
                     char c = s[stop];
                     if (c == '(') {
-                        List<char> sub = Recursive(stop, out stop);
+                        var sub = Recursive(stop, out stop);
                     
                         sub.Reverse();
                     

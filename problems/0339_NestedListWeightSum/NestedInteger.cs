@@ -29,7 +29,7 @@ namespace Quiz {
             if (m_List == null) {
                 m_List = new List<NestedInteger>();
             }
-            
+
             m_List.Add(ni);
         }
 
@@ -37,10 +37,10 @@ namespace Quiz {
             if (m_Value.HasValue) {
                 return m_Value.Value.ToString();
             } else {
-                StringBuilder sb = new StringBuilder();
+                var sb = new StringBuilder();
                 sb.Append("[");
-                for (int index = 0; index < m_List.Count; index++) {
-                    NestedInteger item = m_List[index];
+                for (var index = 0; index < m_List.Count; index++) {
+                    var item = m_List[index];
                     if (index > 0) {
                         sb.Append(",");
                     }

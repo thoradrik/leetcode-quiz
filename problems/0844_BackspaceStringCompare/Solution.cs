@@ -6,9 +6,9 @@ namespace Quiz {
         public bool BackspaceCompare(string S, string T) {
             return Backspace(S) == Backspace(T);
         }
-        
+
         private string Backspace(string S) {
-            StringBuilder sb = new StringBuilder();
+            var sb = new StringBuilder();
 
             foreach (char c in S) {
                 if (c == '#') {

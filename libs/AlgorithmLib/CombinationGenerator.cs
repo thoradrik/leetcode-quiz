@@ -3,10 +3,10 @@
 public static class CombinationGenerator {
 
     public static void Generate<T>(int length, T[] array, Action<T[]> output) {
-        int[] stack = new int[length];
-        int ptr = 0;
-            
-        T[] result = new T[length];
+        var stack = new int[length];
+        var ptr = 0;
+
+        var result = new T[length];
 
         do {
             if (ptr < length) {
@@ -32,10 +32,10 @@ public static class CombinationGenerator {
     }
 
     public static void Generate<T>(int length, T[][] array, Action<T[]> output) {
-        int[] stack = new int[length];
-        int ptr = 0;
-            
-        T[] result = new T[length];
+        var stack = new int[length];
+        var ptr = 0;
+
+        var result = new T[length];
 
         do {
             if (ptr < length) {
@@ -61,10 +61,10 @@ public static class CombinationGenerator {
     }
 
     public static void Generate<T>(int length, IList<IList<T>> array, Action<T[]> output) {
-        int[] stack = new int[length];
-        int ptr = 0;
-            
-        T[] result = new T[length];
+        var stack = new int[length];
+        var ptr = 0;
+
+        var result = new T[length];
 
         do {
             if (ptr < length) {
@@ -90,10 +90,10 @@ public static class CombinationGenerator {
     }
 
     public static void Generate<T>(int length, Func<int, int> count_of_variants_at_index, Func<int, int, T> variant_at_index, Action<T[]> output) {
-        int[] stack = new int[length];
-        int ptr = 0;
-            
-        T[] result = new T[length];
+        var stack = new int[length];
+        var ptr = 0;
+
+        var result = new T[length];
 
         do {
             if (ptr < length) {
@@ -117,5 +117,5 @@ public static class CombinationGenerator {
             }
         } while (true);
     }
-        
+
 }

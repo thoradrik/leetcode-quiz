@@ -2,12 +2,12 @@
 
 namespace Quiz {
     public class Solution {
-        
-        public int LongestValidParentheses(string s) {
-            bool[] flags = new bool[s.Length];
-            int max = 0;
 
-            for (int end = 1; end < s.Length; end++) {
+        public int LongestValidParentheses(string s) {
+            var flags = new bool[s.Length];
+            var max = 0;
+
+            for (var end = 1; end < s.Length; end++) {
                 int start = end - 1;
                 if (s[start] == '(' && s[end] == ')') {
                     flags[start] = true;
@@ -17,7 +17,7 @@ namespace Quiz {
                 bool expanded;
                 do {
                     expanded = false;
-                    
+
                     while (start >= 0 && flags[start]) {
                         start--;
                         expanded = true;
@@ -32,16 +32,16 @@ namespace Quiz {
 
                         flags[end] = true;
                         end++;
-                        
+
                         expanded = true;
                     }
                 } while (expanded);
 
                 max = Math.Max(max, end - start - 1);
             }
-            
+
             return max;
         }
-        
+
     }
 }

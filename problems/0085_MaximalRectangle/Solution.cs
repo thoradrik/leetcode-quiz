@@ -44,18 +44,18 @@ namespace Quiz {
             }
             int width = matrix[0].Length;
 
-            HashSet<Cell>[,] dp = new HashSet<Cell>[height + 1, width + 1];
+            var dp = new HashSet<Cell>[height + 1, width + 1];
 
-            int max_area = 0;
+            var max_area = 0;
             
             for (int i = height - 1; i >= 0; i--) {
                 for (int j = width - 1; j >= 0; j--) {
                     if (matrix[i][j] != '1') continue;
 
-                    HashSet<Cell> current = new HashSet<Cell>();
+                    var current = new HashSet<Cell>();
                     
-                    HashSet<Cell> nexts = dp[i, j + 1];
-                    HashSet<Cell> bottoms = dp[i + 1, j];
+                    var nexts = dp[i, j + 1];
+                    var bottoms = dp[i + 1, j];
                     if (nexts == null && bottoms == null) {
                         current.Add(new Cell(1, 1));
                     } else if (nexts != null && bottoms == null) {
@@ -65,8 +65,8 @@ namespace Quiz {
                         int max_height = bottoms.Max(c => c.Height);
                         current.Add(new Cell(max_height + 1, 1));
                     } else {
-                        foreach (Cell bottom in bottoms) {
-                            foreach (Cell next in nexts) {
+                        foreach (var bottom in bottoms) {
+                            foreach (var next in nexts) {
                                 current.Add(new Cell(bottom.Height + 1,  Math.Min(bottom.Width, next.Width + 1)));
                                 current.Add(new Cell(Math.Min(bottom.Height + 1, next.Height), next.Width + 1));
                             }
@@ -75,7 +75,7 @@ namespace Quiz {
 
                     dp[i, j] = current;
                     
-                    foreach (Cell cell in current) {
+                    foreach (var cell in current) {
                         max_area = Math.Max(max_area, cell.Area);
                     }
                 }

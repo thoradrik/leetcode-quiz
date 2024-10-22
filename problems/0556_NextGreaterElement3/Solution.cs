@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Quiz {
     public class Solution {
-        
+
         public int NextGreaterElement(int n) {
             int[] digits = GetDigits(n);
 
@@ -13,14 +13,14 @@ namespace Quiz {
                 return -1;
             }
         }
-        
+
         public bool TryMakeNextGreaterElement(int[] digits) {
             for (int i = digits.Length - 2; i >= 0; i--) {
                 int d_i = digits[i];
 
-                int min = 10;
+                var min = 10;
                 int min_j = -1;
-                
+
                 for (int j = i + 1; j < digits.Length; j++) {
                     int d_j = digits[j];
 
@@ -38,7 +38,7 @@ namespace Quiz {
                     digits[min_j] = tmp;
 
                     MinimizeElement(digits, i + 1);
-                    
+
                     return true;
                 }
             }
@@ -47,11 +47,11 @@ namespace Quiz {
         }
 
         private void MinimizeElement(int[] digits, int end) {
-            Array.Sort(digits, end, digits.Length - end);    
+            Array.Sort(digits, end, digits.Length - end);
         }
 
         private static int[] GetDigits(int n) {
-            List<int> list = new List<int>();
+            var list = new List<int>();
 
             while (n > 0) {
                 list.Insert(0, n % 10);
@@ -64,7 +64,7 @@ namespace Quiz {
         private static int GetNumber(int[] digits) {
             long result = 0;
 
-            for (int i = 0; i < digits.Length; i++) {
+            for (var i = 0; i < digits.Length; i++) {
                 result = result * 10 + digits[i];
             }
 

@@ -1,8 +1,8 @@
 ﻿namespace Quiz {
     public class Program : ProgramBase {
-        
+
         public static void Main() {
-            Solution solution = new Solution();
+            var solution = new Solution();
 
             Test.Check(solution.IsMonotonic, IntArray("[1,2,2,3]"), true);
             Test.Check(solution.IsMonotonic, IntArray("[6,5,4,4]"), true);

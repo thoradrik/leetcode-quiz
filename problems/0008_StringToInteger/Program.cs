@@ -2,10 +2,10 @@
 
 namespace Quiz {
     public class Program : ProgramBase {
-        
+
         public static void Main() {
-            Solution solution = new Solution();
-            
+            var solution = new Solution();
+
             Test.Check(solution.MyAtoi, "12345", 12345);
             Test.Check(solution.MyAtoi, "+12345", 12345);
             Test.Check(solution.MyAtoi, "-12345", -12345);

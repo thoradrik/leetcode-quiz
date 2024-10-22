@@ -3,11 +3,11 @@
 public class Solution {
 
     public ListNode MergeTwoLists(ListNode l1, ListNode l2) {
-        ListNode a = l1;
-        ListNode b = l2;
+        var a = l1;
+        var b = l2;
 
-        ListNode r = new ListNode();
-        ListNode i = r;
+        var r = new ListNode();
+        var i = r;
 
         while (a != null || b != null) {
             if (a == null) {

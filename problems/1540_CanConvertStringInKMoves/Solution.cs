@@ -8,17 +8,17 @@
                 return true;
             }
 
-            int[] shifts = new int[26];
+            var shifts = new int[26];
             
-            for (int i = 1; i < shifts.Length; i++) {
+            for (var i = 1; i < shifts.Length; i++) {
                 shifts[i] = k / 26;
             }
             
-            for (int i = 1; i <= k % 26; i++) {
+            for (var i = 1; i <= k % 26; i++) {
                 shifts[i]++;
             }
             
-            for (int i = 0; i < s.Length; i++) {
+            for (var i = 0; i < s.Length; i++) {
                 int c_s = s[i];
                 int c_t = t[i];
                 

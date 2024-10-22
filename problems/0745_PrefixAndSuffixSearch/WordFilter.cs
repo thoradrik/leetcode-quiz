@@ -10,18 +10,18 @@ namespace Quiz {
         }
 
         private readonly TrieNode m_TrieNode = new TrieNode();
-        
+
         public WordFilter(string[] words) {
-            for (int index = 0; index < words.Length; index++) {
+            for (var index = 0; index < words.Length; index++) {
                 string word = words[index];
 
-                for (int i = 0; i < word.Length; i++) {
+                for (var i = 0; i < word.Length; i++) {
                     string form = word.Substring(i) + "\0" + word;
-                    
-                    TrieNode current = m_TrieNode;
+
+                    var current = m_TrieNode;
 
                     foreach (char c in form) {
-                        if (!current.TryGetValue(c, out TrieNode node)) {
+                        if (!current.TryGetValue(c, out var node)) {
                             node = new TrieNode();
                             current.Add(c, node);
                         }
@@ -32,9 +32,9 @@ namespace Quiz {
                 }
             }
         }
-    
+
         public int F(string prefix, string suffix) {
-            TrieNode current = m_TrieNode;
+            var current = m_TrieNode;
 
             foreach (char c in suffix + "\0" + prefix) {
                 if (!current.TryGetValue(c, out current)) {
@@ -44,6 +44,6 @@ namespace Quiz {
 
             return current.Index;
         }
-        
+
     }
 }

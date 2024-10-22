@@ -6,9 +6,9 @@ namespace Quiz {
         private static readonly char[] CHARS = { 'a', 'b' };
         
         public string GenerateTheString(int n) {
-            StringBuilder sb = new StringBuilder(n);
+            var sb = new StringBuilder(n);
 
-            int c_index = 0;
+            var c_index = 0;
             while (n > 0) {
                 int c_count = n;
 

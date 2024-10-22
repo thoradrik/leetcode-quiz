@@ -4,7 +4,7 @@ namespace Quiz {
     public class Program : ProgramBase {
         
         public static void Main() {
-            Solution solution = new Solution();
+            var solution = new Solution();
 
             Test.Check(solution.LastSubstring, "", "");
             Test.Check(solution.LastSubstring, "a", "a");

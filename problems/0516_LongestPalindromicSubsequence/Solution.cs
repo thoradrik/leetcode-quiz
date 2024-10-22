@@ -4,10 +4,10 @@ namespace Quiz {
     public class Solution {
 
         public int LongestPalindromeSubseq(string s) {
-            int[,] dp = new int[s.Length, s.Length];
-            
-            int max = 0;
-            
+            var dp = new int[s.Length, s.Length];
+
+            var max = 0;
+
             for (int start = s.Length - 1; start >= 0; start--) {
                 for (int end = start; end < s.Length; end++) {
                     int length = end - start + 1;

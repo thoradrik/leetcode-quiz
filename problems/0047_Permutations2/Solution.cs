@@ -5,12 +5,12 @@ namespace Quiz {
     public class Solution {
         
         public IList<IList<int>> PermuteUnique(int[] nums) {
-            Dictionary<string, IList<int>> map = new Dictionary<string, IList<int>>();
+            var map = new Dictionary<string, IList<int>>();
 
             void add() {
-                StringBuilder sb = new StringBuilder();
+                var sb = new StringBuilder();
                 
-                for (int i = 0; i < nums.Length; i++) {
+                for (var i = 0; i < nums.Length; i++) {
                     sb.Append(",");
                     sb.Append(nums[i]);
                 }
@@ -19,13 +19,13 @@ namespace Quiz {
             }
             
             void swap<T>(ref T a, ref T b) {
-                T tmp = a;
+                var tmp = a;
                 a = b;
                 b = tmp;
             }
             
-            int[] stack = new int[nums.Length];
-            int ptr = 0;
+            var stack = new int[nums.Length];
+            var ptr = 0;
 
             add();
 
