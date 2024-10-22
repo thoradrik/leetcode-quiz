@@ -84,6 +84,7 @@
     <Project Path="problems\0263_UglyNumber\UglyNumber.csproj" Type="Classic C#" />
     <Project Path="problems\0264_UglyNumber2\UglyNumber2.csproj" Type="Classic C#" />
     <Project Path="problems\0266_PalindromePermutation\PalindromePermutation.csproj" Type="Classic C#" />
+    <Project Path="problems\0273_IntegerToEnglishWords\IntegerToEnglishWords.csproj" Type="Classic C#" />
     <Project Path="problems\0279_PerfectSquares\PerfectSquares.csproj" Type="Classic C#" />
     <Project Path="problems\0281_ZigzagIterator\ZigzagIterator.csproj" Type="Classic C#" />
     <Project Path="problems\0282_ExpressionAddOperators\ExpressionAddOperators.csproj" Type="Classic C#" />
