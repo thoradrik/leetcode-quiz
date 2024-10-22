@@ -24,6 +24,7 @@ public class Program : ProgramBase {
         Test.Check(solution.RomanToInt, "XXV", 25);
         Test.Check(solution.RomanToInt, "XL", 40);
         Test.Check(solution.RomanToInt, "L", 50);
+        Test.Check(solution.RomanToInt, "LVIII", 58);
         Test.Check(solution.RomanToInt, "XC", 90);
         Test.Check(solution.RomanToInt, "C", 100);
         Test.Check(solution.RomanToInt, "CD", 400);

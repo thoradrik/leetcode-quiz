@@ -13,6 +13,7 @@
     <Project Path="problems\0007_ReverseInteger\ReverseInteger.csproj" Type="Classic C#" />
     <Project Path="problems\0008_StringToInteger\StringToInteger.csproj" Type="Classic C#" />
     <Project Path="problems\0009_PalindromeNumber\PalindromeNumber.csproj" Type="Classic C#" />
+    <Project Path="problems\0012_IntegerToRoman\IntegerToRoman.csproj" Type="Classic C#" />
     <Project Path="problems\0013_RomanToInteger\RomanToInteger.csproj" Type="Classic C#" />
     <Project Path="problems\0014_LongestCommonPrefix\LongestCommonPrefix.csproj" Type="Classic C#" />
     <Project Path="problems\0017_LetterCombinationsOfPhoneNumber\LetterCombinationsOfPhoneNumber.csproj" Type="Classic C#" />
