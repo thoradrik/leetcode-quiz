@@ -197,6 +197,7 @@
     <Project Path="problems\2073_TimeNeededToBuyTickets\TimeNeededToBuyTickets.csproj" Type="Classic C#" />
     <Project Path="problems\2095_DeleteMiddleNodeOfLinkedList\DeleteMiddleNodeOfLinkedList.csproj" Type="Classic C#" />
     <Project Path="problems\2130_MaximumTwinSumOfLinkedList\MaximumTwinSumOfLinkedList.csproj" Type="Classic C#" />
+    <Project Path="problems\2348_NumberOfZeroFilledSubarrays\NumberOfZeroFilledSubarrays.csproj" Type="Classic C#" />
     <Project Path="problems\2527_XorBeautyOfArray\XorBeautyOfArray.csproj" Type="Classic C#" />
     <Project Path="problems\2652_SumMultiples\SumMultiples.csproj" Type="Classic C#" />
   </Folder>
