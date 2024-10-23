@@ -195,6 +195,7 @@
     <Project Path="problems\1624_LargestSubstringBetweenTwoEqualCharacters\LargestSubstringBetweenTwoEqualCharacters.csproj" Type="Classic C#" />
     <Project Path="problems\1664_WaysToMakeFairArray\WaysToMakeFairArray.csproj" Type="Classic C#" />
     <Project Path="problems\1700_NumberOfStudentsUnableToEatLunch\NumberOfStudentsUnableToEatLunch.csproj" Type="Classic C#" />
+    <Project Path="problems\1704_DetermineIfStringHalvesAreAlike\DetermineIfStringHalvesAreAlike.csproj" Type="Classic C#" />
     <Project Path="problems\1732_FindHighestAltitude\FindHighestAltitude.csproj" Type="Classic C#" />
     <Project Path="problems\1768_MergeStringsAlternately\MergeStringsAlternately.csproj" Type="Classic C#" />
     <Project Path="problems\2073_TimeNeededToBuyTickets\TimeNeededToBuyTickets.csproj" Type="Classic C#" />
