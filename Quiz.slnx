@@ -13,6 +13,7 @@
     <Project Path="problems\0007_ReverseInteger\ReverseInteger.csproj" Type="Classic C#" />
     <Project Path="problems\0008_StringToInteger\StringToInteger.csproj" Type="Classic C#" />
     <Project Path="problems\0009_PalindromeNumber\PalindromeNumber.csproj" Type="Classic C#" />
+    <Project Path="problems\0010_RegularExpressionMatching\RegularExpressionMatching.csproj" Type="Classic C#" />
     <Project Path="problems\0012_IntegerToRoman\IntegerToRoman.csproj" Type="Classic C#" />
     <Project Path="problems\0013_RomanToInteger\RomanToInteger.csproj" Type="Classic C#" />
     <Project Path="problems\0014_LongestCommonPrefix\LongestCommonPrefix.csproj" Type="Classic C#" />
@@ -205,7 +206,6 @@
     <Project Path="problems\2652_SumMultiples\SumMultiples.csproj" Type="Classic C#" />
   </Folder>
   <Folder Name="/problems-solved-suboptimal/">
-    <Project Path="problems\0010_RegularExpressionMatching\RegularExpressionMatching.csproj" Type="Classic C#" />
     <Project Path="problems\0047_Permutations2\Permutations2.csproj" Type="Classic C#" />
     <Project Path="problems\0084_LargestRectangleInHistogram\LargestRectangleInHistogram.csproj" Type="Classic C#" />
     <Project Path="problems\0085_MaximalRectangle\MaximalRectangle.csproj" Type="Classic C#" />

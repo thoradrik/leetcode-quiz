@@ -3,201 +3,74 @@
 public class Solution {
 
     public bool IsMatch(string s, string p) {
-        var matcher = BuildMatcherChain(p);
-        return matcher.TryMatch(s);
+        var dp = new bool?[s.Length + 1, p.Length + 1];
+
+        var ss = s.AsSpan();
+        var pp = p.AsSpan();
+        return IsMatch(ref ss, 0, ref pp, 0, dp);
     }
 
-    private abstract class Matcher {
-
-        public Matcher Next { get; set; }
-
-        public abstract bool TryMatch(ReadOnlySpan<char> str);
-
-        protected bool TryMatchNext(ReadOnlySpan<char> str) {
-            if (Next != null) {
-                return Next.TryMatch(str);
-            }
-
-            return str.Length == 0;
-        }
-    }
-
-    private class Start : Matcher {
-
-        public override bool TryMatch(ReadOnlySpan<char> str) => TryMatchNext(str);
-
-    }
-
-    private Matcher BuildMatcherChain(ReadOnlySpan<char> pattern) {
-        var start = new Start();
-        Matcher matcher = start;
-
-        while (pattern.Length > 0) {
-            if (TryZeroOrMoreAnyChar(ref pattern, ref matcher)) {
-
-            } else if (TryZeroOrMoreChars(ref pattern, ref matcher)) {
-
-            } else if (TryAnyChar(ref pattern, ref matcher)) {
-
-            } else if (TrySubstring(ref pattern, ref matcher)) {
-
-            } else {
-                throw new Exception("Invalid pattern");
-            }
+    private bool IsMatch(ref ReadOnlySpan<char> s, int si, ref ReadOnlySpan<char> p, int pi, bool?[,] dp) {
+        if (pi >= p.Length) {
+            return si >= s.Length;
         }
 
-        return start;
-    }
+        var d = dp[si, pi];
+        if (d.HasValue) {
+            return d.Value;
+        }
 
-    private class ZeroOrMoreAnyChar : Matcher {
+        var ppi = p[pi];
+        var ppi_next = pi + 1 < p.Length ? p[pi + 1] : '_';
 
-        public override string ToString() => ".*";
-
-        public override bool TryMatch(ReadOnlySpan<char> str) {
-            for (var j = str.Length; j >= 0; j--) {
-                var rest = str.Slice(j);
-                if (TryMatchNext(rest)) {
+        if (ppi == '.' && ppi_next == '*') {
+            if (si < s.Length) {
+                if (IsMatch(ref s, si + 1, ref p, pi + 2, dp) || IsMatch(ref s, si + 1, ref p, pi, dp)) {
+                    dp[si, pi] = true;
                     return true;
                 }
             }
 
-            return false;
-        }
+            if (IsMatch(ref s, si, ref p, pi + 2, dp)) {
+                dp[si, pi] = true;
+                return true;
+            }
+        } else {
+            if (ppi == '.') {
+                if (si < s.Length) {
+                    if (IsMatch(ref s, si + 1, ref p, pi + 1, dp)) {
+                        dp[si, pi] = true;
+                        return true;
+                    }
+                }
+            }
 
-    }
-
-    private bool TryZeroOrMoreAnyChar(ref ReadOnlySpan<char> pattern, ref Matcher matcher) {
-        if (pattern.Length <= 1) {
-            return false;
-        }
-
-        if (pattern[0] == '.' && pattern[1] == '*') {
-            ChainMatcher(ref matcher, new ZeroOrMoreAnyChar());
-            pattern = pattern.Slice(2);
-            return true;
-        }
-
-        return false;
-    }
-
-    private class ZeroOrMoreChars(char chr) : Matcher {
-
-        public override string ToString() => $"{chr}*";
-
-        public override bool TryMatch(ReadOnlySpan<char> str) {
-            for (var i = 0; i <= str.Length; i++) {
-                if (i >= str.Length || str[i] != chr) {
-                    for (var j = i; j >= 0; j--) {
-                        var rest = str.Slice(j);
-                        if (TryMatchNext(rest)) {
+            if (ppi >= 'a' && ppi <= 'z') {
+                if (ppi_next == '*') {
+                    if (si < s.Length && ppi == s[si]) {
+                        if (IsMatch(ref s, si + 1, ref p, pi + 2, dp) || IsMatch(ref s, si + 1, ref p, pi, dp)) {
+                            dp[si, pi] = true;
                             return true;
                         }
                     }
 
-                    return false;
+                    if (IsMatch(ref s, si, ref p, pi + 2, dp)) {
+                        dp[si, pi] = true;
+                        return true;
+                    }
+                } else {
+                    if (si < s.Length && ppi == s[si]) {
+                        if (IsMatch(ref s, si + 1, ref p, pi + 1, dp)) {
+                            dp[si, pi] = true;
+                            return true;
+                        }
+                    }
                 }
             }
-
-            return false;
-        }
-    }
-
-    private bool TryZeroOrMoreChars(ref ReadOnlySpan<char> pattern, ref Matcher matcher) {
-        if (pattern.Length <= 1) {
-            return false;
         }
 
-        if (pattern[0] >= 'a' && pattern[0] <= 'z' && pattern[1] == '*') {
-            ChainMatcher(ref matcher, new ZeroOrMoreChars(pattern[0]));
-            pattern = pattern.Slice(2);
-            return true;
-        }
-
+        dp[si, pi] = false;
         return false;
     }
 
-    private class AnyChar : Matcher {
-
-        public override string ToString() => $".";
-
-        public override bool TryMatch(ReadOnlySpan<char> str) {
-            if (str.Length <= 0) {
-                return false;
-            }
-
-            var rest = str.Slice(1);
-            return TryMatchNext(rest);
-        }
-    }
-
-    private bool TryAnyChar(ref ReadOnlySpan<char> pattern, ref Matcher matcher) {
-        if (pattern.Length <= 0) {
-            return false;
-        }
-
-        if (pattern[0] == '.') {
-            ChainMatcher(ref matcher, new AnyChar());
-            pattern = pattern.Slice(1);
-            return true;
-        }
-
-        return false;
-    }
-
-    private class Substring : Matcher {
-
-        public Substring(ReadOnlySpan<char> str) {
-            _str = new string(str);
-        }
-
-        private readonly string _str;
-
-        public override string ToString() => _str;
-
-        public override bool TryMatch(ReadOnlySpan<char> str) {
-            if (str.Length < _str.Length) {
-                return false;
-            }
-
-            if (!str.StartsWith(_str)) {
-                return false;
-            }
-
-            var rest = str.Slice(_str.Length);
-            return TryMatchNext(rest);
-        }
-    }
-
-    private bool TrySubstring(ref ReadOnlySpan<char> pattern, ref Matcher matcher) {
-        if (pattern.Length <= 0) {
-            return false;
-        }
-
-        for (var i = 0; i < pattern.Length; i++) {
-            if (pattern[i] >= 'a' && pattern[i] <= 'z') {
-                continue;
-            }
-
-            if (pattern[i] == '.' && i > 0) {
-                ChainMatcher(ref matcher, new Substring(pattern.Slice(0, i)));
-                pattern = pattern.Slice(i);
-                return true;
-            }
-
-            if (pattern[i] == '*' && i > 1) {
-                ChainMatcher(ref matcher, new Substring(pattern.Slice(0, i - 1)));
-                pattern = pattern.Slice(i - 1);
-                return true;
-            }
-        }
-
-        ChainMatcher(ref matcher, new Substring(pattern));
-        pattern = pattern.Slice(pattern.Length);
-        return true;
-    }
-
-    private void ChainMatcher(ref Matcher matcher, Matcher next) {
-        matcher.Next = next;
-        matcher = next;
-    }
 }

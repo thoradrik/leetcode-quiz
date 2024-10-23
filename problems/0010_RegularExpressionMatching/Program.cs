@@ -40,6 +40,7 @@ public class Program : ProgramBase {
         Test.Check(solution.IsMatch, "baccbbcbcacacbbc", "c*.*b*c*ba*b*b*.a*", true);
         Test.Check(solution.IsMatch, "bacacaababbbcbc", ".*a*.*a*.aa*c*b*c", false);
         Test.Check(solution.IsMatch, "abcaaaaaaabaabcabac", ".ab.a.aa.bb*", false);
+        Test.Check(solution.IsMatch, "a", "ab*", true);
     }
 
 }
