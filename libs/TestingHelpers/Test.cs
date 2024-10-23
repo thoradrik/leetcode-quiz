@@ -11,22 +11,38 @@ namespace Quiz;
 public static class Test {
 
     public static void Check<TArg, TResult>(Func<TArg, TResult> func, TArg arg, TResult expected) {
-        Check(() => func(arg), [arg], expected);
+        Check(() => func(arg), [arg], CheckResult, expected);
     }
 
     public static void Check<TArg1, TArg2, TResult>(Func<TArg1, TArg2, TResult> func, TArg1 arg1, TArg2 arg2, TResult expected) {
-        Check(() => func(arg1, arg2), [arg1, arg2], expected);
+        Check(() => func(arg1, arg2), [arg1, arg2], CheckResult, expected);
     }
 
     public static void Check<TArg1, TArg2, TArg3, TResult>(Func<TArg1, TArg2, TArg3, TResult> func, TArg1 arg1, TArg2 arg2, TArg3 arg3, TResult expected) {
-        Check(() => func(arg1, arg2, arg3), [arg1, arg2, arg3], expected);
+        Check(() => func(arg1, arg2, arg3), [arg1, arg2, arg3], CheckResult, expected);
     }
 
     public static void Check<TArg1, TArg2, TArg3, TArg4, TResult>(Func<TArg1, TArg2, TArg3, TArg4, TResult> func, TArg1 arg1, TArg2 arg2, TArg3 arg3, TArg4 arg4, TResult expected) {
-        Check(() => func(arg1, arg2, arg3, arg4), [arg1, arg2, arg3, arg4], expected);
+        Check(() => func(arg1, arg2, arg3, arg4), [arg1, arg2, arg3, arg4], CheckResult, expected);
     }
 
-    private static void Check<TResult>(Func<TResult> result, object[] input, TResult expected) {
+    public static void Check<TArg, TResult, TExpected>(Func<TArg, TResult> func, TArg arg, Func<TResult, TExpected, bool> check_result, TExpected expected) {
+        Check(() => func(arg), [arg], check_result, expected);
+    }
+
+    public static void Check<TArg1, TArg2, TResult, TExpected>(Func<TArg1, TArg2, TResult> func, TArg1 arg1, TArg2 arg2, Func<TResult, TExpected, bool> check_result, TExpected expected) {
+        Check(() => func(arg1, arg2), [arg1, arg2], check_result, expected);
+    }
+
+    public static void Check<TArg1, TArg2, TArg3, TResult, TExpected>(Func<TArg1, TArg2, TArg3, TResult> func, TArg1 arg1, TArg2 arg2, TArg3 arg3, Func<TResult, TExpected, bool> check_result, TExpected expected) {
+        Check(() => func(arg1, arg2, arg3), [arg1, arg2, arg3], check_result, expected);
+    }
+
+    public static void Check<TArg1, TArg2, TArg3, TArg4, TResult, TExpected>(Func<TArg1, TArg2, TArg3, TArg4, TResult> func, TArg1 arg1, TArg2 arg2, TArg3 arg3, TArg4 arg4, Func<TResult, TExpected, bool> check_result, TExpected expected) {
+        Check(() => func(arg1, arg2, arg3, arg4), [arg1, arg2, arg3, arg4], check_result, expected);
+    }
+
+    private static void Check<TResult, TExpected>(Func<TResult> result, object[] input, Func<TResult, TExpected, bool> check_result, TExpected expected) {
         Console.WriteLine("TEST {0}", Value(input));
 
         var stopwatch = Stopwatch.StartNew();
@@ -48,7 +64,7 @@ public static class Test {
 
         stopwatch.Stop();
 
-        if (CheckResult(answer, expected)) {
+        if (check_result(answer, expected)) {
             Console.Write("  ");
 
             using (ConsoleIndicator.Passed()) {
@@ -112,9 +128,11 @@ public static class Test {
         Console.WriteLine(" [{0}ms] ANSWER {1}", stopwatch.ElapsedMilliseconds, Value(answer));
     }
 
-    private static bool CheckResult(object answer, object expected) {
+    private static bool CheckResult<TResult, TExpected>(TResult answer, TExpected expected) {
         switch (answer) {
             case null: return expected == null;
+
+            case Predicate<object> predicate: return predicate(expected);
 
             case int i_answer when expected is int i_expected: return i_answer == i_expected;
             case uint ui_answer when expected is uint ui_expected: return ui_answer == ui_expected;

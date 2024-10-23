@@ -17,6 +17,7 @@
     <Project Path="problems\0012_IntegerToRoman\IntegerToRoman.csproj" Type="Classic C#" />
     <Project Path="problems\0013_RomanToInteger\RomanToInteger.csproj" Type="Classic C#" />
     <Project Path="problems\0014_LongestCommonPrefix\LongestCommonPrefix.csproj" Type="Classic C#" />
+    <Project Path="problems\0015_3Sum\3Sum.csproj" Type="Classic C#" />
     <Project Path="problems\0017_LetterCombinationsOfPhoneNumber\LetterCombinationsOfPhoneNumber.csproj" Type="Classic C#" />
     <Project Path="problems\0019_RemoveNthNodeFromEndOfList\RemoveNthNodeFromEndOfList.csproj" Type="Classic C#" />
     <Project Path="problems\0020_ValidParentheses\ValidParentheses.csproj" Type="Classic C#" />
