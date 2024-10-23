@@ -1,6 +1,4 @@
-﻿using System.Runtime.CompilerServices;
-
-namespace Quiz;
+﻿namespace Quiz;
 
 public class Solution {
 

@@ -27,6 +27,7 @@
     <Project Path="problems\0039_CombinationSum\CombinationSum.csproj" Type="Classic C#" />
     <Project Path="problems\0040_CombinationSum2\CombinationSum2.csproj" Type="Classic C#" />
     <Project Path="problems\0043_MultiplyStrings\MultiplyStrings.csproj" Type="Classic C#" />
+    <Project Path="problems\0044_WildcardMatching\WildcardMatching.csproj" Type="Classic C#" />
     <Project Path="problems\0046_Permutations\Permutations.csproj" Type="Classic C#" />
     <Project Path="problems\0050_Pow\Pow.csproj" Type="Classic C#" />
     <Project Path="problems\0053_MaximumSubarray\MaximumSubarray.csproj" Type="Classic C#" />

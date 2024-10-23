@@ -6,7 +6,6 @@ public class Program : ProgramBase {
         var solution = new Solution();
 
         Test.Check(solution.IsMatch, "a", "a", true);
-        Test.Check(solution.IsMatch, "a", "a", true);
         Test.Check(solution.IsMatch, "a", "b", false);
         Test.Check(solution.IsMatch, "a", ".", true);
         Test.Check(solution.IsMatch, "ab", "a", false);
