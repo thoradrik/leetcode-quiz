@@ -160,6 +160,7 @@
     <Project Path="problems\0876_MiddleOfLinkedList\MiddleOfLinkedList.csproj" Type="Classic C#" />
     <Project Path="problems\0896_MonotonicArray\MonotonicArray.csproj" Type="Classic C#" />
     <Project Path="problems\0907_SumOfSubarrayMinimums\SumOfSubarrayMinimums.csproj" Type="Classic C#" />
+    <Project Path="problems\0915_PartitionArrayIntoDisjointIntervals\PartitionArrayIntoDisjointIntervals.csproj" Type="Classic C#" />
     <Project Path="problems\0929_UniqueEmailAddresses\UniqueEmailAddresses.csproj" Type="Classic C#" />
     <Project Path="problems\0937_ReorderDataInLogFiles\ReorderDataInLogFiles.csproj" Type="Classic C#" />
     <Project Path="problems\0942_DIStringMatch\DIStringMatch.csproj" Type="Classic C#" />
