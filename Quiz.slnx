@@ -24,6 +24,7 @@
     <Project Path="problems\0021_MergeTwoSortedLists\MergeTwoSortedLists.csproj" Type="Classic C#" />
     <Project Path="problems\0022_GenerateParentheses\GenerateParentheses.csproj" Type="Classic C#" />
     <Project Path="problems\0023_MergeKSortedLists\MergeKSortedLists.csproj" Type="Classic C#" />
+    <Project Path="problems\0026_RemoveDuplicatesFromSortedArray\RemoveDuplicatesFromSortedArray.csproj" Type="Classic C#" />
     <Project Path="problems\0028_ImplementStrStr\ImplementStrStr.csproj" Type="Classic C#" />
     <Project Path="problems\0032_LongestValidParentheses\LongestValidParentheses.csproj" Type="Classic C#" />
     <Project Path="problems\0039_CombinationSum\CombinationSum.csproj" Type="Classic C#" />
@@ -40,6 +41,7 @@
     <Project Path="problems\0072_EditDistance\EditDistance.csproj" Type="Classic C#" />
     <Project Path="problems\0077_Combinations\Combinations.csproj" Type="Classic C#" />
     <Project Path="problems\0078_Subsets\Subsets.csproj" Type="Classic C#" />
+    <Project Path="problems\0080_RemoveDuplicatesFromSortedArray2\RemoveDuplicatesFromSortedArray2.csproj" Type="Classic C#" />
     <Project Path="problems\0088_MergeSortedArray\MergeSortedArray.csproj" Type="Classic C#" />
     <Project Path="problems\0090_Subsets2\Subsets2.csproj" Type="Classic C#" />
     <Project Path="problems\0100_SameTree\SameTree.csproj" Type="Classic C#" />
